@@ -10,8 +10,8 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("eyyy fukboi");
-            Console.Beep(1000,1000);
+            Console.WriteLine("Hello World!");
+            Console.Beep(1000, 1000);
             Console.ReadKey();
         }
     }
