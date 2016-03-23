@@ -14,6 +14,7 @@ namespace Test
             Console.Beep(1000, 1000);
             Console.ReadKey();
             Console.WriteLine("Fuck jer!");
+            Console.ReadLine();
         }
     }
 }
