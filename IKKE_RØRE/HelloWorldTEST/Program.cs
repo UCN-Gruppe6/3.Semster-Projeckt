@@ -12,6 +12,8 @@ namespace HelloWorldTEST
         {
             Console.WriteLine("Hello World!");
             Console.ReadKey();
+            Console.WriteLine("Dette er en TEST");
+            Console.ReadKey();
         }
     }
 }
