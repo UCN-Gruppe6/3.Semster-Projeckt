@@ -3,3 +3,5 @@ solution: IKKE_RØRE/IKKE_RØRE.sln
 install:
   - sudo apt-get install -y gtk-sharp2
   - nuget restore IKKE_RØRE/IKKE_RØRE.sln
+script:
+  - xbuild IKKE_RØRE/IKKE_RØRE.sln
