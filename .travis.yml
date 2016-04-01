@@ -1,5 +1,5 @@
 language: csharp
-solution: .IKKE_RØRE/IKKE_RØRE.sln
+solution: IKKE_RØRE/IKKE_RØRE.sln
 install:
   - sudo apt-get install -y gtk-sharp2
-  - nuget restore .IKKE_RØRE/IKKE_RØRE.sln
+  - nuget restore IKKE_RØRE/IKKE_RØRE.sln
