@@ -4,4 +4,4 @@ install:
   - sudo apt-get install -y gtk-sharp2
   - nuget restore IKKE_RØRE/IKKE_RØRE.sln
 script:
-  - xbuild /p:Configuration=Release HelloFriends/HelloFriends.sln /p:TargetFrameworkVersion="v4.5"
+  - xbuild /p:Configuration=Release IKKE_RØRE/IKKE_RØRE.sln /p:TargetFrameworkVersion="v4.5"
