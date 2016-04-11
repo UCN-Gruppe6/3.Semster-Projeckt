@@ -1,7 +1,13 @@
 language: csharp
-solution: IKKE_RØRE/IKKE_RØRE.sln
+solution: solution.sln
 install:
   - sudo apt-get install -y gtk-sharp2
-  - nuget restore IKKE_RØRE/IKKE_RØRE.sln
+  - nuget restore solution.sln
 script:
-  - xbuild /p:Configuration=Release IKKE_RØRE/IKKE_RØRE.sln /p:TargetFrameworkVersion="v4.5"
+  - xbuild /p:Configuration=Release solution.sln /p:TargetFrameworkVersion="v4.5"
+  - mono ./testrunner/NUnit.ConsoleRunner.3.2.0/tools/nunit3-console.exe ./solution/Tests/bin/Release/Tests.dll
+notifications:
+  email: false
+install:
+  - nuget restore solution.sln
+  - nuget install NUnit.Runners -Version 3.2.0 -OutputDirectory testrunner
