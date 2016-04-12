@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ModelLayer.Hardware
 {
-    class Socket
+    public class Socket
     {
-
+        public string SocketType { get; set; }
     }
 }
