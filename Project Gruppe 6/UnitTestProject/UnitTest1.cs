@@ -27,10 +27,10 @@ namespace UnitTestProject
             ModelLayer.Hardware.CPU cpu = new ModelLayer.Hardware.CPU();
 
             //act
-            cpu.BaseClok = 1;
+            cpu.BaseClock = 1;
 
             //assert
-            Assert.AreEqual(1, cpu.BaseClok, 0);
+            Assert.AreEqual(1, cpu.BaseClock, 0);
         }
 
 
