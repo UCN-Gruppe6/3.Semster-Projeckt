@@ -10,6 +10,7 @@ namespace DBLayer
     public class EntityFrameworkContext : DbContext
     {
         EntityFrameworkContext()
+            : base("name=EntityFrameworkContext")
         {
 
             this.Configuration.LazyLoadingEnabled = false;
