@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelLayer", "ModelLayer\ModelLayer.csproj", "{C6D7596E-4F1F-417A-A7E5-F54309B207ED}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBLayer", "DBLayer\DBLayer.csproj", "{5C69AFDF-DDBD-47C8-8973-962B7B0279EB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServices", "WCFServices\WCFServices.csproj", "{92FA7922-102D-401D-947B-E5836F2E5D50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test2", "Test2\Test2.csproj", "{EFA6A07E-ADFB-4F3A-97B4-F13519E45FA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{92FA7922-102D-401D-947B-E5836F2E5D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92FA7922-102D-401D-947B-E5836F2E5D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92FA7922-102D-401D-947B-E5836F2E5D50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFA6A07E-ADFB-4F3A-97B4-F13519E45FA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA6A07E-ADFB-4F3A-97B4-F13519E45FA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA6A07E-ADFB-4F3A-97B4-F13519E45FA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA6A07E-ADFB-4F3A-97B4-F13519E45FA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
