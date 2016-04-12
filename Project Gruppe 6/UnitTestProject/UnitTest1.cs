@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ControlerLayer;
+using ModelLayer;
 
 namespace UnitTestProject
 {
@@ -18,5 +20,20 @@ namespace UnitTestProject
 
             Assert.AreEqual(expected, x, 0);
         }
+        [TestMethod]
+        public void CPUtest()
+        {
+            //arrange 
+            ModelLayer.Hardware.CPU cpu = new ModelLayer.Hardware.CPU();
+
+            //act
+            cpu.BaseClok = 1;
+
+            //assert
+            Assert.AreEqual(1, cpu.BaseClok, 0);
+        }
+
+
+
     }
 }
