@@ -11,10 +11,11 @@ namespace DBLayer
 {
     public class EntityFrameworkContext : DbContext
     { 
-        EntityFrameworkContext() : base("name=EntityFrameworkContext")
+        public EntityFrameworkContext() : base("name=EntityFrameworkContext")
         {
             this.Configuration.LazyLoadingEnabled = false;
             this.Configuration.ProxyCreationEnabled = false;
+           
         }
 
         public DbSet<CPU> CPUs { get; set; }
