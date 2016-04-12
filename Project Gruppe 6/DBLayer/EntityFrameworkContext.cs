@@ -4,20 +4,20 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ModelLayer;
+using ModelLayer.Hardware;
 
 namespace DBLayer
 {
     public class EntityFrameworkContext : DbContext
-    {
-        EntityFrameworkContext()
-            : base("name=EntityFrameworkContext")
+    { 
+        EntityFrameworkContext() : base("name=EntityFrameworkContext")
         {
-
             this.Configuration.LazyLoadingEnabled = false;
             this.Configuration.ProxyCreationEnabled = false;
         }
 
-        //public DbSet<CLASS> NAMES { get; set; }
+        public DbSet<CPU> CPUs { get; set; }
 
     }
 }

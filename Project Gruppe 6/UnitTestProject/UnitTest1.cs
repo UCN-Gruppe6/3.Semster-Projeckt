@@ -11,13 +11,14 @@ namespace UnitTestProject
         [TestMethod]
         public void TestMethod1()
         {
+            //arrange
             int beginning = 10;
             int creditAmount = 10;
             int expected = 20;
             int x = 0;
-
+            //act
             x = beginning + creditAmount;
-
+            //assert
             Assert.AreEqual(expected, x, 0);
         }
         [TestMethod]
