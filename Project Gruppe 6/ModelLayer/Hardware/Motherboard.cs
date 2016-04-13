@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -24,6 +25,7 @@ namespace ModelLayer.Hardware
         [DataMember]
         public double Price { get; set; }
 
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public Socket SocketType { get; set; }
     }
 }

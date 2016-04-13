@@ -28,6 +28,7 @@ namespace ModelLayer.Hardware
         [DataMember, MaxLength(50)]
         public string Description { get; set; }
         [DataMember]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public Socket SocketType { get; set; }
         [DataMember]
         public double Price { get; set; }
