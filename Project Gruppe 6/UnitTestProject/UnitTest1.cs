@@ -28,7 +28,7 @@ namespace UnitTestProject
 
                 //act
                 cpu.BaseClock = 1;
-                cpu.id = 1;
+                cpu.id = 2;
                 db.CPUs.Add(cpu);
                 db.SaveChanges();
                 
