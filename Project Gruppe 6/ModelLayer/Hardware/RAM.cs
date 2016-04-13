@@ -9,21 +9,21 @@ using System.Threading.Tasks;
 namespace ModelLayer.Hardware
 {
     [DataContract]
-    public class Motherboard
+    public class RAM
     {
         [Key]
-        public int MotherboardId { get; set; }
+        public int RAMId { get; set; }
         [DataMember]
         public string Manufacturer { get; set; }
         [DataMember]
-        public string Chipset { get; set; }
-        [DataMember, MaxLength(100)]
-        public string Description { get; set; }
+        public string Model { get; set; }
+        [DataMember]
+        public string Type  { get; set; }
+        [DataMember]
+        public int Capacity { get; set; }
         [DataMember]
         public string Category { get; set; }
         [DataMember]
         public double Price { get; set; }
-
-        public Socket SocketType { get; set; }
     }
 }
