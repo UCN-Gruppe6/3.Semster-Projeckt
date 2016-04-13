@@ -11,7 +11,7 @@ namespace ModelLayer.Hardware
 {
     [DataContract]
     public class CPU
-    {   
+    {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CPUId { get; set; }
