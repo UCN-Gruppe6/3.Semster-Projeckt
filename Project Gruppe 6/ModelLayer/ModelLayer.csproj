@@ -54,6 +54,7 @@
     <Compile Include="Basket\Basket.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Hardware\CPU.cs" />
+    <Compile Include="Hardware\Motherboard.cs" />
     <Compile Include="Hardware\Socket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

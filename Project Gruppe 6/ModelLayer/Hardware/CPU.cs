@@ -12,8 +12,8 @@ namespace ModelLayer.Hardware
     public class CPU
     {
         [Key]
-        public int id { get; set; }
-        [DataMember]
+        public int CPUId { get; set; }
+        [DataMember, MaxLength(10) ]
         public string Brand { get; set; }
         [DataMember]
         public string ModelNumber { get; set; }
@@ -23,7 +23,13 @@ namespace ModelLayer.Hardware
         public double BoostClock { get; set; }
         [DataMember]
         public bool IsUnlocked { get; set; }
-        [DataMember]
+        [DataMember, MaxLength(50)]
         public string Description { get; set; }
+        [DataMember]
+        public Socket SocketType { get; set; }
+        [DataMember]
+        public double Price { get; set; }
+        [DataMember]
+        public string Category { get; set; }
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ControlerLayer
 {
-    public class Class1
+    class HardweareCTR
     {
+
     }
 }
