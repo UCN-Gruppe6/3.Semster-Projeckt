@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -11,7 +12,9 @@ namespace ModelLayer.Hardware
     [DataContract]
     public class CPU
     {
+        
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CPUId { get; set; }
         [DataMember, MaxLength(10) ]
         public string Brand { get; set; }
