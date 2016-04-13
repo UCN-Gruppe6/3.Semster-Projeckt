@@ -1,7 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ControlerLayer;
-using ModelLayer;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProject
 {
@@ -24,14 +21,21 @@ namespace UnitTestProject
         [TestMethod]
         public void CPUtest()
         {
-            //arrange 
-            ModelLayer.Hardware.CPU cpu = new ModelLayer.Hardware.CPU();
+            using (DBLayer.EntityFrameworkContext db = new DBLayer.EntityFrameworkContext())
+            {
+                //arrange 
+                ModelLayer.Hardware.CPU cpu = new ModelLayer.Hardware.CPU();
 
-            //act
-            cpu.BaseClock = 1;
+                //act
+                cpu.BaseClock = 1;
+                cpu.id = 1;
+                db.CPUs.Add(cpu);
+                db.SaveChanges();
+                
+                //assert
+                Assert.AreEqual(1, cpu.BaseClock, 0,"shit failed is" + cpu.BaseClock);
+            }
 
-            //assert
-            Assert.AreEqual(1, cpu.BaseClock, 0);
         }
 
 
