@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 
 namespace ModelLayer.Hardware
@@ -7,6 +8,7 @@ namespace ModelLayer.Hardware
     public class CPU
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int id { get; set; }
         [DataMember]
         public string Brand { get; set; }
