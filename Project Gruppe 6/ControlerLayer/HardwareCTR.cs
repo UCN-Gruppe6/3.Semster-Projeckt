@@ -1,6 +1,6 @@
 ﻿namespace ControlerLayer
 {
-    class HardweareCTR
+    class HardwareCtr
     {
 
     }
