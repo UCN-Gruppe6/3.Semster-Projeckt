@@ -19,16 +19,9 @@ namespace ModelLayer.Hardware
         [DataMember]
         public string Architecture { get; set; }
 
-        public CPU CPU { get; set; }
-        [ForeignKey("CPU")]
-        public int CPUId { get; set; }
-
-        public Motherboard Motherboard { get; set; }
-        [ForeignKey("Motherboard")]
-        public int MotherboardId { get; set; }
+        public List<Motherboard> Motherboards { get; set; }
 
         public List<CPU> CPUs { get; set; }
-        public List<Motherboard> Motherboards { get; set; }
 
     }
 }

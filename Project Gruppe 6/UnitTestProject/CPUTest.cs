@@ -89,6 +89,7 @@ namespace UnitTestProject
             IEnumerable<ModelLayer.Hardware.CPU> cpulist = hrdweCtr.FindAllCPUs().ToList();
 
             //Assert
+            Assert.IsTrue(cpulist.Count() > 0);
         }
     }
 
