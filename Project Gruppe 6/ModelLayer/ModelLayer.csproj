@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Basket\Basket.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Hardware\Computer_Case.cs" />
     <Compile Include="Hardware\CPU.cs" />
     <Compile Include="Hardware\GPU.cs" />

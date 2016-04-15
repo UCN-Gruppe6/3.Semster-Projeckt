@@ -29,5 +29,6 @@ namespace ModelLayer.Hardware
 
         public List<CPU> CPUs { get; set; }
         public List<Motherboard> Motherboards { get; set; }
+
     }
 }

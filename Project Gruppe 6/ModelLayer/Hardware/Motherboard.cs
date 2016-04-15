@@ -25,7 +25,17 @@ namespace ModelLayer.Hardware
         [DataMember]
         public double Price { get; set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Key]
         public Socket SocketType { get; set; }
-    }
+
+        public List<GPU> GPUs { get; set; }
+
+        public List<Storage> Stoprage { get; set; }
+
+        public List<RAM> RAMs { get; set; }
+
+        public List<Computer_Case> ComputerCase { get; set; }
+
+            
+        }
 }
