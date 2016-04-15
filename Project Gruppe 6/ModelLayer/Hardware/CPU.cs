@@ -13,7 +13,7 @@ namespace ModelLayer.Hardware
     public class CPU
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CPUId { get; set; }
         [DataMember, MaxLength(10) ]
         public string Brand { get; set; }

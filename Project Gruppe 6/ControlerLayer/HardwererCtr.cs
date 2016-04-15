@@ -11,31 +11,31 @@ namespace ControlerLayer
 {
     public class HardwererCtr
     {
-        // CPU START
 
-        public void CreateCPU(CPU cpu)
+        //CPU CTR
+        #region
+
+        public IEnumerable<CPU> FindCPUsByBrand(string brand)
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                db.CPUs.Add(cpu);
-                db.SaveChanges();
+                return db.CPUs.Where(x => x.Brand.Equals(brand)).ToList();
             }
         }
 
-        public CPU GetCPUByBrand(string Brand)
+        public IEnumerable<CPU> FindCPUsByCategory(string category)
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-
+                return db.CPUs.Where(x => x.Category.Equals(category)).ToList();
             }
         }
 
-        public IEnumerable<CPU> GetAllCPUs()
+        public IEnumerable<CPU> FindAllCPUs()
         {
-            using (EntityFrameworkContext db = new EntityFrameworkContext())
-            {
-                return db.CPUs.ToList();
-            }
+            throw new NotImplementedException();
         }
+
+        #endregion
     }
 }

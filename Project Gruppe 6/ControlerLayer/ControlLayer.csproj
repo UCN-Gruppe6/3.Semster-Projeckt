@@ -49,12 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HardweareCTR.cs" />
     <Compile Include="HardwererCtr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="HardwererCtr.cs.vsspell" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
