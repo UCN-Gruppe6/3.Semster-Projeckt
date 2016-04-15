@@ -13,7 +13,6 @@ namespace ModelLayer.Hardware
     public class CPU
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CPUId { get; set; }
         [DataMember, MaxLength(10) ]
         public string Brand { get; set; }
@@ -28,11 +27,13 @@ namespace ModelLayer.Hardware
         [DataMember, MaxLength(50)]
         public string Description { get; set; }
         [DataMember]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public Socket SocketType { get; set; }
         [DataMember]
         public double Price { get; set; }
         [DataMember]
         public string Category { get; set; }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public Socket Socket { get; set; }
     }
 }

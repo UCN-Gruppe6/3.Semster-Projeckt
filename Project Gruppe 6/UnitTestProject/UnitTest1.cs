@@ -20,7 +20,7 @@ namespace UnitTestProject
         }
         [TestMethod]
         public void CPUtest()
-        {
+      {
             using (DBLayer.EntityFrameworkContext db = new DBLayer.EntityFrameworkContext())
             {
                 //arrange 

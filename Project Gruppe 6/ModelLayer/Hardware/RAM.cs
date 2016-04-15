@@ -25,5 +25,7 @@ namespace ModelLayer.Hardware
         public string Category { get; set; }
         [DataMember]
         public double Price { get; set; }
+
+        public Motherboard RMotherboards { get; set;}
     }
 }
