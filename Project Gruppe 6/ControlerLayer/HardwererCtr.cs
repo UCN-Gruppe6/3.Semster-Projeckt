@@ -33,7 +33,10 @@ namespace ControlerLayer
 
         public IEnumerable<CPU> FindAllCPUs()
         {
-            throw new NotImplementedException();
+            using (EntityFrameworkContext db = new EntityFrameworkContext())
+            {
+                return db.CPUs.ToList();
+            }
         }
 
         #endregion

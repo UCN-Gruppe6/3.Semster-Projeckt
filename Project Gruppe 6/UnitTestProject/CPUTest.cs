@@ -92,5 +92,4 @@ namespace UnitTestProject
             Assert.IsTrue(cpulist.Count() > 0);
         }
     }
-
 }
