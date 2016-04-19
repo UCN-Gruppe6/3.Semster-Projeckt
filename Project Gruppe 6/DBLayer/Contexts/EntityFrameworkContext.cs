@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using ModelLayer.Hardware;
+using ModelLayer;
 
 namespace DBLayer
 {
@@ -18,6 +19,8 @@ namespace DBLayer
         public DbSet<Socket> Sockets { get; set; }
         public DbSet<Computer_Case> CompunterCase { get; set; }
         public DbSet<Motherboard> Motherboards { get; set; }
+
+        public DbSet<CPUTestClase> CPUTestClas { get; set; }
 
     }
 }

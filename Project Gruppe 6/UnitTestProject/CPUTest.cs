@@ -76,17 +76,17 @@ namespace UnitTestProject
         {
             //Arrange
             var db = new EntityFrameworkContext();
-            var hrdweCtr = new HardwererCtr();
-            ModelLayer.Hardware.CPU CPU1 = new ModelLayer.Hardware.CPU();
-            ModelLayer.Hardware.CPU CPU2 = new ModelLayer.Hardware.CPU();
-            ModelLayer.Hardware.CPU CPU3 = new ModelLayer.Hardware.CPU();
+            var ctr = new HardwererCtr();
+            ModelLayer.CPUTestClase CPU1 = new ModelLayer.CPUTestClase();
+            ModelLayer.CPUTestClase CPU2 = new ModelLayer.CPUTestClase();
+            ModelLayer.CPUTestClase CPU3 = new ModelLayer.CPUTestClase();
 
             //Act
-            db.CPUs.Add(CPU1);
-            db.CPUs.Add(CPU2);
-            db.CPUs.Add(CPU3);
+            db.CPUTestClas.Add(CPU1);
+            db.CPUTestClas.Add(CPU2);
+            db.CPUTestClas.Add(CPU3);
             db.SaveChanges();
-            IEnumerable<ModelLayer.Hardware.CPU> cpulist = hrdweCtr.FindAllCPUs().ToList();
+            IEnumerable<ModelLayer.CPUTestClase> cpulist = ctr.FindAllCPUs2().ToList();
 
             //Assert
             Assert.IsTrue(cpulist.Count() > 0);

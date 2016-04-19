@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ModelLayer;
 using DBLayer;
 using ModelLayer.Hardware;
+using ModelLayer;
 
 namespace ControlerLayer
 {
@@ -40,5 +41,14 @@ namespace ControlerLayer
         }
 
         #endregion
+
+        // Test method.
+        public IEnumerable<CPUTestClase> FindAllCPUs2()
+        {
+            using (EntityFrameworkContext db = new EntityFrameworkContext())
+            {
+                return db.CPUTestClas.ToList();
+            }
+        }
     }
 }
