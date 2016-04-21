@@ -12,6 +12,7 @@ namespace ModelLayer.Hardware
     [DataContract]
     public class CPU
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CPUId { get; set; }
         [DataMember, MaxLength(10) ]
         public string Brand { get; set; }

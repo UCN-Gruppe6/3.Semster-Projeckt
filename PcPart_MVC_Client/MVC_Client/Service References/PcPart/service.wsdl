@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PcPartServise" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPcPartServise_FindCPUsByBrand_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCPUsByBrand" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_FindCPUsByBrand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCPUsByBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_FindCPUsByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCPUsByCategory" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_FindCPUsByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCPUsByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_FindAllCPUs_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllCPUs" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_FindAllCPUs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllCPUsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPcPartServise">
+    <wsdl:operation name="FindCPUsByBrand">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/FindCPUsByBrand" message="tns:IPcPartServise_FindCPUsByBrand_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/FindCPUsByBrandResponse" message="tns:IPcPartServise_FindCPUsByBrand_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCPUsByCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/FindCPUsByCategory" message="tns:IPcPartServise_FindCPUsByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/FindCPUsByCategoryResponse" message="tns:IPcPartServise_FindCPUsByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllCPUs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/FindAllCPUs" message="tns:IPcPartServise_FindAllCPUs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/FindAllCPUsResponse" message="tns:IPcPartServise_FindAllCPUs_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPcPartServise" type="tns:IPcPartServise">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FindCPUsByBrand">
+      <soap:operation soapAction="http://tempuri.org/IPcPartServise/FindCPUsByBrand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCPUsByCategory">
+      <soap:operation soapAction="http://tempuri.org/IPcPartServise/FindCPUsByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAllCPUs">
+      <soap:operation soapAction="http://tempuri.org/IPcPartServise/FindAllCPUs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PcPartServise">
+    <wsdl:port name="BasicHttpBinding_IPcPartServise" binding="tns:BasicHttpBinding_IPcPartServise">
+      <soap:address location="http://localhost:8733/PcPartServise" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

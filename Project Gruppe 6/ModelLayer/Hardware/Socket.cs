@@ -13,6 +13,7 @@ namespace ModelLayer.Hardware
     public class Socket
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         [DataMember, MaxLength(10), Required]
         public string SocketType { get; set; }

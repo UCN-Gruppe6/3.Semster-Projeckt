@@ -1,0 +1,82 @@
+﻿@model IEnumerable<MVC_Client.PcPart.CPU>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>CPUs</h2>
+
+<div>
+    <br>
+    <h4> <b>Filtrer</b> </h4>
+
+    @using (Html.BeginForm())
+    {
+        <p> <b>Brand:</b> @Html.TextBox("Brand") <br />
+        <br>
+        <input type="submit" value="Find" /></p>
+    }
+    <br />
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Brand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModelNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BaseClock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BoostClock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsUnlocked)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BaseClock)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoostClock)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Brand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsUnlocked)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModelNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
