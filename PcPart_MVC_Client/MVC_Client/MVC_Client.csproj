@@ -150,9 +150,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Computer_CaseController.cs" />
     <Compile Include="Controllers\CPUController.cs" />
+    <Compile Include="Controllers\GPUController.cs" />
     <Compile Include="Controllers\HardwareController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MotherboardController.cs" />
+    <Compile Include="Controllers\RAMController.cs" />
+    <Compile Include="Controllers\StorageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -194,6 +199,21 @@
     <Content Include="Service References\PcPart\MVC_Client.PcPart.CPU.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\PcPart\MVC_Client.PcPart.Computer_Case.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PcPart\MVC_Client.PcPart.GPU.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PcPart\MVC_Client.PcPart.Motherboard.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PcPart\MVC_Client.PcPart.RAM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PcPart\MVC_Client.PcPart.Storage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\PcPart\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -224,6 +244,11 @@
     </None>
     <Content Include="Views\Hardware\Index.cshtml" />
     <Content Include="Views\CPU\Index.cshtml" />
+    <Content Include="Views\Storage\Index.cshtml" />
+    <Content Include="Views\RAM\Index.cshtml" />
+    <Content Include="Views\Computer_Case\Index.cshtml" />
+    <Content Include="Views\GPU\Index.cshtml" />
+    <Content Include="Views\Motherboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

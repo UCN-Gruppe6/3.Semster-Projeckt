@@ -41,4 +41,218 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="FindStorageByManufacturer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Manufacturer" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStorageByManufacturerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindStorageByManufacturerResult" nillable="true" type="q4:ArrayOfStorage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStorageByCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindStorageByCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindStorageByCategoryResult" nillable="true" type="q5:ArrayOfStorage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAllStorage">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAllStorageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindAllStorageResult" nillable="true" type="q6:ArrayOfStorage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindRamByManufacturer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Manufacturer" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindRamByManufacturerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindRamByManufacturerResult" nillable="true" type="q7:ArrayOfRAM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindRamByCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindRamByCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindRamByCategoryResult" nillable="true" type="q8:ArrayOfRAM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAllRam">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAllRamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindAllRamResult" nillable="true" type="q9:ArrayOfRAM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindMotherboardByManufacturer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Manufacturer" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindMotherboardByManufacturerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindMotherboardByManufacturerResult" nillable="true" type="q10:ArrayOfMotherboard" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindMotherboardByCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindMotherboardByCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindMotherboardByCategoryResult" nillable="true" type="q11:ArrayOfMotherboard" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAllMotherboard">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAllMotherboardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindAllMotherboardResult" nillable="true" type="q12:ArrayOfMotherboard" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindGpuByManufacturer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Manufacturer" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindGpuByManufacturerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindGpuByManufacturerResult" nillable="true" type="q13:ArrayOfGPU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindGpuByModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Model" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindGpuByModelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindGpuByModelResult" nillable="true" type="q14:ArrayOfGPU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindGpuByCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindGpuByCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindGpuByCategoryResult" nillable="true" type="q15:ArrayOfGPU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAllGpus">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAllGpusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindAllGpusResult" nillable="true" type="q16:ArrayOfGPU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindComputerCaseByManufacturer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Manufacturer" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindComputerCaseByManufacturerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindComputerCaseByManufacturerResult" nillable="true" type="q17:ArrayOfComputer_Case" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindComputerCaseByCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindComputerCaseByCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindComputerCaseByCategoryResult" nillable="true" type="q18:ArrayOfComputer_Case" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAllComputerCases">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindAllComputerCasesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindAllComputerCasesResult" nillable="true" type="q19:ArrayOfComputer_Case" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

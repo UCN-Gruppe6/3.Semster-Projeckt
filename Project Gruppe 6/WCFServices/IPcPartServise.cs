@@ -15,18 +15,60 @@ namespace WCFServices
         #region
 
         // CPU START
-
         [OperationContract]
         IEnumerable<CPU> FindCPUsByBrand(string Brand);
-
         [OperationContract]
         IEnumerable<CPU> FindCPUsByCategory(string Category);
-
         [OperationContract]
         IEnumerable<CPU> FindAllCPUs();
-
         // CPU END
 
+        // Storage START
+        [OperationContract]
+        IEnumerable<Storage> FindStorageByManufacturer(string Manufacturer);
+        [OperationContract]
+        IEnumerable<Storage> FindStorageByCategory(string Category);
+        [OperationContract]
+        IEnumerable<Storage> FindAllStorage();
+        // Storage END
+
+        // RAM START
+        [OperationContract]
+        IEnumerable<RAM> FindRamByManufacturer(string Manufacturer);
+        [OperationContract]
+        IEnumerable<RAM> FindRamByCategory(string Category);
+        [OperationContract]
+        IEnumerable<RAM> FindAllRam();
+        // RAM END
+
+        // Motherboard START
+        [OperationContract]
+        IEnumerable<Motherboard> FindMotherboardByManufacturer(string Manufacturer);
+        [OperationContract]
+        IEnumerable<Motherboard> FindMotherboardByCategory(string Category);
+        [OperationContract]
+        IEnumerable<Motherboard> FindAllMotherboard();
+        // Motherboard END 
+
+        // GPU START
+        [OperationContract]
+        IEnumerable<GPU> FindGpuByManufacturer(string Manufacturer);
+        [OperationContract]
+        IEnumerable<GPU> FindGpuByModel(string Model);
+        [OperationContract]
+        IEnumerable<GPU> FindGpuByCategory(String Category);
+        [OperationContract]
+        IEnumerable<GPU> FindAllGpus();
+        // GPU END
+
+        // Computer Case START
+        [OperationContract]
+        IEnumerable<Computer_Case> FindComputerCaseByManufacturer(string Manufacturer);
+        [OperationContract]
+        IEnumerable<Computer_Case> FindComputerCaseByCategory(string Category);
+        [OperationContract]
+        IEnumerable<Computer_Case> FindAllComputerCases();
+        // Computer Case END 
         #endregion
 
     }

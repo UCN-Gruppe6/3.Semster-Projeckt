@@ -247,6 +247,647 @@ namespace MVC_Client.PcPart {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Storage", Namespace="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware")]
+    [System.SerializableAttribute()]
+    public partial class Storage : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CapacityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ManufacturerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ModelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StorageIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TypeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Capacity {
+            get {
+                return this.CapacityField;
+            }
+            set {
+                if ((this.CapacityField.Equals(value) != true)) {
+                    this.CapacityField = value;
+                    this.RaisePropertyChanged("Capacity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Category {
+            get {
+                return this.CategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CategoryField, value) != true)) {
+                    this.CategoryField = value;
+                    this.RaisePropertyChanged("Category");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Manufacturer {
+            get {
+                return this.ManufacturerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ManufacturerField, value) != true)) {
+                    this.ManufacturerField = value;
+                    this.RaisePropertyChanged("Manufacturer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Model {
+            get {
+                return this.ModelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ModelField, value) != true)) {
+                    this.ModelField = value;
+                    this.RaisePropertyChanged("Model");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int StorageId {
+            get {
+                return this.StorageIdField;
+            }
+            set {
+                if ((this.StorageIdField.Equals(value) != true)) {
+                    this.StorageIdField = value;
+                    this.RaisePropertyChanged("StorageId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TypeField, value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RAM", Namespace="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware")]
+    [System.SerializableAttribute()]
+    public partial class RAM : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CapacityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ManufacturerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ModelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TypeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Capacity {
+            get {
+                return this.CapacityField;
+            }
+            set {
+                if ((this.CapacityField.Equals(value) != true)) {
+                    this.CapacityField = value;
+                    this.RaisePropertyChanged("Capacity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Category {
+            get {
+                return this.CategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CategoryField, value) != true)) {
+                    this.CategoryField = value;
+                    this.RaisePropertyChanged("Category");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Manufacturer {
+            get {
+                return this.ManufacturerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ManufacturerField, value) != true)) {
+                    this.ManufacturerField = value;
+                    this.RaisePropertyChanged("Manufacturer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Model {
+            get {
+                return this.ModelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ModelField, value) != true)) {
+                    this.ModelField = value;
+                    this.RaisePropertyChanged("Model");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TypeField, value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Motherboard", Namespace="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware")]
+    [System.SerializableAttribute()]
+    public partial class Motherboard : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ChipsetField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ManufacturerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double PriceField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Category {
+            get {
+                return this.CategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CategoryField, value) != true)) {
+                    this.CategoryField = value;
+                    this.RaisePropertyChanged("Category");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Chipset {
+            get {
+                return this.ChipsetField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChipsetField, value) != true)) {
+                    this.ChipsetField = value;
+                    this.RaisePropertyChanged("Chipset");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Manufacturer {
+            get {
+                return this.ManufacturerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ManufacturerField, value) != true)) {
+                    this.ManufacturerField = value;
+                    this.RaisePropertyChanged("Manufacturer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GPU", Namespace="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware")]
+    [System.SerializableAttribute()]
+    public partial class GPU : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BoardpartnerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int GPUIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ManufacturerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ModelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int VRamAmountField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Boardpartner {
+            get {
+                return this.BoardpartnerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BoardpartnerField, value) != true)) {
+                    this.BoardpartnerField = value;
+                    this.RaisePropertyChanged("Boardpartner");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Category {
+            get {
+                return this.CategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CategoryField, value) != true)) {
+                    this.CategoryField = value;
+                    this.RaisePropertyChanged("Category");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int GPUId {
+            get {
+                return this.GPUIdField;
+            }
+            set {
+                if ((this.GPUIdField.Equals(value) != true)) {
+                    this.GPUIdField = value;
+                    this.RaisePropertyChanged("GPUId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Manufacturer {
+            get {
+                return this.ManufacturerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ManufacturerField, value) != true)) {
+                    this.ManufacturerField = value;
+                    this.RaisePropertyChanged("Manufacturer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Model {
+            get {
+                return this.ModelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ModelField, value) != true)) {
+                    this.ModelField = value;
+                    this.RaisePropertyChanged("Model");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int VRamAmount {
+            get {
+                return this.VRamAmountField;
+            }
+            set {
+                if ((this.VRamAmountField.Equals(value) != true)) {
+                    this.VRamAmountField = value;
+                    this.RaisePropertyChanged("VRamAmount");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Computer_Case", Namespace="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware")]
+    [System.SerializableAttribute()]
+    public partial class Computer_Case : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CaseIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ManufacturerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double PriceField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CaseId {
+            get {
+                return this.CaseIdField;
+            }
+            set {
+                if ((this.CaseIdField.Equals(value) != true)) {
+                    this.CaseIdField = value;
+                    this.RaisePropertyChanged("CaseId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Category {
+            get {
+                return this.CategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CategoryField, value) != true)) {
+                    this.CategoryField = value;
+                    this.RaisePropertyChanged("Category");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Manufacturer {
+            get {
+                return this.ManufacturerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ManufacturerField, value) != true)) {
+                    this.ManufacturerField = value;
+                    this.RaisePropertyChanged("Manufacturer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="PcPart.IPcPartServise")]
     public interface IPcPartServise {
@@ -268,6 +909,102 @@ namespace MVC_Client.PcPart {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllCPUs", ReplyAction="http://tempuri.org/IPcPartServise/FindAllCPUsResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.CPU[]> FindAllCPUsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindStorageByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindStorageByManufacturerResponse")]
+        MVC_Client.PcPart.Storage[] FindStorageByManufacturer(string Manufacturer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindStorageByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindStorageByManufacturerResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.Storage[]> FindStorageByManufacturerAsync(string Manufacturer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindStorageByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindStorageByCategoryResponse")]
+        MVC_Client.PcPart.Storage[] FindStorageByCategory(string Category);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindStorageByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindStorageByCategoryResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.Storage[]> FindStorageByCategoryAsync(string Category);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllStorage", ReplyAction="http://tempuri.org/IPcPartServise/FindAllStorageResponse")]
+        MVC_Client.PcPart.Storage[] FindAllStorage();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllStorage", ReplyAction="http://tempuri.org/IPcPartServise/FindAllStorageResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.Storage[]> FindAllStorageAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindRamByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindRamByManufacturerResponse")]
+        MVC_Client.PcPart.RAM[] FindRamByManufacturer(string Manufacturer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindRamByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindRamByManufacturerResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.RAM[]> FindRamByManufacturerAsync(string Manufacturer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindRamByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindRamByCategoryResponse")]
+        MVC_Client.PcPart.RAM[] FindRamByCategory(string Category);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindRamByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindRamByCategoryResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.RAM[]> FindRamByCategoryAsync(string Category);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllRam", ReplyAction="http://tempuri.org/IPcPartServise/FindAllRamResponse")]
+        MVC_Client.PcPart.RAM[] FindAllRam();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllRam", ReplyAction="http://tempuri.org/IPcPartServise/FindAllRamResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.RAM[]> FindAllRamAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindMotherboardByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindMotherboardByManufacturerResponse")]
+        MVC_Client.PcPart.Motherboard[] FindMotherboardByManufacturer(string Manufacturer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindMotherboardByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindMotherboardByManufacturerResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.Motherboard[]> FindMotherboardByManufacturerAsync(string Manufacturer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindMotherboardByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindMotherboardByCategoryResponse")]
+        MVC_Client.PcPart.Motherboard[] FindMotherboardByCategory(string Category);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindMotherboardByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindMotherboardByCategoryResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.Motherboard[]> FindMotherboardByCategoryAsync(string Category);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllMotherboard", ReplyAction="http://tempuri.org/IPcPartServise/FindAllMotherboardResponse")]
+        MVC_Client.PcPart.Motherboard[] FindAllMotherboard();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllMotherboard", ReplyAction="http://tempuri.org/IPcPartServise/FindAllMotherboardResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.Motherboard[]> FindAllMotherboardAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindGpuByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindGpuByManufacturerResponse")]
+        MVC_Client.PcPart.GPU[] FindGpuByManufacturer(string Manufacturer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindGpuByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindGpuByManufacturerResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.GPU[]> FindGpuByManufacturerAsync(string Manufacturer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindGpuByModel", ReplyAction="http://tempuri.org/IPcPartServise/FindGpuByModelResponse")]
+        MVC_Client.PcPart.GPU[] FindGpuByModel(string Model);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindGpuByModel", ReplyAction="http://tempuri.org/IPcPartServise/FindGpuByModelResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.GPU[]> FindGpuByModelAsync(string Model);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindGpuByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindGpuByCategoryResponse")]
+        MVC_Client.PcPart.GPU[] FindGpuByCategory(string Category);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindGpuByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindGpuByCategoryResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.GPU[]> FindGpuByCategoryAsync(string Category);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllGpus", ReplyAction="http://tempuri.org/IPcPartServise/FindAllGpusResponse")]
+        MVC_Client.PcPart.GPU[] FindAllGpus();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllGpus", ReplyAction="http://tempuri.org/IPcPartServise/FindAllGpusResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.GPU[]> FindAllGpusAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindComputerCaseByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindComputerCaseByManufacturerResponse")]
+        MVC_Client.PcPart.Computer_Case[] FindComputerCaseByManufacturer(string Manufacturer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindComputerCaseByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindComputerCaseByManufacturerResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.Computer_Case[]> FindComputerCaseByManufacturerAsync(string Manufacturer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindComputerCaseByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindComputerCaseByCategoryResponse")]
+        MVC_Client.PcPart.Computer_Case[] FindComputerCaseByCategory(string Category);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindComputerCaseByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindComputerCaseByCategoryResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.Computer_Case[]> FindComputerCaseByCategoryAsync(string Category);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllComputerCases", ReplyAction="http://tempuri.org/IPcPartServise/FindAllComputerCasesResponse")]
+        MVC_Client.PcPart.Computer_Case[] FindAllComputerCases();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllComputerCases", ReplyAction="http://tempuri.org/IPcPartServise/FindAllComputerCasesResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.Computer_Case[]> FindAllComputerCasesAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -319,6 +1056,134 @@ namespace MVC_Client.PcPart {
         
         public System.Threading.Tasks.Task<MVC_Client.PcPart.CPU[]> FindAllCPUsAsync() {
             return base.Channel.FindAllCPUsAsync();
+        }
+        
+        public MVC_Client.PcPart.Storage[] FindStorageByManufacturer(string Manufacturer) {
+            return base.Channel.FindStorageByManufacturer(Manufacturer);
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.Storage[]> FindStorageByManufacturerAsync(string Manufacturer) {
+            return base.Channel.FindStorageByManufacturerAsync(Manufacturer);
+        }
+        
+        public MVC_Client.PcPart.Storage[] FindStorageByCategory(string Category) {
+            return base.Channel.FindStorageByCategory(Category);
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.Storage[]> FindStorageByCategoryAsync(string Category) {
+            return base.Channel.FindStorageByCategoryAsync(Category);
+        }
+        
+        public MVC_Client.PcPart.Storage[] FindAllStorage() {
+            return base.Channel.FindAllStorage();
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.Storage[]> FindAllStorageAsync() {
+            return base.Channel.FindAllStorageAsync();
+        }
+        
+        public MVC_Client.PcPart.RAM[] FindRamByManufacturer(string Manufacturer) {
+            return base.Channel.FindRamByManufacturer(Manufacturer);
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.RAM[]> FindRamByManufacturerAsync(string Manufacturer) {
+            return base.Channel.FindRamByManufacturerAsync(Manufacturer);
+        }
+        
+        public MVC_Client.PcPart.RAM[] FindRamByCategory(string Category) {
+            return base.Channel.FindRamByCategory(Category);
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.RAM[]> FindRamByCategoryAsync(string Category) {
+            return base.Channel.FindRamByCategoryAsync(Category);
+        }
+        
+        public MVC_Client.PcPart.RAM[] FindAllRam() {
+            return base.Channel.FindAllRam();
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.RAM[]> FindAllRamAsync() {
+            return base.Channel.FindAllRamAsync();
+        }
+        
+        public MVC_Client.PcPart.Motherboard[] FindMotherboardByManufacturer(string Manufacturer) {
+            return base.Channel.FindMotherboardByManufacturer(Manufacturer);
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.Motherboard[]> FindMotherboardByManufacturerAsync(string Manufacturer) {
+            return base.Channel.FindMotherboardByManufacturerAsync(Manufacturer);
+        }
+        
+        public MVC_Client.PcPart.Motherboard[] FindMotherboardByCategory(string Category) {
+            return base.Channel.FindMotherboardByCategory(Category);
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.Motherboard[]> FindMotherboardByCategoryAsync(string Category) {
+            return base.Channel.FindMotherboardByCategoryAsync(Category);
+        }
+        
+        public MVC_Client.PcPart.Motherboard[] FindAllMotherboard() {
+            return base.Channel.FindAllMotherboard();
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.Motherboard[]> FindAllMotherboardAsync() {
+            return base.Channel.FindAllMotherboardAsync();
+        }
+        
+        public MVC_Client.PcPart.GPU[] FindGpuByManufacturer(string Manufacturer) {
+            return base.Channel.FindGpuByManufacturer(Manufacturer);
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.GPU[]> FindGpuByManufacturerAsync(string Manufacturer) {
+            return base.Channel.FindGpuByManufacturerAsync(Manufacturer);
+        }
+        
+        public MVC_Client.PcPart.GPU[] FindGpuByModel(string Model) {
+            return base.Channel.FindGpuByModel(Model);
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.GPU[]> FindGpuByModelAsync(string Model) {
+            return base.Channel.FindGpuByModelAsync(Model);
+        }
+        
+        public MVC_Client.PcPart.GPU[] FindGpuByCategory(string Category) {
+            return base.Channel.FindGpuByCategory(Category);
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.GPU[]> FindGpuByCategoryAsync(string Category) {
+            return base.Channel.FindGpuByCategoryAsync(Category);
+        }
+        
+        public MVC_Client.PcPart.GPU[] FindAllGpus() {
+            return base.Channel.FindAllGpus();
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.GPU[]> FindAllGpusAsync() {
+            return base.Channel.FindAllGpusAsync();
+        }
+        
+        public MVC_Client.PcPart.Computer_Case[] FindComputerCaseByManufacturer(string Manufacturer) {
+            return base.Channel.FindComputerCaseByManufacturer(Manufacturer);
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.Computer_Case[]> FindComputerCaseByManufacturerAsync(string Manufacturer) {
+            return base.Channel.FindComputerCaseByManufacturerAsync(Manufacturer);
+        }
+        
+        public MVC_Client.PcPart.Computer_Case[] FindComputerCaseByCategory(string Category) {
+            return base.Channel.FindComputerCaseByCategory(Category);
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.Computer_Case[]> FindComputerCaseByCategoryAsync(string Category) {
+            return base.Channel.FindComputerCaseByCategoryAsync(Category);
+        }
+        
+        public MVC_Client.PcPart.Computer_Case[] FindAllComputerCases() {
+            return base.Channel.FindAllComputerCases();
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.Computer_Case[]> FindAllComputerCasesAsync() {
+            return base.Channel.FindAllComputerCasesAsync();
         }
     }
 }
