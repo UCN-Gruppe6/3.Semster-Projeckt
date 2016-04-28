@@ -1,0 +1,78 @@
+﻿@model IEnumerable<MVC_Client.PcPart.GPU>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>GPU</h2>
+
+<div>
+    <br />
+    <h4>Filtrer</h4>
+    @using (Html.BeginForm())
+    {
+        <p>
+            <b>Manufacturer:</b> @Html.TextBox("Manufacturer") <br />
+            <br>
+            <input type="submit" value="Find" />
+        </p>
+    }
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Boardpartner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Manufacturer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VRamAmount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Boardpartner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Manufacturer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VRamAmount)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.GPUId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.GPUId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.GPUId })
+        </td>
+    </tr>
+}
+
+</table>
