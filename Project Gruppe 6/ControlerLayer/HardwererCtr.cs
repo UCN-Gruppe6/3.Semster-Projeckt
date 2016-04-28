@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using ModelLayer;
 using DBLayer;
 using ModelLayer.Hardware;
-using ModelLayer;
 
 namespace ControlerLayer
 {
