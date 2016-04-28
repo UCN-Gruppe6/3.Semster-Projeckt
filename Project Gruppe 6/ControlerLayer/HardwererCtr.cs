@@ -174,7 +174,7 @@ namespace ControlerLayer
         #endregion
 
 
-        // Test method.
+        // Test method. Bliver kun brugt til at teste med. 
         public IEnumerable<CPUTestClase> FindAllCPUs2()
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())

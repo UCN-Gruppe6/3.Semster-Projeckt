@@ -14,7 +14,8 @@ namespace ModelLayer
     [DataContract]
     public class Costumer
     {
-        [Key]
+        //[Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CostumerId { get; set; } // Primary key
 
         [DataMember]
