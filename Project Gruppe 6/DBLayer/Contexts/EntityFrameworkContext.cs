@@ -12,6 +12,8 @@ namespace DBLayer
             this.Configuration.ProxyCreationEnabled = false;
         }
 
+        // Hardware
+
         public DbSet<CPU> CPUs { get; set; }
         public DbSet<RAM> RAMs { get; set; }
         public DbSet<Storage> Storages { get; set; }
@@ -20,7 +22,13 @@ namespace DBLayer
         public DbSet<Computer_Case> CompunterCase { get; set; }
         public DbSet<Motherboard> Motherboards { get; set; }
 
-        public DbSet<CPUTestClase> CPUTestClas { get; set; }
+        // Kunde
 
+        public DbSet<Costumer> Costumer { get; set; }
+
+        #region TEST
+        // Bliver kun brugt til en test.
+        public DbSet<CPUTestClase> CPUTestClas { get; set; }
+        #endregion
     }
 }
