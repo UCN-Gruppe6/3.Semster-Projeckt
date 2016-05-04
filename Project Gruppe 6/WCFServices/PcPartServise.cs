@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ModelLayer;
 using ModelLayer.Hardware;
-using ControlerLayer;
+using ControlLayer;
 
 namespace WCFServices 
 {

@@ -12,7 +12,7 @@ namespace ModelLayer
     // En klasse til kunder. 
 
     [DataContract]
-    public class Costumer
+    public class Customer
     {
         [Key]
         public int CostumerId { get; set; } // Primary key

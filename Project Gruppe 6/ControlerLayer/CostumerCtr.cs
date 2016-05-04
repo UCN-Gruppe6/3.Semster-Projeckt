@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using ModelLayer;
 using DBLayer;
 
-namespace ControlerLayer
+namespace ControlLayer
 {
-    public class CostumerCtr
+    public class CustomerCtr
     {
         // Metode til at lave en kunde.
         // Laver en ny db context.
-        public void CreatCostumer(Costumer costumer)
+        public void CreatCostumer(Customer costumer)
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
@@ -22,7 +22,7 @@ namespace ControlerLayer
         }
 
         // Dette er en midligtigt metode til at finde en kunde via navn.
-        public IEnumerable<Costumer> FindCostumerByName(string name)
+        public IEnumerable<Customer> FindCostumerByName(string name)
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
