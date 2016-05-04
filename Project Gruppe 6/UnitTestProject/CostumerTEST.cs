@@ -71,14 +71,18 @@ namespace UnitTestProject
             {
                 Name = "JENS"
             };
-
-            //Act
-
             db.Costumer.Add(costumer);
             db.SaveChanges();
 
+            //Act
+
+            costumer.Name = "PETER";
+            costumerCtr.UpdateCostumer(costumer);
+            db.SaveChanges();
 
             //Assert
+
+            Assert.AreNotEqual("JENS", costumer.Name);
         }
 
         [TestMethod]
@@ -86,9 +90,25 @@ namespace UnitTestProject
         {
             //Arranger
 
+            var idImput = 1;
+            var db = new DBLayer.EntityFrameworkContext();
+            var customerCtr = new ControlerLayer.CostumerCtr();
+            ModelLayer.Costumer customer = new ModelLayer.Costumer()
+            {
+                CostumerId = 1
+            };
+            db.Costumer.Add(customer);
+            db.SaveChanges();
+
             //Act
 
+            customerCtr.DeleteCostumer(idImput);
+            db.SaveChanges();
+            customerCtr.FindCustomerById(idImput);
+
             //Assert
+
+            Assert.IsTrue(customerCtr.FindCustomerById(idImput) == null);
         }
     }
 }
