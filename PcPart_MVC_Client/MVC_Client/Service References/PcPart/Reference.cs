@@ -888,6 +888,179 @@ namespace MVC_Client.PcPart {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Costumer", Namespace="http://schemas.datacontract.org/2004/07/ModelLayer")]
+    [System.SerializableAttribute()]
+    public partial class Costumer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> BirthdayField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CompanyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CostumerIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PhoneNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ZIPCodeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Address {
+            get {
+                return this.AddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
+                    this.AddressField = value;
+                    this.RaisePropertyChanged("Address");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Birthday {
+            get {
+                return this.BirthdayField;
+            }
+            set {
+                if ((this.BirthdayField.Equals(value) != true)) {
+                    this.BirthdayField = value;
+                    this.RaisePropertyChanged("Birthday");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Company {
+            get {
+                return this.CompanyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CompanyField, value) != true)) {
+                    this.CompanyField = value;
+                    this.RaisePropertyChanged("Company");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CostumerId {
+            get {
+                return this.CostumerIdField;
+            }
+            set {
+                if ((this.CostumerIdField.Equals(value) != true)) {
+                    this.CostumerIdField = value;
+                    this.RaisePropertyChanged("CostumerId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PhoneNumber {
+            get {
+                return this.PhoneNumberField;
+            }
+            set {
+                if ((this.PhoneNumberField.Equals(value) != true)) {
+                    this.PhoneNumberField = value;
+                    this.RaisePropertyChanged("PhoneNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ZIPCode {
+            get {
+                return this.ZIPCodeField;
+            }
+            set {
+                if ((this.ZIPCodeField.Equals(value) != true)) {
+                    this.ZIPCodeField = value;
+                    this.RaisePropertyChanged("ZIPCode");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="PcPart.IPcPartServise")]
     public interface IPcPartServise {
@@ -1005,6 +1178,42 @@ namespace MVC_Client.PcPart {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllComputerCases", ReplyAction="http://tempuri.org/IPcPartServise/FindAllComputerCasesResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.Computer_Case[]> FindAllComputerCasesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/CreateCustomer", ReplyAction="http://tempuri.org/IPcPartServise/CreateCustomerResponse")]
+        void CreateCustomer(MVC_Client.PcPart.Costumer customer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/CreateCustomer", ReplyAction="http://tempuri.org/IPcPartServise/CreateCustomerResponse")]
+        System.Threading.Tasks.Task CreateCustomerAsync(MVC_Client.PcPart.Costumer customer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/UpdateCustomer", ReplyAction="http://tempuri.org/IPcPartServise/UpdateCustomerResponse")]
+        void UpdateCustomer(MVC_Client.PcPart.Costumer customer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/UpdateCustomer", ReplyAction="http://tempuri.org/IPcPartServise/UpdateCustomerResponse")]
+        System.Threading.Tasks.Task UpdateCustomerAsync(MVC_Client.PcPart.Costumer customer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/DeleteCustomer", ReplyAction="http://tempuri.org/IPcPartServise/DeleteCustomerResponse")]
+        void DeleteCustomer(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/DeleteCustomer", ReplyAction="http://tempuri.org/IPcPartServise/DeleteCustomerResponse")]
+        System.Threading.Tasks.Task DeleteCustomerAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCustomerById", ReplyAction="http://tempuri.org/IPcPartServise/FindCustomerByIdResponse")]
+        MVC_Client.PcPart.Costumer FindCustomerById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCustomerById", ReplyAction="http://tempuri.org/IPcPartServise/FindCustomerByIdResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.Costumer> FindCustomerByIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCustomerByName", ReplyAction="http://tempuri.org/IPcPartServise/FindCustomerByNameResponse")]
+        MVC_Client.PcPart.Costumer[] FindCustomerByName(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCustomerByName", ReplyAction="http://tempuri.org/IPcPartServise/FindCustomerByNameResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.Costumer[]> FindCustomerByNameAsync(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllCustomers", ReplyAction="http://tempuri.org/IPcPartServise/FindAllCustomersResponse")]
+        MVC_Client.PcPart.Costumer[] FindAllCustomers();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllCustomers", ReplyAction="http://tempuri.org/IPcPartServise/FindAllCustomersResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.Costumer[]> FindAllCustomersAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1184,6 +1393,54 @@ namespace MVC_Client.PcPart {
         
         public System.Threading.Tasks.Task<MVC_Client.PcPart.Computer_Case[]> FindAllComputerCasesAsync() {
             return base.Channel.FindAllComputerCasesAsync();
+        }
+        
+        public void CreateCustomer(MVC_Client.PcPart.Costumer customer) {
+            base.Channel.CreateCustomer(customer);
+        }
+        
+        public System.Threading.Tasks.Task CreateCustomerAsync(MVC_Client.PcPart.Costumer customer) {
+            return base.Channel.CreateCustomerAsync(customer);
+        }
+        
+        public void UpdateCustomer(MVC_Client.PcPart.Costumer customer) {
+            base.Channel.UpdateCustomer(customer);
+        }
+        
+        public System.Threading.Tasks.Task UpdateCustomerAsync(MVC_Client.PcPart.Costumer customer) {
+            return base.Channel.UpdateCustomerAsync(customer);
+        }
+        
+        public void DeleteCustomer(int id) {
+            base.Channel.DeleteCustomer(id);
+        }
+        
+        public System.Threading.Tasks.Task DeleteCustomerAsync(int id) {
+            return base.Channel.DeleteCustomerAsync(id);
+        }
+        
+        public MVC_Client.PcPart.Costumer FindCustomerById(int id) {
+            return base.Channel.FindCustomerById(id);
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.Costumer> FindCustomerByIdAsync(int id) {
+            return base.Channel.FindCustomerByIdAsync(id);
+        }
+        
+        public MVC_Client.PcPart.Costumer[] FindCustomerByName(string name) {
+            return base.Channel.FindCustomerByName(name);
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.Costumer[]> FindCustomerByNameAsync(string name) {
+            return base.Channel.FindCustomerByNameAsync(name);
+        }
+        
+        public MVC_Client.PcPart.Costumer[] FindAllCustomers() {
+            return base.Channel.FindAllCustomers();
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.Costumer[]> FindAllCustomersAsync() {
+            return base.Channel.FindAllCustomersAsync();
         }
     }
 }

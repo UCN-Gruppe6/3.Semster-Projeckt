@@ -14,17 +14,14 @@ namespace ModelLayer
     [DataContract]
     public class Costumer
     {
-        //[Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DataMember]
         public int CostumerId { get; set; } // Primary key
 
         [DataMember]
         public string Name { get; set; }
 
-        public DateTime? Birthday { get; set; }
-
         [DataMember]
-        public int CPR { get; set; }
+        public DateTime? Birthday { get; set; }
 
         [DataMember]
         public string Address { get; set; }
@@ -33,7 +30,7 @@ namespace ModelLayer
         public int ZIPCode { get; set; }
 
         [DataMember]
-        public int Country { get; set; }
+        public string City { get; set; }
 
         [DataMember]
         public int PhoneNumber { get; set; }

@@ -40,7 +40,7 @@ namespace ControlerLayer
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                return db.Costumer.Where(x => x.Name.Equals(name)).ToList();
+                return db.Costumer.Where(x => x.Name.ToLower().Contains(name.ToLower())).ToList();
             }
         }
 
