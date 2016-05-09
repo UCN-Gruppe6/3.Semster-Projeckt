@@ -10,50 +10,50 @@ namespace UnitTestProject
     {
         // Test metode til at lave en kunde.
         [TestMethod]
-        public void CreatCostumer()
+        public void CreateCustomer()
         {
             using (DBLayer.EntityFrameworkContext db = new DBLayer.EntityFrameworkContext())
             {
                 //Arranger
 
-                var costumerCtr = new ControlerLayer.CostumerCtr();
+                var customerCtr = new ControlLayer.CustomerCtr();
 
                 //Act
 
-                ModelLayer.Costumer costumer = new ModelLayer.Costumer()
+                ModelLayer.Customer customer = new ModelLayer.Customer()
                 {
                     Name = "BO"
                 };
-                costumerCtr.CreatCostumer(costumer);
-                db.Costumer.Add(costumer);
+                customerCtr.CreatCostumer(customer);
+                db.Costumer.Add(customer);
                 db.SaveChanges();
 
                 //Assert
 
-                Assert.AreEqual("BO", costumer.Name);
+                Assert.AreEqual("BO", customer.Name);
             }
         }
 
         // Test metode til at finde en kunde via navn.
         // Dette er en midligtigt metode.
         [TestMethod]
-        public void FindCostumerByName()
+        public void FindCustomerByName()
         {
             //Arranger
 
-            var nameImput = "HANS";
+            var nameInput = "HANS";
             var db = new DBLayer.EntityFrameworkContext();
-            var costumerCtr = new ControlerLayer.CostumerCtr();
-            ModelLayer.Costumer costumer = new ModelLayer.Costumer
+            var customerCtr = new ControlLayer.CustomerCtr();
+            ModelLayer.Customer customer = new ModelLayer.Customer
             {
                 Name = "HANS"
             };
 
             //Act
 
-            db.Costumer.Add(costumer);
+            db.Costumer.Add(customer);
             db.SaveChanges();
-            IEnumerable<ModelLayer.Costumer> costumerList = costumerCtr.FindCostumerByName(nameImput);
+            IEnumerable<ModelLayer.Customer> costumerList = customerCtr.FindCostumerByName(nameInput);
 
             //Assert
 
@@ -66,8 +66,8 @@ namespace UnitTestProject
             //Arranger
 
             var db = new DBLayer.EntityFrameworkContext();
-            var costumerCtr = new ControlerLayer.CostumerCtr();
-            ModelLayer.Costumer costumer = new ModelLayer.Costumer
+            var costumerCtr = new ControlLayer.CustomerCtr();
+            ModelLayer.Customer costumer = new ModelLayer.Customer
             {
                 Name = "JENS"
             };

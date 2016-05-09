@@ -7,7 +7,7 @@ using ModelLayer;
 using DBLayer;
 using ModelLayer.Hardware;
 
-namespace ControlerLayer
+namespace ControlLayer
 {
     public class HardwererCtr
     {
