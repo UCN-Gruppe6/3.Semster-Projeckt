@@ -5,6 +5,7 @@
       <xsd:import namespace="http://tempuri.org/" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IPcPartServise_FindCPUsByBrand_InputMessage">
@@ -121,6 +122,42 @@
   <wsdl:message name="IPcPartServise_FindAllComputerCases_OutputMessage">
     <wsdl:part name="parameters" element="tns:FindAllComputerCasesResponse" />
   </wsdl:message>
+  <wsdl:message name="IPcPartServise_CreateCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_CreateCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_UpdateCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_UpdateCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_DeleteCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_DeleteCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_FindCustomerById_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCustomerById" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_FindCustomerById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCustomerByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_FindCustomerByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCustomerByName" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_FindCustomerByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCustomerByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_FindAllCustomers_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllCustomers" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_FindAllCustomers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllCustomersResponse" />
+  </wsdl:message>
   <wsdl:portType name="IPcPartServise">
     <wsdl:operation name="FindCPUsByBrand">
       <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/FindCPUsByBrand" message="tns:IPcPartServise_FindCPUsByBrand_InputMessage" />
@@ -197,6 +234,30 @@
     <wsdl:operation name="FindAllComputerCases">
       <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/FindAllComputerCases" message="tns:IPcPartServise_FindAllComputerCases_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/FindAllComputerCasesResponse" message="tns:IPcPartServise_FindAllComputerCases_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/CreateCustomer" message="tns:IPcPartServise_CreateCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/CreateCustomerResponse" message="tns:IPcPartServise_CreateCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/UpdateCustomer" message="tns:IPcPartServise_UpdateCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/UpdateCustomerResponse" message="tns:IPcPartServise_UpdateCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/DeleteCustomer" message="tns:IPcPartServise_DeleteCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/DeleteCustomerResponse" message="tns:IPcPartServise_DeleteCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCustomerById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/FindCustomerById" message="tns:IPcPartServise_FindCustomerById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/FindCustomerByIdResponse" message="tns:IPcPartServise_FindCustomerById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCustomerByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/FindCustomerByName" message="tns:IPcPartServise_FindCustomerByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/FindCustomerByNameResponse" message="tns:IPcPartServise_FindCustomerByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllCustomers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/FindAllCustomers" message="tns:IPcPartServise_FindAllCustomers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/FindAllCustomersResponse" message="tns:IPcPartServise_FindAllCustomers_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IPcPartServise" type="tns:IPcPartServise">
@@ -365,6 +426,60 @@
     </wsdl:operation>
     <wsdl:operation name="FindAllComputerCases">
       <soap:operation soapAction="http://tempuri.org/IPcPartServise/FindAllComputerCases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomer">
+      <soap:operation soapAction="http://tempuri.org/IPcPartServise/CreateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomer">
+      <soap:operation soapAction="http://tempuri.org/IPcPartServise/UpdateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <soap:operation soapAction="http://tempuri.org/IPcPartServise/DeleteCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCustomerById">
+      <soap:operation soapAction="http://tempuri.org/IPcPartServise/FindCustomerById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCustomerByName">
+      <soap:operation soapAction="http://tempuri.org/IPcPartServise/FindCustomerByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAllCustomers">
+      <soap:operation soapAction="http://tempuri.org/IPcPartServise/FindAllCustomers" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

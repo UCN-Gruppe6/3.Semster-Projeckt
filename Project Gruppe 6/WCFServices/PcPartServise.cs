@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ModelLayer;
 using ModelLayer.Hardware;
-using ControlerLayer;
+using ControlLayer;
 
 namespace WCFServices 
 {
@@ -13,8 +13,7 @@ namespace WCFServices
     {
 
         private HardwererCtr HWCtr = new HardwererCtr();
-
-        
+        private CostumerCtr customerCtr = new CostumerCtr();
 
         // Hardware
         #region
@@ -123,7 +122,43 @@ namespace WCFServices
         {
             return HWCtr.FindComputerCaseByManufacturer(Manufacturer);
         }
+
         // Computer Case END 
+        #endregion
+
+        // Customer
+        #region
+
+        public void CreateCustomer(Costumer customer)
+        {
+            customerCtr.CreatCostumer(customer);
+        }
+
+        public void UpdateCustomer(Costumer customer)
+        {
+            customerCtr.UpdateCostumer(customer);
+        }
+
+        public void DeleteCustomer(int id)
+        {
+            customerCtr.DeleteCostumer(id);
+        }
+
+        public Costumer FindCustomerById(int id)
+        {
+            return customerCtr.FindCustomerById(id);
+        }
+
+        public IEnumerable<Costumer> FindCustomerByName(string name)
+        {
+            return customerCtr.FindCostumerByName(name);
+        }
+
+        public IEnumerable<Costumer> FindAllCustomers()
+        {
+            return customerCtr.FindAllCustomer();
+        }
+
         #endregion
     }
 }
