@@ -40,6 +40,15 @@ namespace ControlLayer
             }
         }
 
+        // bliver ikke brugt så tit
+        public Socket FindSocket(int id)
+        {
+            using (EntityFrameworkContext db = new EntityFrameworkContext())
+            {
+                return db.Sockets.Find(id);
+            }
+        }
+
         #endregion
 
         //Storage CTR

@@ -103,6 +103,8 @@ namespace WCFServices
 
         #endregion
 
+        [OperationContract]
+        Socket FindSocket(int id);
 
     }
 }
