@@ -12,7 +12,7 @@
 
     @using (Html.BeginForm())
     {
-        <p> <b>Brand:</b> @Html.TextBox("Brand") <br />
+        <p> <b>Mærke:</b> @Html.TextBox("Brand") <br />
         <br>
         <input type="submit" value="Find" /></p>
     }
@@ -21,28 +21,28 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Brand)
+            <label>Mærke</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ModelNumber)
+            <label>Modelnummer</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.BaseClock)
+            <label>Baseclock</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.BoostClock)
+            <label>Boostclock</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Description)
+            <label>Unlocked</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.IsUnlocked)
+            <label>Beskrivelse</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Category)
+            <label>Kategori</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Price)
+            <label>Pris</label>
         </th>
         <th></th>
     </tr>
@@ -50,25 +50,25 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.Brand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModelNumber)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.BaseClock)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.BoostClock)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Brand)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category)
+            @Html.DisplayFor(modelItem => item.IsUnlocked)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.IsUnlocked)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ModelNumber)
+            @Html.DisplayFor(modelItem => item.Category)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Price)

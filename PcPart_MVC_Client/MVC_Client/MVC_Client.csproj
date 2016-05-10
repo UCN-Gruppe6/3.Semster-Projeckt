@@ -152,6 +152,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\Computer_CaseController.cs" />
     <Compile Include="Controllers\CPUController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\GPUController.cs" />
     <Compile Include="Controllers\HardwareController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -214,6 +215,12 @@
     <Content Include="Service References\PcPart\MVC_Client.PcPart.Storage.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\PcPart\ModelLayer.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\PcPart\MVC_Client.PcPart.Costumer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\PcPart\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -249,6 +256,11 @@
     <Content Include="Views\Computer_Case\Index.cshtml" />
     <Content Include="Views\GPU\Index.cshtml" />
     <Content Include="Views\Motherboard\Index.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\Create.cshtml" />
+    <Content Include="Views\Customer\Edit.cshtml" />
+    <Content Include="Views\Customer\Delete.cshtml" />
+    <Content Include="Views\Customer\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

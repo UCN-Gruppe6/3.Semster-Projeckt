@@ -12,7 +12,7 @@
     @using (Html.BeginForm())
     {
         <p>
-            <b>Manufacturer:</b> @Html.TextBox("Manufacturer") <br />
+            <b>Fabrikant:</b> @Html.TextBox("Manufacturer") <br />
             <br>
             <input type="submit" value="Find" />
         </p>
@@ -21,56 +21,52 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Boardpartner)
+            <label>Fabrikant</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Category)
+            <label>Samarbejdspartner</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Description)
+            <label>Ram</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Manufacturer)
+            <label>Model</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Model)
+            <label>Beskrivelse</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Price)
+            <label>Kategori</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.VRamAmount)
+            <label>Pris</label>
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Boardpartner)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Manufacturer)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Model)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
+            @Html.DisplayFor(modelItem => item.Boardpartner)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.VRamAmount)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.GPUId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.GPUId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.GPUId })
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
         </td>
     </tr>
 }

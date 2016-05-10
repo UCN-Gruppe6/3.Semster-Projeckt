@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ModelLayer.Hardware;
+using ModelLayer;
 using System.ServiceModel;
 
 namespace WCFServices
@@ -70,6 +71,25 @@ namespace WCFServices
         IEnumerable<Computer_Case> FindAllComputerCases();
         // Computer Case END 
         #endregion
+
+        // Customer
+        #region
+
+        [OperationContract]
+        void CreateCustomer(Costumer customer);
+        [OperationContract]
+        void UpdateCustomer(Costumer customer);
+        [OperationContract]
+        void DeleteCustomer(int id);
+        [OperationContract]
+        Costumer FindCustomerById(int id);
+        [OperationContract]
+        IEnumerable<Costumer> FindCustomerByName(string name);
+        [OperationContract]
+        IEnumerable<Costumer> FindAllCustomers();
+
+        #endregion
+
 
     }
 }

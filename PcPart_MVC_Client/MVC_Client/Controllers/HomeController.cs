@@ -15,7 +15,7 @@ namespace MVC_Client.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Her kan du læse om hvem vi er.";
 
             return View();
         }

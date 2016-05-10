@@ -1,0 +1,83 @@
+﻿@model MVC_Client.PcPart.Costumer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detaljer om kunden</h2>
+
+<div>
+    <h4>Kunden</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.LabelForModel("Navn:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.LabelForModel("Fødselsdag:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Birthday)
+        </dd>
+
+        <dt>
+            @Html.LabelForModel("Addresse:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.LabelForModel("Postnummer:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZIPCode)
+        </dd>
+
+        <dt>
+            @Html.LabelForModel("By:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.LabelForModel("Telefon Nummer:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.LabelForModel("Email:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.LabelForModel("Firma:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Company)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Redigere", "Edit", new { id = Model.CostumerId }) |
+    @Html.ActionLink("Slet", "Delete", new { id = Model.CostumerId}) |
+    @Html.ActionLink("Tilbage", "Index", null, new { @class = "btn btn-default" })
+</p>
