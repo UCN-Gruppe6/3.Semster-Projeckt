@@ -14,28 +14,7 @@ namespace WCFServices
     {
 
         private HardwererCtr HWCtr = new HardwererCtr();
-        private CostumerCtr customerCtr = new CostumerCtr();
-        private ProductCtr proCtr = new ProductCtr();
-
-        // Vare CRUD
-        #region
-
-        //CPU 
-        public void CreatCPU(CPU cpu)
-        {
-            proCtr.CreatCPU(cpu);
-        }
-
-        public void UpdateCPU(CPU cpu)
-        {
-            proCtr.UpdateCPU(cpu);
-        }
-
-        public void DeleteCPU(int id)
-        {
-            proCtr.DeleteCPU(id);
-        }
-        #endregion
+        private ControlerLayer.CostumerCtr customerCtr = new CostumerCtr();
 
         // Hardware
         #region
