@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ModelLayer;
 using ModelLayer.Hardware;
 using ControlLayer;
+using ControlerLayer;
 
 namespace WCFServices 
 {
@@ -13,7 +14,7 @@ namespace WCFServices
     {
 
         private HardwererCtr HWCtr = new HardwererCtr();
-        private CostumerCtr customerCtr = new CostumerCtr();
+        private ControlerLayer.CostumerCtr customerCtr = new CostumerCtr();
 
         // Hardware
         #region

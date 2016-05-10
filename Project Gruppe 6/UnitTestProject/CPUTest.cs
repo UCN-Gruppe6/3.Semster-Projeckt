@@ -4,6 +4,7 @@ using ControlLayer;
 using DBLayer;
 using System.Linq;
 using System.Collections.Generic;
+using ControlerLayer;
 
 namespace UnitTestProject
 {
@@ -90,6 +91,30 @@ namespace UnitTestProject
 
             //Assert
             Assert.IsTrue(cpulist.Count() > 0);
+        }
+
+        [TestMethod]
+        public void CreatCPU()
+        {
+            using (EntityFrameworkContext db = new EntityFrameworkContext())
+            {
+                //Arrange
+                var ctr = new ProductCtr();
+
+                //Act
+                ModelLayer.Hardware.CPU CPU = new ModelLayer.Hardware.CPU
+                {
+                    //CPUId = 5,
+                    ModelNumber = "I5 6600",
+                    SocketId = 1
+                };
+                ctr.CreatCPU(CPU);
+                db.CPUs.Add(CPU);
+                db.SaveChanges();
+
+                //Assert
+                Assert.AreEqual("I5 6600", CPU.ModelNumber);
+            }
         }
     }
 }
