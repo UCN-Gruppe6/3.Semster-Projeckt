@@ -9,6 +9,7 @@ using ModelLayer.Hardware;
 
 namespace ControlLayer
 {
+    // Denne her ctr bluver kun brugt til at finde hardware
     public class HardwererCtr
     {
 
@@ -36,6 +37,15 @@ namespace ControlLayer
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
                 return db.CPUs.ToList();
+            }
+        }
+
+        // bliver ikke brugt så tit
+        public Socket FindSocket(int id)
+        {
+            using (EntityFrameworkContext db = new EntityFrameworkContext())
+            {
+                return db.Sockets.Find(id);
             }
         }
 
