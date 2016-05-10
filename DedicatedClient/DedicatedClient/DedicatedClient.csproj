@@ -109,6 +109,9 @@
     <None Include="Service References\PcPartService\DedicatedClient.PcPartService.RAM.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\PcPartService\DedicatedClient.PcPartService.Socket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\PcPartService\DedicatedClient.PcPartService.Storage.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

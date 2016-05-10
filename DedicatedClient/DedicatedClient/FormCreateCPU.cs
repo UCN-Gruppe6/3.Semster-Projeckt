@@ -31,7 +31,6 @@ namespace DedicatedClient
                 newCpu.Price = Double.Parse(textBox7.ToString());
                 newCpu.Category = textBox8.ToString();
                 newCpu.Description = richTextBox1.ToString();
-                
             }
             catch(Exception exception) {
                 Debug.Print(exception.ToString());

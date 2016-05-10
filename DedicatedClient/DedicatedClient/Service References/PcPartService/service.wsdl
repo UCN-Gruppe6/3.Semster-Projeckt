@@ -8,6 +8,24 @@
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IPcPartServise_CreatCPU_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatCPU" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_CreatCPU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatCPUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_UpdateCPU_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCPU" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_UpdateCPU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCPUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_DeleteCPU_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCPU" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_DeleteCPU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCPUResponse" />
+  </wsdl:message>
   <wsdl:message name="IPcPartServise_FindCPUsByBrand_InputMessage">
     <wsdl:part name="parameters" element="tns:FindCPUsByBrand" />
   </wsdl:message>
@@ -158,7 +176,25 @@
   <wsdl:message name="IPcPartServise_FindAllCustomers_OutputMessage">
     <wsdl:part name="parameters" element="tns:FindAllCustomersResponse" />
   </wsdl:message>
+  <wsdl:message name="IPcPartServise_FindSocket_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindSocket" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_FindSocket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindSocketResponse" />
+  </wsdl:message>
   <wsdl:portType name="IPcPartServise">
+    <wsdl:operation name="CreatCPU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/CreatCPU" message="tns:IPcPartServise_CreatCPU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/CreatCPUResponse" message="tns:IPcPartServise_CreatCPU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCPU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/UpdateCPU" message="tns:IPcPartServise_UpdateCPU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/UpdateCPUResponse" message="tns:IPcPartServise_UpdateCPU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCPU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/DeleteCPU" message="tns:IPcPartServise_DeleteCPU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/DeleteCPUResponse" message="tns:IPcPartServise_DeleteCPU_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="FindCPUsByBrand">
       <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/FindCPUsByBrand" message="tns:IPcPartServise_FindCPUsByBrand_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/FindCPUsByBrandResponse" message="tns:IPcPartServise_FindCPUsByBrand_OutputMessage" />
@@ -259,9 +295,40 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/FindAllCustomers" message="tns:IPcPartServise_FindAllCustomers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/FindAllCustomersResponse" message="tns:IPcPartServise_FindAllCustomers_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="FindSocket">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/FindSocket" message="tns:IPcPartServise_FindSocket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/FindSocketResponse" message="tns:IPcPartServise_FindSocket_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IPcPartServise" type="tns:IPcPartServise">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreatCPU">
+      <soap:operation soapAction="http://tempuri.org/IPcPartServise/CreatCPU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCPU">
+      <soap:operation soapAction="http://tempuri.org/IPcPartServise/UpdateCPU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCPU">
+      <soap:operation soapAction="http://tempuri.org/IPcPartServise/DeleteCPU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="FindCPUsByBrand">
       <soap:operation soapAction="http://tempuri.org/IPcPartServise/FindCPUsByBrand" style="document" />
       <wsdl:input>
@@ -480,6 +547,15 @@
     </wsdl:operation>
     <wsdl:operation name="FindAllCustomers">
       <soap:operation soapAction="http://tempuri.org/IPcPartServise/FindAllCustomers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindSocket">
+      <soap:operation soapAction="http://tempuri.org/IPcPartServise/FindSocket" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -32,6 +32,9 @@ namespace DedicatedClient.PcPartService {
         private string BrandField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CPUIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CategoryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -94,6 +97,19 @@ namespace DedicatedClient.PcPartService {
                 if ((object.ReferenceEquals(this.BrandField, value) != true)) {
                     this.BrandField = value;
                     this.RaisePropertyChanged("Brand");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CPUId {
+            get {
+                return this.CPUIdField;
+            }
+            set {
+                if ((this.CPUIdField.Equals(value) != true)) {
+                    this.CPUIdField = value;
+                    this.RaisePropertyChanged("CPUId");
                 }
             }
         }
@@ -1065,6 +1081,24 @@ namespace DedicatedClient.PcPartService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="PcPartService.IPcPartServise")]
     public interface IPcPartServise {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/CreatCPU", ReplyAction="http://tempuri.org/IPcPartServise/CreatCPUResponse")]
+        void CreatCPU(DedicatedClient.PcPartService.CPU cpu);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/CreatCPU", ReplyAction="http://tempuri.org/IPcPartServise/CreatCPUResponse")]
+        System.Threading.Tasks.Task CreatCPUAsync(DedicatedClient.PcPartService.CPU cpu);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/UpdateCPU", ReplyAction="http://tempuri.org/IPcPartServise/UpdateCPUResponse")]
+        void UpdateCPU(DedicatedClient.PcPartService.CPU cpu);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/UpdateCPU", ReplyAction="http://tempuri.org/IPcPartServise/UpdateCPUResponse")]
+        System.Threading.Tasks.Task UpdateCPUAsync(DedicatedClient.PcPartService.CPU cpu);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/DeleteCPU", ReplyAction="http://tempuri.org/IPcPartServise/DeleteCPUResponse")]
+        void DeleteCPU(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/DeleteCPU", ReplyAction="http://tempuri.org/IPcPartServise/DeleteCPUResponse")]
+        System.Threading.Tasks.Task DeleteCPUAsync(int id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCPUsByBrand", ReplyAction="http://tempuri.org/IPcPartServise/FindCPUsByBrandResponse")]
         DedicatedClient.PcPartService.CPU[] FindCPUsByBrand(string Brand);
         
@@ -1214,6 +1248,12 @@ namespace DedicatedClient.PcPartService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllCustomers", ReplyAction="http://tempuri.org/IPcPartServise/FindAllCustomersResponse")]
         System.Threading.Tasks.Task<DedicatedClient.PcPartService.Costumer[]> FindAllCustomersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindSocket", ReplyAction="http://tempuri.org/IPcPartServise/FindSocketResponse")]
+        DedicatedClient.PcPartService.Socket FindSocket(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindSocket", ReplyAction="http://tempuri.org/IPcPartServise/FindSocketResponse")]
+        System.Threading.Tasks.Task<DedicatedClient.PcPartService.Socket> FindSocketAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1241,6 +1281,30 @@ namespace DedicatedClient.PcPartService {
         
         public PcPartServiseClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public void CreatCPU(DedicatedClient.PcPartService.CPU cpu) {
+            base.Channel.CreatCPU(cpu);
+        }
+        
+        public System.Threading.Tasks.Task CreatCPUAsync(DedicatedClient.PcPartService.CPU cpu) {
+            return base.Channel.CreatCPUAsync(cpu);
+        }
+        
+        public void UpdateCPU(DedicatedClient.PcPartService.CPU cpu) {
+            base.Channel.UpdateCPU(cpu);
+        }
+        
+        public System.Threading.Tasks.Task UpdateCPUAsync(DedicatedClient.PcPartService.CPU cpu) {
+            return base.Channel.UpdateCPUAsync(cpu);
+        }
+        
+        public void DeleteCPU(int id) {
+            base.Channel.DeleteCPU(id);
+        }
+        
+        public System.Threading.Tasks.Task DeleteCPUAsync(int id) {
+            return base.Channel.DeleteCPUAsync(id);
         }
         
         public DedicatedClient.PcPartService.CPU[] FindCPUsByBrand(string Brand) {
@@ -1441,6 +1505,14 @@ namespace DedicatedClient.PcPartService {
         
         public System.Threading.Tasks.Task<DedicatedClient.PcPartService.Costumer[]> FindAllCustomersAsync() {
             return base.Channel.FindAllCustomersAsync();
+        }
+        
+        public DedicatedClient.PcPartService.Socket FindSocket(int id) {
+            return base.Channel.FindSocket(id);
+        }
+        
+        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.Socket> FindSocketAsync(int id) {
+            return base.Channel.FindSocketAsync(id);
         }
     }
 }
