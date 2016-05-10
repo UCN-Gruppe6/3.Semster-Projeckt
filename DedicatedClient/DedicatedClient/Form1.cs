@@ -27,5 +27,10 @@ namespace DedicatedClient
             FormCreateCPU createCpu = new FormCreateCPU();
             createCpu.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
