@@ -12,6 +12,19 @@ namespace WCFServices
     [ServiceContract]
     interface IPcPartServise
     {
+        // Vare CRUD
+        #region
+
+        // CPU
+        [OperationContract]
+        void CreatCPU(CPU cpu);
+        [OperationContract]
+        void UpdateCPU(CPU cpu);
+        [OperationContract]
+        void DeleteCPU(int id);
+
+        #endregion
+
         // Hardware
         #region
 
