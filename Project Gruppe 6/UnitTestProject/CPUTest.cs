@@ -104,7 +104,6 @@ namespace UnitTestProject
                 //Act
                 ModelLayer.Hardware.CPU CPU = new ModelLayer.Hardware.CPU
                 {
-                    //CPUId = 5,
                     ModelNumber = "I5 6600",
                     SocketId = 1
                 };

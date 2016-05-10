@@ -9,6 +9,7 @@ using ModelLayer.Hardware;
 
 namespace ControlLayer
 {
+    // Denne her ctr bluver kun brugt til at finde hardware
     public class HardwererCtr
     {
 
