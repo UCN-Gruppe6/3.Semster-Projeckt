@@ -14,7 +14,7 @@ namespace WCFServices
     {
 
         private HardwererCtr HWCtr = new HardwererCtr();
-        private ControlerLayer.CostumerCtr customerCtr = new CostumerCtr();
+        private CostumerCtr customerCtr = new CostumerCtr();
 
         // Hardware
         #region
