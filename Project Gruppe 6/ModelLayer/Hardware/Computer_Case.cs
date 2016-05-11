@@ -23,6 +23,6 @@ namespace ModelLayer.Hardware
         [DataMember]
         public string Category { get; set; }
 
-        public Motherboard CMotherboard { get; set; }
+        public Motherboard Motherboard { get; set; }
     }
 }

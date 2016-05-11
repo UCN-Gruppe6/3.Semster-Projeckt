@@ -17,7 +17,7 @@ namespace WCFServices
 
         // CPU
         [OperationContract]
-        void CreatCPU(CPU cpu);
+        void CreateCPU(CPU cpu);
         [OperationContract]
         void UpdateCPU(CPU cpu);
         [OperationContract]
@@ -89,17 +89,17 @@ namespace WCFServices
         #region
 
         [OperationContract]
-        void CreateCustomer(Costumer customer);
+        void CreateCustomer(Customer customer);
         [OperationContract]
-        void UpdateCustomer(Costumer customer);
+        void UpdateCustomer(Customer customer);
         [OperationContract]
         void DeleteCustomer(int id);
         [OperationContract]
-        Costumer FindCustomerById(int id);
+        Customer FindCustomerById(int id);
         [OperationContract]
-        IEnumerable<Costumer> FindCustomerByName(string name);
+        IEnumerable<Customer> FindCustomerByName(string name);
         [OperationContract]
-        IEnumerable<Costumer> FindAllCustomers();
+        IEnumerable<Customer> FindAllCustomers();
 
         #endregion
 

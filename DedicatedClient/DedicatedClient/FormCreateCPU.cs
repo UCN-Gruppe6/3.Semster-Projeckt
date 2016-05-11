@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using DedicatedClient.PcPartService;
 
 namespace DedicatedClient
 {
@@ -21,20 +22,27 @@ namespace DedicatedClient
         private void button1_Click(object sender, EventArgs e)
         {
             try {
+                PcPartServiseClient cl = new PcPartServiseClient();
                 PcPartService.CPU newCpu = new PcPartService.CPU();
+
                 newCpu.Brand = textBox1.ToString();
                 newCpu.ModelNumber = textBox2.ToString();
                 newCpu.BaseClock = Double.Parse(textBox3.ToString());
                 newCpu.BoostClock = Double.Parse(textBox4.ToString());
-                newCpu.IsUnlocked = Boolean.Parse(textBox5.ToString());
+                newCpu.IsUnlocked = true; //Boolean.Parse(textBox5.ToString());
                 newCpu.Socket = new PcPartService.Socket();
                 newCpu.Price = Double.Parse(textBox7.ToString());
                 newCpu.Category = textBox8.ToString();
                 newCpu.Description = richTextBox1.ToString();
+
+                cl.CreatCPU(newCpu);
+
             }
             catch(Exception exception) {
                 Debug.Print(exception.ToString());
                 Console.Write(exception.ToString());
+                richTextBox2.Text = exception.ToString();
+                    
             }
 
 

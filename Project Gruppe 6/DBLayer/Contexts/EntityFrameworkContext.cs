@@ -24,7 +24,7 @@ namespace DBLayer
 
         // Kunde
 
-        public DbSet<Costumer> Costumer { get; set; }
+        public DbSet<Customer> Customer { get; set; }
 
         #region TEST
         // Bliver kun brugt til en test.
