@@ -28,5 +28,8 @@ namespace ModelLayer.Hardware
         public double Price { get; set; }
 
         public Motherboard SMotherboard { get; set; }
+
+        [DataMember]
+        public int Stock { get; set; }
     }
 }

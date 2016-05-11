@@ -43,5 +43,8 @@ namespace ModelLayer.Hardware
         [DataMember]
         public string Category { get; set; }
 
+        [DataMember]
+        public int Stock { get; set; }
+
     }
 }
