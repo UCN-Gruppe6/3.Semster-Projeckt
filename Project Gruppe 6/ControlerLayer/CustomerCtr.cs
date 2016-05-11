@@ -12,47 +12,47 @@ namespace ControlLayer
     {
         // Metode til at lave en kunde.
         // Laver en ny db context.
-        public void CreatCostumer(Costumer costumer)
+        public void CreatCostumer(Customer costumer)
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                db.Costumer.Add(costumer);
+                db.Customer.Add(costumer);
                 db.SaveChanges();
             }
         }
 
         // Metode til at finde alle kunderne.
 
-        public IEnumerable<Costumer> FindAllCustomer()
+        public IEnumerable<Customer> FindAllCustomer()
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                return db.Costumer.ToList();
+                return db.Customer.ToList();
             }
         }
 
         // Dette er en midligtigt metode til at finde en kunde via navn.
-        public IEnumerable<Costumer> FindCostumerByName(string name)
+        public IEnumerable<Customer> FindCostumerByName(string name)
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                return db.Costumer.Where(x => x.Name.ToLower().Contains(name.ToLower())).ToList();
+                return db.Customer.Where(x => x.Name.ToLower().Contains(name.ToLower())).ToList();
             }
         }
 
         // Metode til at finde en kunde via id.
 
-        public Costumer FindCustomerById(int id)
+        public Customer FindCustomerById(int id)
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                return db.Costumer.Find(id);
+                return db.Customer.Find(id);
             }
         }
 
         // Metode til at updater en kunde.
 
-        public void UpdateCostumer(Costumer costumer)
+        public void UpdateCostumer(Customer costumer)
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
@@ -67,7 +67,7 @@ namespace ControlLayer
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                Costumer customer = new Costumer();
+                Customer customer = new Customer();
                 customer.CostumerId = id;
                 db.Entry(customer).State = System.Data.Entity.EntityState.Deleted;
                 db.SaveChanges();

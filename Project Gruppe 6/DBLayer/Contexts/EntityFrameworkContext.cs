@@ -25,7 +25,7 @@ namespace DBLayer
 
         // Kunde
 
-        public DbSet<Costumer> Costumer { get; set; }
+        public DbSet<Customer> Customer { get; set; }
 
         //Basket
         public DbSet<Basket> Basket { get; set; }

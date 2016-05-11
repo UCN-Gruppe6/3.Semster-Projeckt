@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using ModelLayer;
 using ModelLayer.Hardware;
 using ControlLayer;
-using ControlerLayer;
 
 
 namespace WCFServices 
@@ -152,12 +151,12 @@ namespace WCFServices
         // Customer
         #region
 
-        public void CreateCustomer(Costumer customer)
+        public void CreateCustomer(Customer customer)
         {
             customerCtr.CreatCostumer(customer);
         }
 
-        public void UpdateCustomer(Costumer customer)
+        public void UpdateCustomer(Customer customer)
         {
             customerCtr.UpdateCostumer(customer);
         }
@@ -167,17 +166,17 @@ namespace WCFServices
             customerCtr.DeleteCostumer(id);
         }
 
-        public Costumer FindCustomerById(int id)
+        public Customer FindCustomerById(int id)
         {
             return customerCtr.FindCustomerById(id);
         }
 
-        public IEnumerable<Costumer> FindCustomerByName(string name)
+        public IEnumerable<Customer> FindCustomerByName(string name)
         {
             return customerCtr.FindCostumerByName(name);
         }
 
-        public IEnumerable<Costumer> FindAllCustomers()
+        public IEnumerable<Customer> FindAllCustomers()
         {
             return customerCtr.FindAllCustomer();
         }
