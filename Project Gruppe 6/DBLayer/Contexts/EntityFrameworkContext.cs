@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using ModelLayer.Hardware;
 using ModelLayer;
+using ModelLayer.Basket;
 
 namespace DBLayer
 {
@@ -25,6 +26,9 @@ namespace DBLayer
         // Kunde
 
         public DbSet<Customer> Customer { get; set; }
+
+        //Basket
+        public DbSet<Basket> Basket { get; set; }
 
         #region TEST
         // Bliver kun brugt til en test.
