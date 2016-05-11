@@ -94,10 +94,10 @@
     <None Include="Service References\PcPartService\DedicatedClient.PcPartService.Computer_Case.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\PcPartService\DedicatedClient.PcPartService.Costumer.datasource">
+    <None Include="Service References\PcPartService\DedicatedClient.PcPartService.CPU.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\PcPartService\DedicatedClient.PcPartService.CPU.datasource">
+    <None Include="Service References\PcPartService\DedicatedClient.PcPartService.Customer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\PcPartService\DedicatedClient.PcPartService.GPU.datasource">

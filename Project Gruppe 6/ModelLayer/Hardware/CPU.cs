@@ -35,6 +35,7 @@ namespace ModelLayer.Hardware
 
         [DataMember]
         public Socket Socket { get; set; }
+        [DataMember]
         public int SocketId { get; set; }
 
         [DataMember]
