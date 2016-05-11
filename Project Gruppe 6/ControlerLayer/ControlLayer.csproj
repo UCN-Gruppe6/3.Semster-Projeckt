@@ -50,8 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CostumerCtr.cs" />
-    <Compile Include="HardwererCtr.cs" />
-    <Compile Include="InventoryCtr.cs" />
+    <Compile Include="HardwareCtr.cs" />
     <Compile Include="ProductCtr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

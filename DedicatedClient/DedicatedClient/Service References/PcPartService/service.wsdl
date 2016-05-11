@@ -8,11 +8,11 @@
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IPcPartServise_CreatCPU_InputMessage">
-    <wsdl:part name="parameters" element="tns:CreatCPU" />
+  <wsdl:message name="IPcPartServise_CreateCPU_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCPU" />
   </wsdl:message>
-  <wsdl:message name="IPcPartServise_CreatCPU_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CreatCPUResponse" />
+  <wsdl:message name="IPcPartServise_CreateCPU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCPUResponse" />
   </wsdl:message>
   <wsdl:message name="IPcPartServise_UpdateCPU_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateCPU" />
@@ -183,9 +183,9 @@
     <wsdl:part name="parameters" element="tns:FindSocketResponse" />
   </wsdl:message>
   <wsdl:portType name="IPcPartServise">
-    <wsdl:operation name="CreatCPU">
-      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/CreatCPU" message="tns:IPcPartServise_CreatCPU_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/CreatCPUResponse" message="tns:IPcPartServise_CreatCPU_OutputMessage" />
+    <wsdl:operation name="CreateCPU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/CreateCPU" message="tns:IPcPartServise_CreateCPU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/CreateCPUResponse" message="tns:IPcPartServise_CreateCPU_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="UpdateCPU">
       <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/UpdateCPU" message="tns:IPcPartServise_UpdateCPU_InputMessage" />
@@ -302,8 +302,8 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IPcPartServise" type="tns:IPcPartServise">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="CreatCPU">
-      <soap:operation soapAction="http://tempuri.org/IPcPartServise/CreatCPU" style="document" />
+    <wsdl:operation name="CreateCPU">
+      <soap:operation soapAction="http://tempuri.org/IPcPartServise/CreateCPU" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
