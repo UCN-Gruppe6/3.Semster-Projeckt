@@ -8,22 +8,22 @@ using DBLayer;
 
 namespace ControlLayer
 {
-    public class CostumerCtr
+    public class CustomerCtr
     {
         // Metode til at lave en kunde.
         // Laver en ny db context.
-        public void CreatCostumer(Customer costumer)
+        public void CreateCustomer(Customer customer)
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                db.Customer.Add(costumer);
+                db.Customer.Add(customer);
                 db.SaveChanges();
             }
         }
 
         // Metode til at finde alle kunderne.
 
-        public IEnumerable<Customer> FindAllCustomer()
+        public IEnumerable<Customer> FindAllCustomers()
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
@@ -32,7 +32,7 @@ namespace ControlLayer
         }
 
         // Dette er en midligtigt metode til at finde en kunde via navn.
-        public IEnumerable<Customer> FindCostumerByName(string name)
+        public IEnumerable<Customer> FindCustomerByName(string name)
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
@@ -52,23 +52,23 @@ namespace ControlLayer
 
         // Metode til at updater en kunde.
 
-        public void UpdateCostumer(Customer costumer)
+        public void UpdateCustomer(Customer customer)
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                db.Entry(costumer).State = System.Data.Entity.EntityState.Modified;
+                db.Entry(customer).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
             }
         }
 
         // Metode til at slætte en kunde via deres id.
 
-        public void DeleteCostumer(int id)
+        public void DeleteCustomer(int id)
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
                 Customer customer = new Customer();
-                customer.CostumerId = id;
+                customer.CustomerId = id;
                 db.Entry(customer).State = System.Data.Entity.EntityState.Deleted;
                 db.SaveChanges();
             }

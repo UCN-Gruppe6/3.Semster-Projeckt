@@ -15,7 +15,7 @@ namespace ModelLayer
     public class Customer
     {
         [DataMember]
-        public int CostumerId { get; set; } // Primary key
+        public int CustomerId { get; set; } // Primary key
 
         [DataMember]
         public string Name { get; set; }

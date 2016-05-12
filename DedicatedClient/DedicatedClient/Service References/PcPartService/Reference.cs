@@ -52,6 +52,9 @@ namespace DedicatedClient.PcPartService {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private DedicatedClient.PcPartService.Socket SocketField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SocketIdField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -188,6 +191,19 @@ namespace DedicatedClient.PcPartService {
                 if ((object.ReferenceEquals(this.SocketField, value) != true)) {
                     this.SocketField = value;
                     this.RaisePropertyChanged("Socket");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SocketId {
+            get {
+                return this.SocketIdField;
+            }
+            set {
+                if ((this.SocketIdField.Equals(value) != true)) {
+                    this.SocketIdField = value;
+                    this.RaisePropertyChanged("SocketId");
                 }
             }
         }
@@ -906,9 +922,9 @@ namespace DedicatedClient.PcPartService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Costumer", Namespace="http://schemas.datacontract.org/2004/07/ModelLayer")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Customer", Namespace="http://schemas.datacontract.org/2004/07/ModelLayer")]
     [System.SerializableAttribute()]
-    public partial class Costumer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Customer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -926,7 +942,7 @@ namespace DedicatedClient.PcPartService {
         private string CompanyField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CostumerIdField;
+        private int CustomerIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string EmailField;
@@ -1003,14 +1019,14 @@ namespace DedicatedClient.PcPartService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CostumerId {
+        public int CustomerId {
             get {
-                return this.CostumerIdField;
+                return this.CustomerIdField;
             }
             set {
-                if ((this.CostumerIdField.Equals(value) != true)) {
-                    this.CostumerIdField = value;
-                    this.RaisePropertyChanged("CostumerId");
+                if ((this.CustomerIdField.Equals(value) != true)) {
+                    this.CustomerIdField = value;
+                    this.RaisePropertyChanged("CustomerId");
                 }
             }
         }
@@ -1081,11 +1097,11 @@ namespace DedicatedClient.PcPartService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="PcPartService.IPcPartServise")]
     public interface IPcPartServise {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/CreatCPU", ReplyAction="http://tempuri.org/IPcPartServise/CreatCPUResponse")]
-        void CreatCPU(DedicatedClient.PcPartService.CPU cpu);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/CreateCPU", ReplyAction="http://tempuri.org/IPcPartServise/CreateCPUResponse")]
+        void CreateCPU(DedicatedClient.PcPartService.CPU cpu);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/CreatCPU", ReplyAction="http://tempuri.org/IPcPartServise/CreatCPUResponse")]
-        System.Threading.Tasks.Task CreatCPUAsync(DedicatedClient.PcPartService.CPU cpu);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/CreateCPU", ReplyAction="http://tempuri.org/IPcPartServise/CreateCPUResponse")]
+        System.Threading.Tasks.Task CreateCPUAsync(DedicatedClient.PcPartService.CPU cpu);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/UpdateCPU", ReplyAction="http://tempuri.org/IPcPartServise/UpdateCPUResponse")]
         void UpdateCPU(DedicatedClient.PcPartService.CPU cpu);
@@ -1214,16 +1230,16 @@ namespace DedicatedClient.PcPartService {
         System.Threading.Tasks.Task<DedicatedClient.PcPartService.Computer_Case[]> FindAllComputerCasesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/CreateCustomer", ReplyAction="http://tempuri.org/IPcPartServise/CreateCustomerResponse")]
-        void CreateCustomer(DedicatedClient.PcPartService.Costumer customer);
+        void CreateCustomer(DedicatedClient.PcPartService.Customer customer);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/CreateCustomer", ReplyAction="http://tempuri.org/IPcPartServise/CreateCustomerResponse")]
-        System.Threading.Tasks.Task CreateCustomerAsync(DedicatedClient.PcPartService.Costumer customer);
+        System.Threading.Tasks.Task CreateCustomerAsync(DedicatedClient.PcPartService.Customer customer);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/UpdateCustomer", ReplyAction="http://tempuri.org/IPcPartServise/UpdateCustomerResponse")]
-        void UpdateCustomer(DedicatedClient.PcPartService.Costumer customer);
+        void UpdateCustomer(DedicatedClient.PcPartService.Customer customer);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/UpdateCustomer", ReplyAction="http://tempuri.org/IPcPartServise/UpdateCustomerResponse")]
-        System.Threading.Tasks.Task UpdateCustomerAsync(DedicatedClient.PcPartService.Costumer customer);
+        System.Threading.Tasks.Task UpdateCustomerAsync(DedicatedClient.PcPartService.Customer customer);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/DeleteCustomer", ReplyAction="http://tempuri.org/IPcPartServise/DeleteCustomerResponse")]
         void DeleteCustomer(int id);
@@ -1232,22 +1248,22 @@ namespace DedicatedClient.PcPartService {
         System.Threading.Tasks.Task DeleteCustomerAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCustomerById", ReplyAction="http://tempuri.org/IPcPartServise/FindCustomerByIdResponse")]
-        DedicatedClient.PcPartService.Costumer FindCustomerById(int id);
+        DedicatedClient.PcPartService.Customer FindCustomerById(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCustomerById", ReplyAction="http://tempuri.org/IPcPartServise/FindCustomerByIdResponse")]
-        System.Threading.Tasks.Task<DedicatedClient.PcPartService.Costumer> FindCustomerByIdAsync(int id);
+        System.Threading.Tasks.Task<DedicatedClient.PcPartService.Customer> FindCustomerByIdAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCustomerByName", ReplyAction="http://tempuri.org/IPcPartServise/FindCustomerByNameResponse")]
-        DedicatedClient.PcPartService.Costumer[] FindCustomerByName(string name);
+        DedicatedClient.PcPartService.Customer[] FindCustomerByName(string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCustomerByName", ReplyAction="http://tempuri.org/IPcPartServise/FindCustomerByNameResponse")]
-        System.Threading.Tasks.Task<DedicatedClient.PcPartService.Costumer[]> FindCustomerByNameAsync(string name);
+        System.Threading.Tasks.Task<DedicatedClient.PcPartService.Customer[]> FindCustomerByNameAsync(string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllCustomers", ReplyAction="http://tempuri.org/IPcPartServise/FindAllCustomersResponse")]
-        DedicatedClient.PcPartService.Costumer[] FindAllCustomers();
+        DedicatedClient.PcPartService.Customer[] FindAllCustomers();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllCustomers", ReplyAction="http://tempuri.org/IPcPartServise/FindAllCustomersResponse")]
-        System.Threading.Tasks.Task<DedicatedClient.PcPartService.Costumer[]> FindAllCustomersAsync();
+        System.Threading.Tasks.Task<DedicatedClient.PcPartService.Customer[]> FindAllCustomersAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindSocket", ReplyAction="http://tempuri.org/IPcPartServise/FindSocketResponse")]
         DedicatedClient.PcPartService.Socket FindSocket(int id);
@@ -1283,12 +1299,12 @@ namespace DedicatedClient.PcPartService {
                 base(binding, remoteAddress) {
         }
         
-        public void CreatCPU(DedicatedClient.PcPartService.CPU cpu) {
-            base.Channel.CreatCPU(cpu);
+        public void CreateCPU(DedicatedClient.PcPartService.CPU cpu) {
+            base.Channel.CreateCPU(cpu);
         }
         
-        public System.Threading.Tasks.Task CreatCPUAsync(DedicatedClient.PcPartService.CPU cpu) {
-            return base.Channel.CreatCPUAsync(cpu);
+        public System.Threading.Tasks.Task CreateCPUAsync(DedicatedClient.PcPartService.CPU cpu) {
+            return base.Channel.CreateCPUAsync(cpu);
         }
         
         public void UpdateCPU(DedicatedClient.PcPartService.CPU cpu) {
@@ -1459,19 +1475,19 @@ namespace DedicatedClient.PcPartService {
             return base.Channel.FindAllComputerCasesAsync();
         }
         
-        public void CreateCustomer(DedicatedClient.PcPartService.Costumer customer) {
+        public void CreateCustomer(DedicatedClient.PcPartService.Customer customer) {
             base.Channel.CreateCustomer(customer);
         }
         
-        public System.Threading.Tasks.Task CreateCustomerAsync(DedicatedClient.PcPartService.Costumer customer) {
+        public System.Threading.Tasks.Task CreateCustomerAsync(DedicatedClient.PcPartService.Customer customer) {
             return base.Channel.CreateCustomerAsync(customer);
         }
         
-        public void UpdateCustomer(DedicatedClient.PcPartService.Costumer customer) {
+        public void UpdateCustomer(DedicatedClient.PcPartService.Customer customer) {
             base.Channel.UpdateCustomer(customer);
         }
         
-        public System.Threading.Tasks.Task UpdateCustomerAsync(DedicatedClient.PcPartService.Costumer customer) {
+        public System.Threading.Tasks.Task UpdateCustomerAsync(DedicatedClient.PcPartService.Customer customer) {
             return base.Channel.UpdateCustomerAsync(customer);
         }
         
@@ -1483,27 +1499,27 @@ namespace DedicatedClient.PcPartService {
             return base.Channel.DeleteCustomerAsync(id);
         }
         
-        public DedicatedClient.PcPartService.Costumer FindCustomerById(int id) {
+        public DedicatedClient.PcPartService.Customer FindCustomerById(int id) {
             return base.Channel.FindCustomerById(id);
         }
         
-        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.Costumer> FindCustomerByIdAsync(int id) {
+        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.Customer> FindCustomerByIdAsync(int id) {
             return base.Channel.FindCustomerByIdAsync(id);
         }
         
-        public DedicatedClient.PcPartService.Costumer[] FindCustomerByName(string name) {
+        public DedicatedClient.PcPartService.Customer[] FindCustomerByName(string name) {
             return base.Channel.FindCustomerByName(name);
         }
         
-        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.Costumer[]> FindCustomerByNameAsync(string name) {
+        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.Customer[]> FindCustomerByNameAsync(string name) {
             return base.Channel.FindCustomerByNameAsync(name);
         }
         
-        public DedicatedClient.PcPartService.Costumer[] FindAllCustomers() {
+        public DedicatedClient.PcPartService.Customer[] FindAllCustomers() {
             return base.Channel.FindAllCustomers();
         }
         
-        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.Costumer[]> FindAllCustomersAsync() {
+        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.Customer[]> FindAllCustomersAsync() {
             return base.Channel.FindAllCustomersAsync();
         }
         

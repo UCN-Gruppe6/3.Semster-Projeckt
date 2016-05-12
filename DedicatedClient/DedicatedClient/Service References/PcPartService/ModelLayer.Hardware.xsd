@@ -12,6 +12,7 @@
       <xs:element minOccurs="0" name="ModelNumber" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Price" type="xs:double" />
       <xs:element minOccurs="0" name="Socket" nillable="true" type="tns:Socket" />
+      <xs:element minOccurs="0" name="SocketId" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CPU" nillable="true" type="tns:CPU" />

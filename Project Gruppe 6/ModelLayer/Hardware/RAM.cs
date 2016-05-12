@@ -26,6 +26,9 @@ namespace ModelLayer.Hardware
         [DataMember]
         public double Price { get; set; }
 
-        public Motherboard RMotherboards { get; set;}
+        public Motherboard Motherboard { get; set;}
+
+        [DataMember]
+        public int Stock { get; set; }
     }
 }

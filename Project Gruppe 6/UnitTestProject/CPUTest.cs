@@ -107,7 +107,7 @@ namespace UnitTestProject
                     ModelNumber = "I5 6600",
                     SocketId = 1
                 };
-                ctr.CreatCPU(CPU);
+                ctr.CreateCPU(CPU);
                 db.CPUs.Add(CPU);
                 db.SaveChanges();
 

@@ -14,16 +14,16 @@ namespace WCFServices
     {
 
         private HardwererCtr HWCtr = new HardwererCtr();
-        private CostumerCtr customerCtr = new CostumerCtr();
+        private CustomerCtr customerCtr = new CustomerCtr();
         private ProductCtr proCtr = new ProductCtr();
 
         // Vare CRUD
         #region
 
         //CPU 
-        public void CreatCPU(CPU cpu)
+        public void CreateCPU(CPU cpu)
         {
-            proCtr.CreatCPU(cpu);
+            proCtr.CreateCPU(cpu);
         }
 
         public void UpdateCPU(CPU cpu)
@@ -153,17 +153,17 @@ namespace WCFServices
 
         public void CreateCustomer(Customer customer)
         {
-            customerCtr.CreatCostumer(customer);
+            customerCtr.CreateCustomer(customer);
         }
 
         public void UpdateCustomer(Customer customer)
         {
-            customerCtr.UpdateCostumer(customer);
+            customerCtr.UpdateCustomer(customer);
         }
 
         public void DeleteCustomer(int id)
         {
-            customerCtr.DeleteCostumer(id);
+            customerCtr.DeleteCustomer(id);
         }
 
         public Customer FindCustomerById(int id)
@@ -173,12 +173,12 @@ namespace WCFServices
 
         public IEnumerable<Customer> FindCustomerByName(string name)
         {
-            return customerCtr.FindCostumerByName(name);
+            return customerCtr.FindCustomerByName(name);
         }
 
         public IEnumerable<Customer> FindAllCustomers()
         {
-            return customerCtr.FindAllCustomer();
+            return customerCtr.FindAllCustomers();
         }
 
         #endregion

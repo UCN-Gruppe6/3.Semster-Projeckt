@@ -24,7 +24,7 @@
 //                {
 //                    Name = "BO"
 //                };
-//                customerCtr.CreatCostumer(customer);
+//                customerCtr.CreateCustomer(customer);
 //                db.Costumer.Add(customer);
 //                db.SaveChanges();
 
@@ -53,7 +53,7 @@
 
 //            db.Costumer.Add(customer);
 //            db.SaveChanges();
-//            IEnumerable<ModelLayer.Customer> costumerList = customerCtr.FindCostumerByName(nameInput);
+//            IEnumerable<ModelLayer.Customer> costumerList = customerCtr.FindCustomerByName(nameInput);
 
 //            //Assert
 
@@ -61,7 +61,7 @@
 //        }
 
 //        [TestMethod]
-//        public void UpdateCostumer()
+//        public void UpdateCustomer()
 //        {
 //            //Arranger
 
@@ -77,7 +77,7 @@
 //            //Act
 
 //            costumer.Name = "PETER";
-//            costumerCtr.UpdateCostumer(costumer);
+//            costumerCtr.UpdateCustomer(costumer);
 //            db.SaveChanges();
 
 //            //Assert
@@ -86,13 +86,13 @@
 //        }
 
 //        [TestMethod]
-//        public void DeleteCostumer()
+//        public void DeleteCustomer()
 //        {
 //            //Arranger
 
 //            var idImput = 1;
 //            var db = new DBLayer.EntityFrameworkContext();
-//            var customerCtr = new ControlerLayer.CostumerCtr();
+//            var customerCtr = new ControlerLayer.CustomerCtr();
 //            ModelLayer.Costumer customer = new ModelLayer.Costumer()
 //            {
 //                CostumerId = 1
@@ -102,7 +102,7 @@
 
 //            //Act
 
-//            customerCtr.DeleteCostumer(idImput);
+//            customerCtr.DeleteCustomer(idImput);
 //            db.SaveChanges();
 //            customerCtr.FindCustomerById(idImput);
 

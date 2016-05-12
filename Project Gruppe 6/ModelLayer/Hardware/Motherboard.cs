@@ -31,12 +31,13 @@ namespace ModelLayer.Hardware
 
         public List<GPU> GPUs { get; set; }
 
-        public List<Storage> Stoprage { get; set; }
+        public List<Storage> Storage { get; set; }
 
         public List<RAM> RAMs { get; set; }
 
         public List<Computer_Case> ComputerCase { get; set; }
 
-            
-        }
+        [DataMember]
+        public int Stock { get; set; }
+    }
 }

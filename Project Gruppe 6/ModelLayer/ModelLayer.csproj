@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Basket\Basket.cs" />
-    <Compile Include="Customer\Costumer.cs" />
+    <Compile Include="Customer\Customer.cs" />
     <Compile Include="CPUTestClase.cs" />
     <Compile Include="Hardware\Computer_Case.cs" />
     <Compile Include="Hardware\CPU.cs" />

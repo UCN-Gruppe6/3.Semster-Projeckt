@@ -8,13 +8,13 @@ using DBLayer;
 
 namespace ControlerLayer
 {
-    // Denne her ctr bliver brugt til Create, Update og Delete. 
+    // Denne Controller bliver brugt til Create, Update og Delete. 
     public class ProductCtr
     {
         // CPU
         #region
 
-        public void CreatCPU(CPU cpu)
+        public void CreateCPU(CPU cpu)
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {

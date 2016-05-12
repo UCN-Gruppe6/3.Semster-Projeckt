@@ -2,14 +2,14 @@
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" />
   <xs:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer" />
-  <xs:element name="CreatCPU">
+  <xs:element name="CreateCPU">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="cpu" nillable="true" type="q1:CPU" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="CreatCPUResponse">
+  <xs:element name="CreateCPUResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
@@ -295,7 +295,7 @@
   <xs:element name="CreateCustomer">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="customer" nillable="true" type="q22:Costumer" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="customer" nillable="true" type="q22:Customer" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -307,7 +307,7 @@
   <xs:element name="UpdateCustomer">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="customer" nillable="true" type="q23:Costumer" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="customer" nillable="true" type="q23:Customer" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -338,7 +338,7 @@
   <xs:element name="FindCustomerByIdResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="FindCustomerByIdResult" nillable="true" type="q24:Costumer" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="FindCustomerByIdResult" nillable="true" type="q24:Customer" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -352,7 +352,7 @@
   <xs:element name="FindCustomerByNameResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="FindCustomerByNameResult" nillable="true" type="q25:ArrayOfCostumer" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="FindCustomerByNameResult" nillable="true" type="q25:ArrayOfCustomer" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -364,7 +364,7 @@
   <xs:element name="FindAllCustomersResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="FindAllCustomersResult" nillable="true" type="q26:ArrayOfCostumer" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="FindAllCustomersResult" nillable="true" type="q26:ArrayOfCustomer" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
