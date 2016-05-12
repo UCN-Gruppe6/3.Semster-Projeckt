@@ -37,6 +37,7 @@ namespace ModelLayer.Hardware
 
         public List<Computer_Case> ComputerCase { get; set; }
 
-            
-        }
+        [DataMember]
+        public int Stock { get; set; }
+    }
 }

@@ -24,5 +24,8 @@ namespace ModelLayer.Hardware
         public string Category { get; set; }
 
         public Motherboard Motherboard { get; set; }
+
+        [DataMember]
+        public int Stock { get; set; }
     }
 }
