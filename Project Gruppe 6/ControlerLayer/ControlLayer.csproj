@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="CostumerCtr.cs" />
     <Compile Include="HardwareCtr.cs" />
+    <Compile Include="Inventory.cs" />
     <Compile Include="ProductCtr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

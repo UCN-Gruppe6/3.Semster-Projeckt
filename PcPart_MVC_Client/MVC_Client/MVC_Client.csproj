@@ -218,7 +218,10 @@
     <None Include="Service References\PcPart\ModelLayer.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Service References\PcPart\MVC_Client.PcPart.Costumer.datasource">
+    <Content Include="Service References\PcPart\MVC_Client.PcPart.Customer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PcPart\MVC_Client.PcPart.Socket.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Service References\PcPart\Reference.svcmap">

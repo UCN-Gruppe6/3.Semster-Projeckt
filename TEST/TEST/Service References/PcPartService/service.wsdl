@@ -182,6 +182,12 @@
   <wsdl:message name="IPcPartServise_FindSocket_OutputMessage">
     <wsdl:part name="parameters" element="tns:FindSocketResponse" />
   </wsdl:message>
+  <wsdl:message name="IPcPartServise_StockCpuADD_InputMessage">
+    <wsdl:part name="parameters" element="tns:StockCpuADD" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartServise_StockCpuADD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StockCpuADDResponse" />
+  </wsdl:message>
   <wsdl:portType name="IPcPartServise">
     <wsdl:operation name="CreateCPU">
       <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/CreateCPU" message="tns:IPcPartServise_CreateCPU_InputMessage" />
@@ -298,6 +304,10 @@
     <wsdl:operation name="FindSocket">
       <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/FindSocket" message="tns:IPcPartServise_FindSocket_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/FindSocketResponse" message="tns:IPcPartServise_FindSocket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StockCpuADD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartServise/StockCpuADD" message="tns:IPcPartServise_StockCpuADD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartServise/StockCpuADDResponse" message="tns:IPcPartServise_StockCpuADD_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IPcPartServise" type="tns:IPcPartServise">
@@ -556,6 +566,15 @@
     </wsdl:operation>
     <wsdl:operation name="FindSocket">
       <soap:operation soapAction="http://tempuri.org/IPcPartServise/FindSocket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StockCpuADD">
+      <soap:operation soapAction="http://tempuri.org/IPcPartServise/StockCpuADD" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

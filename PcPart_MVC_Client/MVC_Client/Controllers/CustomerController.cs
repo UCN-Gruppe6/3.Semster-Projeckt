@@ -20,7 +20,7 @@ namespace MVC_Client.Controllers
             }
             else if (id != null && id != 0)
             {
-                return View(new List<Costumer> { client.FindCustomerById(id.Value) } );
+                return View(new List<Customer> { client.FindCustomerById(id.Value) } );
             }
             else
             {
@@ -39,7 +39,7 @@ namespace MVC_Client.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Costumer customer)
+        public ActionResult Create(Customer customer)
         {
             try
             {
@@ -59,7 +59,7 @@ namespace MVC_Client.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(Costumer customer)
+        public ActionResult Edit(Customer customer)
         {
             try
             {
@@ -79,11 +79,11 @@ namespace MVC_Client.Controllers
         }
 
         [HttpPost]
-        public ActionResult Delete(Costumer customer)
+        public ActionResult Delete(Customer customer)
         {
             try
             {
-                client.DeleteCustomer(customer.CostumerId);
+                client.DeleteCustomer(customer.CustomerId);
                 return RedirectToAction("Index");
             }
             catch
