@@ -106,5 +106,7 @@ namespace WCFServices
         [OperationContract]
         Socket FindSocket(int id);
 
+        //[OperationContract]
+        //void StockCpuADD(string modelNumber, int numberToAdd);
     }
 }

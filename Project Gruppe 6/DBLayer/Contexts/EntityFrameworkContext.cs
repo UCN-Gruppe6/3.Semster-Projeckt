@@ -28,7 +28,7 @@ namespace DBLayer
         public DbSet<Customer> Customer { get; set; }
 
         //Basket
-        public DbSet<Basket> Basket { get; set; }
+        //public DbSet<Basket> Basket { get; set; }
 
         #region TEST
         // Bliver kun brugt til en test.

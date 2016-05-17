@@ -16,6 +16,7 @@ namespace WCFServices
         private HardwererCtr HWCtr = new HardwererCtr();
         private CustomerCtr customerCtr = new CustomerCtr();
         private ProductCtr proCtr = new ProductCtr();
+        private Inventory invCtr = new Inventory();
 
         // Vare CRUD
         #region
@@ -188,6 +189,9 @@ namespace WCFServices
             return HWCtr.FindSocket(id);
         }
 
-
+        //public void StockCpuADD(string modelNumber, int numberToAdd)
+        //{
+        //    invCtr.StockCpuADD(modelNumber, numberToAdd);
+        //}
     }
 }
