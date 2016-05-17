@@ -9,7 +9,7 @@ using ControlerLayer;
 
 namespace WCFServices 
 {
-    public class PcPartServise : IPcPartServise
+    public class PcPartService : IPcPartService
     {
 
         private HardwererCtr HWCtr = new HardwererCtr();

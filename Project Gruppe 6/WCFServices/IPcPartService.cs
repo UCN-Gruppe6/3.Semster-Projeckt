@@ -10,7 +10,7 @@ using System.ServiceModel;
 namespace WCFServices
 {
     [ServiceContract]
-    interface IPcPartServise
+    interface IPcPartService
     {
         // Vare CRUD
         #region
