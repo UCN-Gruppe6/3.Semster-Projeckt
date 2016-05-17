@@ -67,9 +67,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ControlerLayer\ControlLayer.csproj">
+    <ProjectReference Include="..\ControlerLayer\ControlerLayer.csproj">
       <Project>{6d774d92-6469-4c01-aea9-f5be09e04829}</Project>
-      <Name>ControlLayer</Name>
+      <Name>ControlerLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\DBLayer\DBLayer.csproj">
       <Project>{5c69afdf-ddbd-47c8-8973-962b7b0279eb}</Project>

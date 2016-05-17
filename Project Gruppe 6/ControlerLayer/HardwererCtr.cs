@@ -7,7 +7,7 @@ using ModelLayer;
 using DBLayer;
 using ModelLayer.Hardware;
 
-namespace ControlLayer
+namespace ControlerLayer
 {
     // Denne her ctr bluver kun brugt til at finde hardware
     public class HardwererCtr
@@ -192,8 +192,5 @@ namespace ControlLayer
                 return db.CPUTestClas.ToList();
             }
         }
-
-
-
     }
 }

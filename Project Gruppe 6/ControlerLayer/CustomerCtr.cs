@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using ModelLayer;
 using DBLayer;
 
-namespace ControlLayer
+namespace ControlerLayer
 {
     public class CustomerCtr
     {
