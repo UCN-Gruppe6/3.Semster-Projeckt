@@ -49,10 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CostumerCtr.cs" />
-    <Compile Include="HardwareCtr.cs" />
-    <Compile Include="Inventory.cs" />
-    <Compile Include="ProductCtr.cs" />
+    <Compile Include="BasketCtr.cs" />
+    <Compile Include="CustomerCtr.cs" />
+    <Compile Include="HardwererCtr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
