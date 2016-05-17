@@ -9,7 +9,7 @@ using System.Runtime.Serialization;
 
 namespace ModelLayer.Basket
 { 
-    [DataContract]
+   [DataContract]
    public class Basket
     {
         [DataMember]

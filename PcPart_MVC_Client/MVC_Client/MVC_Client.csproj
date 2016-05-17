@@ -197,10 +197,13 @@
     <Content Include="Scripts\_references.js" />
     <None Include="Service References\PcPart\configuration91.svcinfo" />
     <None Include="Service References\PcPart\configuration.svcinfo" />
+    <Content Include="Service References\PcPart\MVC_Client.PcPart.Computer_Case.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Service References\PcPart\MVC_Client.PcPart.CPU.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\PcPart\MVC_Client.PcPart.Computer_Case.datasource">
+    <Content Include="Service References\PcPart\MVC_Client.PcPart.Customer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Service References\PcPart\MVC_Client.PcPart.GPU.datasource">
@@ -212,16 +215,10 @@
     <Content Include="Service References\PcPart\MVC_Client.PcPart.RAM.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\PcPart\MVC_Client.PcPart.Storage.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\PcPart\ModelLayer.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Service References\PcPart\MVC_Client.PcPart.Customer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Service References\PcPart\MVC_Client.PcPart.Socket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PcPart\MVC_Client.PcPart.Storage.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Service References\PcPart\Reference.svcmap">
@@ -235,26 +232,17 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <None Include="Service References\PcPart\ModelLayer.Hardware.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PcPart\service.wsdl" />
-    <None Include="Service References\PcPart\service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PcPart\service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Views\Hardware\Index.cshtml" />
     <Content Include="Views\CPU\Index.cshtml" />
-    <Content Include="Views\Storage\Index.cshtml" />
     <Content Include="Views\RAM\Index.cshtml" />
     <Content Include="Views\Computer_Case\Index.cshtml" />
     <Content Include="Views\GPU\Index.cshtml" />
@@ -264,6 +252,20 @@
     <Content Include="Views\Customer\Edit.cshtml" />
     <Content Include="Views\Customer\Delete.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
+    <None Include="Service References\PcPart\ModelLayer.Hardware.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PcPart\ModelLayer.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PcPart\service.wsdl" />
+    <None Include="Service References\PcPart\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PcPart\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Views\Storage\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

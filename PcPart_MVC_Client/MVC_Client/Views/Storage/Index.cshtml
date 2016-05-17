@@ -1,0 +1,81 @@
+﻿@model IEnumerable<MVC_Client.PcPart.Storage>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>HDD/SSD</h2>
+
+<div>
+<br>
+<h4> <b>Filtrer</b> </h4>
+
+@using (Html.BeginForm())
+{
+    <p>
+        <b>Mærke:</b> @Html.TextBox("Brand") <br />
+        <br>
+        <input type="submit" value="Find" />
+    </p>
+}
+<br />
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.LabelForModel("Type")
+        </th>
+        <th>
+            @Html.LabelForModel("Fabrikant")
+        </th>
+        <th>
+            @Html.LabelForModel("Model")
+        </th>
+        <th>
+            @Html.LabelForModel("Størlse")
+        </th>
+        <th>
+            @Html.LabelForModel("Kateroi")
+        </th>
+        <th>
+            @Html.LabelForModel("Pris")
+        </th>
+        <th>
+            @Html.LabelForModel("På lager")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Manufacturer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Capacity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stock)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StorageId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StorageId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StorageId })
+        </td>
+    </tr>
+}
+
+</table>
