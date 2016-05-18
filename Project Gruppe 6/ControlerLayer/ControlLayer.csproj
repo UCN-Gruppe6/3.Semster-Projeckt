@@ -49,9 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasketCtr.cs" />
-    <Compile Include="CustomerCtr.cs" />
+    <Compile Include="CostumerCtr.cs" />
     <Compile Include="HardwererCtr.cs" />
+    <Compile Include="ProductCtr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

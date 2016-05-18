@@ -12,18 +12,18 @@ namespace ControlLayer
     {
         // Metode til at lave en kunde.
         // Laver en ny db context.
-        public void CreateCustomer(Customer customer)
+        public void CreatCostumer(Costumer costumer)
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                db.Customer.Add(customer);
+                db.Costumer.Add(costumer);
                 db.SaveChanges();
             }
         }
 
         // Metode til at finde alle kunderne.
 
-        public IEnumerable<Customer> FindAllCustomers()
+        public IEnumerable<Costumer> FindAllCustomer()
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
@@ -32,7 +32,7 @@ namespace ControlLayer
         }
 
         // Dette er en midligtigt metode til at finde en kunde via navn.
-        public IEnumerable<Customer> FindCustomerByName(string name)
+        public IEnumerable<Costumer> FindCostumerByName(string name)
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
@@ -52,7 +52,7 @@ namespace ControlLayer
 
         // Metode til at updater en kunde.
 
-        public void UpdateCustomer(Customer customer)
+        public void UpdateCostumer(Costumer costumer)
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
@@ -67,8 +67,8 @@ namespace ControlLayer
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                Customer customer = new Customer();
-                customer.CustomerId = id;
+                Costumer customer = new Costumer();
+                customer.CostumerId = id;
                 db.Entry(customer).State = System.Data.Entity.EntityState.Deleted;
                 db.SaveChanges();
             }
