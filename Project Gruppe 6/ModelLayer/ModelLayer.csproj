@@ -57,6 +57,7 @@
     <Compile Include="Hardware\Computer_Case.cs" />
     <Compile Include="Hardware\CPU.cs" />
     <Compile Include="Hardware\GPU.cs" />
+    <Compile Include="Hardware\JegVilSkideDigIMunden.cs" />
     <Compile Include="Hardware\Motherboard.cs" />
     <Compile Include="Hardware\RAM.cs" />
     <Compile Include="Hardware\Socket.cs" />

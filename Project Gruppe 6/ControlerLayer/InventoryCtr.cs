@@ -13,7 +13,7 @@ namespace ControlerLayer
     {
         public void CPUStockCount()
         {
-
+            using (EntityFrameworkContext db = new EntityFrameworkContext())
         }
     }
 }

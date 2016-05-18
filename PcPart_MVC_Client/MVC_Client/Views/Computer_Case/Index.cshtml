@@ -32,7 +32,9 @@
         <th>
             <label>Pris</label>
         </th>
-        <th></th>
+        <th>
+            <label>På lager</label>
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -48,6 +50,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stock)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) 

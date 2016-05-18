@@ -49,5 +49,15 @@ namespace DedicatedClient
 
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            ///
+            //textBox16.Text;
+
+
+
+        }
     }
 }

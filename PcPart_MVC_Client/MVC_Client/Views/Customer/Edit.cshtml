@@ -1,4 +1,4 @@
-﻿@model MVC_Client.PcPart.Costumer
+﻿@model MVC_Client.PcPart.Customer
 
 @{
     ViewBag.Title = "Edit";
@@ -9,7 +9,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    @Html.HiddenFor(x => x.CostumerId)
+    @Html.HiddenFor(x => x.CustomerId)
     <div class="form-horizontal">
         <h4>Indtast dinne nye oplysninger</h4>
         <hr />

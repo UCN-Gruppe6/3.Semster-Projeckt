@@ -2,6 +2,42 @@
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" />
   <xs:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer" />
+  <xs:element name="CreateCPU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="cpu" nillable="true" type="q1:CPU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCPUResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCPU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="cpu" nillable="true" type="q2:CPU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCPUResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCPU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCPUResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="FindCPUsByBrand">
     <xs:complexType>
       <xs:sequence>
@@ -12,7 +48,7 @@
   <xs:element name="FindCPUsByBrandResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindCPUsByBrandResult" nillable="true" type="q1:ArrayOfCPU" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindCPUsByBrandResult" nillable="true" type="q3:ArrayOfCPU" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -26,7 +62,7 @@
   <xs:element name="FindCPUsByCategoryResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindCPUsByCategoryResult" nillable="true" type="q2:ArrayOfCPU" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindCPUsByCategoryResult" nillable="true" type="q4:ArrayOfCPU" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -38,7 +74,7 @@
   <xs:element name="FindAllCPUsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindAllCPUsResult" nillable="true" type="q3:ArrayOfCPU" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindAllCPUsResult" nillable="true" type="q5:ArrayOfCPU" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -52,7 +88,7 @@
   <xs:element name="FindStorageByManufacturerResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindStorageByManufacturerResult" nillable="true" type="q4:ArrayOfStorage" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindStorageByManufacturerResult" nillable="true" type="q6:ArrayOfStorage" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -66,7 +102,7 @@
   <xs:element name="FindStorageByCategoryResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindStorageByCategoryResult" nillable="true" type="q5:ArrayOfStorage" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindStorageByCategoryResult" nillable="true" type="q7:ArrayOfStorage" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -78,7 +114,7 @@
   <xs:element name="FindAllStorageResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindAllStorageResult" nillable="true" type="q6:ArrayOfStorage" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindAllStorageResult" nillable="true" type="q8:ArrayOfStorage" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -92,7 +128,7 @@
   <xs:element name="FindRamByManufacturerResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindRamByManufacturerResult" nillable="true" type="q7:ArrayOfRAM" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindRamByManufacturerResult" nillable="true" type="q9:ArrayOfRAM" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -106,7 +142,7 @@
   <xs:element name="FindRamByCategoryResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindRamByCategoryResult" nillable="true" type="q8:ArrayOfRAM" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindRamByCategoryResult" nillable="true" type="q10:ArrayOfRAM" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -118,7 +154,7 @@
   <xs:element name="FindAllRamResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindAllRamResult" nillable="true" type="q9:ArrayOfRAM" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindAllRamResult" nillable="true" type="q11:ArrayOfRAM" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -132,7 +168,7 @@
   <xs:element name="FindMotherboardByManufacturerResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindMotherboardByManufacturerResult" nillable="true" type="q10:ArrayOfMotherboard" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindMotherboardByManufacturerResult" nillable="true" type="q12:ArrayOfMotherboard" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -146,7 +182,7 @@
   <xs:element name="FindMotherboardByCategoryResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindMotherboardByCategoryResult" nillable="true" type="q11:ArrayOfMotherboard" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindMotherboardByCategoryResult" nillable="true" type="q13:ArrayOfMotherboard" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -158,7 +194,7 @@
   <xs:element name="FindAllMotherboardResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindAllMotherboardResult" nillable="true" type="q12:ArrayOfMotherboard" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindAllMotherboardResult" nillable="true" type="q14:ArrayOfMotherboard" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -172,7 +208,7 @@
   <xs:element name="FindGpuByManufacturerResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindGpuByManufacturerResult" nillable="true" type="q13:ArrayOfGPU" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindGpuByManufacturerResult" nillable="true" type="q15:ArrayOfGPU" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -186,7 +222,7 @@
   <xs:element name="FindGpuByModelResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindGpuByModelResult" nillable="true" type="q14:ArrayOfGPU" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindGpuByModelResult" nillable="true" type="q16:ArrayOfGPU" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -200,7 +236,7 @@
   <xs:element name="FindGpuByCategoryResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindGpuByCategoryResult" nillable="true" type="q15:ArrayOfGPU" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindGpuByCategoryResult" nillable="true" type="q17:ArrayOfGPU" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -212,7 +248,7 @@
   <xs:element name="FindAllGpusResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindAllGpusResult" nillable="true" type="q16:ArrayOfGPU" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindAllGpusResult" nillable="true" type="q18:ArrayOfGPU" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -226,7 +262,7 @@
   <xs:element name="FindComputerCaseByManufacturerResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindComputerCaseByManufacturerResult" nillable="true" type="q17:ArrayOfComputer_Case" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindComputerCaseByManufacturerResult" nillable="true" type="q19:ArrayOfComputer_Case" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -240,7 +276,7 @@
   <xs:element name="FindComputerCaseByCategoryResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindComputerCaseByCategoryResult" nillable="true" type="q18:ArrayOfComputer_Case" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindComputerCaseByCategoryResult" nillable="true" type="q20:ArrayOfComputer_Case" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -252,14 +288,14 @@
   <xs:element name="FindAllComputerCasesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindAllComputerCasesResult" nillable="true" type="q19:ArrayOfComputer_Case" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindAllComputerCasesResult" nillable="true" type="q21:ArrayOfComputer_Case" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="CreateCustomer">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="customer" nillable="true" type="q20:Costumer" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="customer" nillable="true" type="q22:Customer" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -271,7 +307,7 @@
   <xs:element name="UpdateCustomer">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="customer" nillable="true" type="q21:Costumer" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="customer" nillable="true" type="q23:Customer" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -302,7 +338,7 @@
   <xs:element name="FindCustomerByIdResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="FindCustomerByIdResult" nillable="true" type="q22:Costumer" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="FindCustomerByIdResult" nillable="true" type="q24:Customer" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -316,7 +352,7 @@
   <xs:element name="FindCustomerByNameResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="FindCustomerByNameResult" nillable="true" type="q23:ArrayOfCostumer" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="FindCustomerByNameResult" nillable="true" type="q25:ArrayOfCustomer" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -328,7 +364,21 @@
   <xs:element name="FindAllCustomersResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="FindAllCustomersResult" nillable="true" type="q24:ArrayOfCostumer" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="FindAllCustomersResult" nillable="true" type="q26:ArrayOfCustomer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindSocket">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindSocketResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="FindSocketResult" nillable="true" type="q27:Socket" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

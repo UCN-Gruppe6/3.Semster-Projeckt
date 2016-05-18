@@ -54,8 +54,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IPcPartServise.cs" />
-    <Compile Include="PcPartServise.cs" />
+    <Compile Include="IPcPartService.cs" />
+    <Compile Include="PcPartService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,9 +63,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ControlerLayer\ControlLayer.csproj">
+    <ProjectReference Include="..\ControlerLayer\ControlerLayer.csproj">
       <Project>{6d774d92-6469-4c01-aea9-f5be09e04829}</Project>
-      <Name>ControlLayer</Name>
+      <Name>ControlerLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\ModelLayer\ModelLayer.csproj">
       <Project>{c6d7596e-4f1f-417a-a7e5-f54309b207ed}</Project>

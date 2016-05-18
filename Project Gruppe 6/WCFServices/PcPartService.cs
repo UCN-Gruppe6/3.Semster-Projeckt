@@ -5,12 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using ModelLayer;
 using ModelLayer.Hardware;
-using ControlLayer;
-
+using ControlerLayer;
 
 namespace WCFServices 
 {
-    public class PcPartServise : IPcPartServise
+    public class PcPartService : IPcPartService
     {
 
         private HardwererCtr HWCtr = new HardwererCtr();
@@ -187,7 +186,6 @@ namespace WCFServices
         {
             return HWCtr.FindSocket(id);
         }
-
 
     }
 }

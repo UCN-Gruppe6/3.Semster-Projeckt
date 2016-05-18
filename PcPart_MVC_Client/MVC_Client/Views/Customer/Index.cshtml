@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MVC_Client.PcPart.Costumer>
+﻿@model IEnumerable<MVC_Client.PcPart.Customer> 
 
 @{
     ViewBag.Title = "Index";
@@ -98,9 +98,9 @@
             @Html.DisplayFor(modelItem => item.Company)
         </td>
         <td>
-            @Html.ActionLink("Redigere", "Edit", new { id=item.CostumerId }) |
-            @Html.ActionLink("Detaljer", "Details", new { id=item.CostumerId }) |
-            @Html.ActionLink("Slet", "Delete", new { id=item.CostumerId })
+            @Html.ActionLink("Redigere", "Edit", new { id=item.CustomerId }) |
+            @Html.ActionLink("Detaljer", "Details", new { id=item.CustomerId }) |
+            @Html.ActionLink("Slet", "Delete", new { id=item.CustomerId })
         </td>
     </tr>
 }

@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelLayer", "ModelLayer\ModelLayer.csproj", "{C6D7596E-4F1F-417A-A7E5-F54309B207ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlLayer", "ControlerLayer\ControlLayer.csproj", "{6D774D92-6469-4C01-AEA9-F5BE09E04829}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlerLayer", "ControlerLayer\ControlerLayer.csproj", "{6D774D92-6469-4C01-AEA9-F5BE09E04829}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBLayer", "DBLayer\DBLayer.csproj", "{5C69AFDF-DDBD-47C8-8973-962B7B0279EB}"
 EndProject

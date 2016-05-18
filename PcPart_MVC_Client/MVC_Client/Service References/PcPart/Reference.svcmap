@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d2ec35bf-092c-4aae-a180-db0ee9aa197c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="15e9b669-9f37-4c00-8630-48ea6d8dafb3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:8733/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="1bc7847a-370c-4c74-97a0-fc162f0413b2" SourceId="1" SourceUrl="http://localhost:8733/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="62df1408-7c59-4e2b-9a61-ddd9f202869d" SourceId="1" SourceUrl="http://localhost:8733/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="4ec0328f-0fa1-48b6-aed8-923d5be8bf03" SourceId="1" SourceUrl="http://localhost:8733/mex" />
-    <MetadataFile FileName="ModelLayer.Hardware.xsd" MetadataType="Schema" ID="4590ee1b-b93b-4cf7-b424-8f044bf427fe" SourceId="1" SourceUrl="http://localhost:8733/mex" />
-    <MetadataFile FileName="ModelLayer.xsd" MetadataType="Schema" ID="fc86ee80-2b53-45f0-a2a7-336c7f1715d6" SourceId="1" SourceUrl="http://localhost:8733/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="975e09d0-9cfd-4567-a5aa-9e7e412b0b5e" SourceId="1" SourceUrl="http://localhost:8733/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="cba49ac4-22c5-4ef9-b4c3-042f0a7624e6" SourceId="1" SourceUrl="http://localhost:8733/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="906c6c5a-7cb5-4c54-8bc9-2778fe59a0b5" SourceId="1" SourceUrl="http://localhost:8733/mex" />
+    <MetadataFile FileName="ModelLayer.Hardware.xsd" MetadataType="Schema" ID="778e9d62-33ec-4f5c-9fae-30f804f6934b" SourceId="1" SourceUrl="http://localhost:8733/mex" />
+    <MetadataFile FileName="ModelLayer.xsd" MetadataType="Schema" ID="3432398b-efbb-4ae9-92b3-3221601f96dd" SourceId="1" SourceUrl="http://localhost:8733/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

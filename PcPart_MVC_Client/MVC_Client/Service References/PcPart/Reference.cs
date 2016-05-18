@@ -32,6 +32,9 @@ namespace MVC_Client.PcPart {
         private string BrandField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CPUIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CategoryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -48,6 +51,12 @@ namespace MVC_Client.PcPart {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private MVC_Client.PcPart.Socket SocketField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SocketIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StockField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -94,6 +103,19 @@ namespace MVC_Client.PcPart {
                 if ((object.ReferenceEquals(this.BrandField, value) != true)) {
                     this.BrandField = value;
                     this.RaisePropertyChanged("Brand");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CPUId {
+            get {
+                return this.CPUIdField;
+            }
+            set {
+                if ((this.CPUIdField.Equals(value) != true)) {
+                    this.CPUIdField = value;
+                    this.RaisePropertyChanged("CPUId");
                 }
             }
         }
@@ -172,6 +194,32 @@ namespace MVC_Client.PcPart {
                 if ((object.ReferenceEquals(this.SocketField, value) != true)) {
                     this.SocketField = value;
                     this.RaisePropertyChanged("Socket");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SocketId {
+            get {
+                return this.SocketIdField;
+            }
+            set {
+                if ((this.SocketIdField.Equals(value) != true)) {
+                    this.SocketIdField = value;
+                    this.RaisePropertyChanged("SocketId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Stock {
+            get {
+                return this.StockField;
+            }
+            set {
+                if ((this.StockField.Equals(value) != true)) {
+                    this.StockField = value;
+                    this.RaisePropertyChanged("Stock");
                 }
             }
         }
@@ -272,6 +320,9 @@ namespace MVC_Client.PcPart {
         private double PriceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StockField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int StorageIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -353,6 +404,19 @@ namespace MVC_Client.PcPart {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Stock {
+            get {
+                return this.StockField;
+            }
+            set {
+                if ((this.StockField.Equals(value) != true)) {
+                    this.StockField = value;
+                    this.RaisePropertyChanged("Stock");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int StorageId {
             get {
                 return this.StorageIdField;
@@ -411,6 +475,9 @@ namespace MVC_Client.PcPart {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private double PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StockField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TypeField;
@@ -491,6 +558,19 @@ namespace MVC_Client.PcPart {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Stock {
+            get {
+                return this.StockField;
+            }
+            set {
+                if ((this.StockField.Equals(value) != true)) {
+                    this.StockField = value;
+                    this.RaisePropertyChanged("Stock");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Type {
             get {
                 return this.TypeField;
@@ -536,6 +616,9 @@ namespace MVC_Client.PcPart {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private double PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StockField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -612,6 +695,19 @@ namespace MVC_Client.PcPart {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Stock {
+            get {
+                return this.StockField;
+            }
+            set {
+                if ((this.StockField.Equals(value) != true)) {
+                    this.StockField = value;
+                    this.RaisePropertyChanged("Stock");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -651,6 +747,9 @@ namespace MVC_Client.PcPart {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private double PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StockField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int VRamAmountField;
@@ -757,6 +856,19 @@ namespace MVC_Client.PcPart {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Stock {
+            get {
+                return this.StockField;
+            }
+            set {
+                if ((this.StockField.Equals(value) != true)) {
+                    this.StockField = value;
+                    this.RaisePropertyChanged("Stock");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int VRamAmount {
             get {
                 return this.VRamAmountField;
@@ -802,6 +914,9 @@ namespace MVC_Client.PcPart {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private double PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StockField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -878,6 +993,19 @@ namespace MVC_Client.PcPart {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Stock {
+            get {
+                return this.StockField;
+            }
+            set {
+                if ((this.StockField.Equals(value) != true)) {
+                    this.StockField = value;
+                    this.RaisePropertyChanged("Stock");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -890,9 +1018,9 @@ namespace MVC_Client.PcPart {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Costumer", Namespace="http://schemas.datacontract.org/2004/07/ModelLayer")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Customer", Namespace="http://schemas.datacontract.org/2004/07/ModelLayer")]
     [System.SerializableAttribute()]
-    public partial class Costumer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Customer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -910,7 +1038,7 @@ namespace MVC_Client.PcPart {
         private string CompanyField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CostumerIdField;
+        private int CustomerIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string EmailField;
@@ -987,14 +1115,14 @@ namespace MVC_Client.PcPart {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CostumerId {
+        public int CustomerId {
             get {
-                return this.CostumerIdField;
+                return this.CustomerIdField;
             }
             set {
-                if ((this.CostumerIdField.Equals(value) != true)) {
-                    this.CostumerIdField = value;
-                    this.RaisePropertyChanged("CostumerId");
+                if ((this.CustomerIdField.Equals(value) != true)) {
+                    this.CustomerIdField = value;
+                    this.RaisePropertyChanged("CustomerId");
                 }
             }
         }
@@ -1064,6 +1192,24 @@ namespace MVC_Client.PcPart {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="PcPart.IPcPartServise")]
     public interface IPcPartServise {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/CreateCPU", ReplyAction="http://tempuri.org/IPcPartServise/CreateCPUResponse")]
+        void CreateCPU(MVC_Client.PcPart.CPU cpu);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/CreateCPU", ReplyAction="http://tempuri.org/IPcPartServise/CreateCPUResponse")]
+        System.Threading.Tasks.Task CreateCPUAsync(MVC_Client.PcPart.CPU cpu);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/UpdateCPU", ReplyAction="http://tempuri.org/IPcPartServise/UpdateCPUResponse")]
+        void UpdateCPU(MVC_Client.PcPart.CPU cpu);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/UpdateCPU", ReplyAction="http://tempuri.org/IPcPartServise/UpdateCPUResponse")]
+        System.Threading.Tasks.Task UpdateCPUAsync(MVC_Client.PcPart.CPU cpu);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/DeleteCPU", ReplyAction="http://tempuri.org/IPcPartServise/DeleteCPUResponse")]
+        void DeleteCPU(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/DeleteCPU", ReplyAction="http://tempuri.org/IPcPartServise/DeleteCPUResponse")]
+        System.Threading.Tasks.Task DeleteCPUAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCPUsByBrand", ReplyAction="http://tempuri.org/IPcPartServise/FindCPUsByBrandResponse")]
         MVC_Client.PcPart.CPU[] FindCPUsByBrand(string Brand);
@@ -1180,16 +1326,16 @@ namespace MVC_Client.PcPart {
         System.Threading.Tasks.Task<MVC_Client.PcPart.Computer_Case[]> FindAllComputerCasesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/CreateCustomer", ReplyAction="http://tempuri.org/IPcPartServise/CreateCustomerResponse")]
-        void CreateCustomer(MVC_Client.PcPart.Costumer customer);
+        void CreateCustomer(MVC_Client.PcPart.Customer customer);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/CreateCustomer", ReplyAction="http://tempuri.org/IPcPartServise/CreateCustomerResponse")]
-        System.Threading.Tasks.Task CreateCustomerAsync(MVC_Client.PcPart.Costumer customer);
+        System.Threading.Tasks.Task CreateCustomerAsync(MVC_Client.PcPart.Customer customer);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/UpdateCustomer", ReplyAction="http://tempuri.org/IPcPartServise/UpdateCustomerResponse")]
-        void UpdateCustomer(MVC_Client.PcPart.Costumer customer);
+        void UpdateCustomer(MVC_Client.PcPart.Customer customer);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/UpdateCustomer", ReplyAction="http://tempuri.org/IPcPartServise/UpdateCustomerResponse")]
-        System.Threading.Tasks.Task UpdateCustomerAsync(MVC_Client.PcPart.Costumer customer);
+        System.Threading.Tasks.Task UpdateCustomerAsync(MVC_Client.PcPart.Customer customer);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/DeleteCustomer", ReplyAction="http://tempuri.org/IPcPartServise/DeleteCustomerResponse")]
         void DeleteCustomer(int id);
@@ -1198,22 +1344,28 @@ namespace MVC_Client.PcPart {
         System.Threading.Tasks.Task DeleteCustomerAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCustomerById", ReplyAction="http://tempuri.org/IPcPartServise/FindCustomerByIdResponse")]
-        MVC_Client.PcPart.Costumer FindCustomerById(int id);
+        MVC_Client.PcPart.Customer FindCustomerById(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCustomerById", ReplyAction="http://tempuri.org/IPcPartServise/FindCustomerByIdResponse")]
-        System.Threading.Tasks.Task<MVC_Client.PcPart.Costumer> FindCustomerByIdAsync(int id);
+        System.Threading.Tasks.Task<MVC_Client.PcPart.Customer> FindCustomerByIdAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCustomerByName", ReplyAction="http://tempuri.org/IPcPartServise/FindCustomerByNameResponse")]
-        MVC_Client.PcPart.Costumer[] FindCustomerByName(string name);
+        MVC_Client.PcPart.Customer[] FindCustomerByName(string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCustomerByName", ReplyAction="http://tempuri.org/IPcPartServise/FindCustomerByNameResponse")]
-        System.Threading.Tasks.Task<MVC_Client.PcPart.Costumer[]> FindCustomerByNameAsync(string name);
+        System.Threading.Tasks.Task<MVC_Client.PcPart.Customer[]> FindCustomerByNameAsync(string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllCustomers", ReplyAction="http://tempuri.org/IPcPartServise/FindAllCustomersResponse")]
-        MVC_Client.PcPart.Costumer[] FindAllCustomers();
+        MVC_Client.PcPart.Customer[] FindAllCustomers();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllCustomers", ReplyAction="http://tempuri.org/IPcPartServise/FindAllCustomersResponse")]
-        System.Threading.Tasks.Task<MVC_Client.PcPart.Costumer[]> FindAllCustomersAsync();
+        System.Threading.Tasks.Task<MVC_Client.PcPart.Customer[]> FindAllCustomersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindSocket", ReplyAction="http://tempuri.org/IPcPartServise/FindSocketResponse")]
+        MVC_Client.PcPart.Socket FindSocket(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindSocket", ReplyAction="http://tempuri.org/IPcPartServise/FindSocketResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.Socket> FindSocketAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1241,6 +1393,30 @@ namespace MVC_Client.PcPart {
         
         public PcPartServiseClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public void CreateCPU(MVC_Client.PcPart.CPU cpu) {
+            base.Channel.CreateCPU(cpu);
+        }
+        
+        public System.Threading.Tasks.Task CreateCPUAsync(MVC_Client.PcPart.CPU cpu) {
+            return base.Channel.CreateCPUAsync(cpu);
+        }
+        
+        public void UpdateCPU(MVC_Client.PcPart.CPU cpu) {
+            base.Channel.UpdateCPU(cpu);
+        }
+        
+        public System.Threading.Tasks.Task UpdateCPUAsync(MVC_Client.PcPart.CPU cpu) {
+            return base.Channel.UpdateCPUAsync(cpu);
+        }
+        
+        public void DeleteCPU(int id) {
+            base.Channel.DeleteCPU(id);
+        }
+        
+        public System.Threading.Tasks.Task DeleteCPUAsync(int id) {
+            return base.Channel.DeleteCPUAsync(id);
         }
         
         public MVC_Client.PcPart.CPU[] FindCPUsByBrand(string Brand) {
@@ -1395,19 +1571,19 @@ namespace MVC_Client.PcPart {
             return base.Channel.FindAllComputerCasesAsync();
         }
         
-        public void CreateCustomer(MVC_Client.PcPart.Costumer customer) {
+        public void CreateCustomer(MVC_Client.PcPart.Customer customer) {
             base.Channel.CreateCustomer(customer);
         }
         
-        public System.Threading.Tasks.Task CreateCustomerAsync(MVC_Client.PcPart.Costumer customer) {
+        public System.Threading.Tasks.Task CreateCustomerAsync(MVC_Client.PcPart.Customer customer) {
             return base.Channel.CreateCustomerAsync(customer);
         }
         
-        public void UpdateCustomer(MVC_Client.PcPart.Costumer customer) {
+        public void UpdateCustomer(MVC_Client.PcPart.Customer customer) {
             base.Channel.UpdateCustomer(customer);
         }
         
-        public System.Threading.Tasks.Task UpdateCustomerAsync(MVC_Client.PcPart.Costumer customer) {
+        public System.Threading.Tasks.Task UpdateCustomerAsync(MVC_Client.PcPart.Customer customer) {
             return base.Channel.UpdateCustomerAsync(customer);
         }
         
@@ -1419,28 +1595,36 @@ namespace MVC_Client.PcPart {
             return base.Channel.DeleteCustomerAsync(id);
         }
         
-        public MVC_Client.PcPart.Costumer FindCustomerById(int id) {
+        public MVC_Client.PcPart.Customer FindCustomerById(int id) {
             return base.Channel.FindCustomerById(id);
         }
         
-        public System.Threading.Tasks.Task<MVC_Client.PcPart.Costumer> FindCustomerByIdAsync(int id) {
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.Customer> FindCustomerByIdAsync(int id) {
             return base.Channel.FindCustomerByIdAsync(id);
         }
         
-        public MVC_Client.PcPart.Costumer[] FindCustomerByName(string name) {
+        public MVC_Client.PcPart.Customer[] FindCustomerByName(string name) {
             return base.Channel.FindCustomerByName(name);
         }
         
-        public System.Threading.Tasks.Task<MVC_Client.PcPart.Costumer[]> FindCustomerByNameAsync(string name) {
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.Customer[]> FindCustomerByNameAsync(string name) {
             return base.Channel.FindCustomerByNameAsync(name);
         }
         
-        public MVC_Client.PcPart.Costumer[] FindAllCustomers() {
+        public MVC_Client.PcPart.Customer[] FindAllCustomers() {
             return base.Channel.FindAllCustomers();
         }
         
-        public System.Threading.Tasks.Task<MVC_Client.PcPart.Costumer[]> FindAllCustomersAsync() {
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.Customer[]> FindAllCustomersAsync() {
             return base.Channel.FindAllCustomersAsync();
+        }
+        
+        public MVC_Client.PcPart.Socket FindSocket(int id) {
+            return base.Channel.FindSocket(id);
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.Socket> FindSocketAsync(int id) {
+            return base.Channel.FindSocketAsync(id);
         }
     }
 }

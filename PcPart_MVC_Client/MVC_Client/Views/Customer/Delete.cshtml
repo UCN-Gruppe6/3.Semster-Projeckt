@@ -1,4 +1,4 @@
-﻿@model MVC_Client.PcPart.Costumer
+﻿@model MVC_Client.PcPart.Customer
 
 @{
     ViewBag.Title = "Delete";
@@ -83,6 +83,6 @@
             <input type="submit" value="Slet" class="btn btn-default" /> |
             @Html.ActionLink("Tilbage", "Index", null, new { @class = "btn btn-default" })
         </div>
-        @Html.HiddenFor(x => x.CostumerId)
+        @Html.HiddenFor(x => x.CustomerId)
     }
 </div>
