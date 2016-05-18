@@ -1,0 +1,70 @@
+﻿@model IEnumerable<MVC_Client.PcPart.Storage>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>HDD/SSD</h2>
+
+<div>
+     <br />
+    <h4>Filtrer</h4>
+    @using (Html.BeginForm())
+    {
+        <p>
+            <b>Fabrikant:</b> @Html.TextBox("Manufacturer") <br />
+            <br>
+            <input type="submit" value="Find" />
+        </p>
+    }
+</div>
+<table class="table">
+    <tr>
+        <th>
+            <label>Fabrikant</label>
+        </th>
+        <th>
+            <label>Model</label>
+        </th>
+        <th>
+            <label>Type</label>
+        </th>
+        <th>
+            <label>Kapasitet</label>
+        </th>
+        <th>
+            <label>Kategori</label>
+        </th>
+        <th>
+            <label>Pris</label>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Manufacturer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Capacity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StorageId })
+        </td>
+    </tr>
+}
+
+</table>
