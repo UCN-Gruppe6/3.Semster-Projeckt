@@ -252,6 +252,10 @@
     <Content Include="Views\Customer\Edit.cshtml" />
     <Content Include="Views\Customer\Delete.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
+    <Content Include="Views\Storage\Index.cshtml" />
+    <None Include="Service References\PcPart\ModelLayer.Basket.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\PcPart\ModelLayer.Hardware.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -265,7 +269,6 @@
     <None Include="Service References\PcPart\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Views\Storage\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

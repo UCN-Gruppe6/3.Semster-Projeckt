@@ -19,8 +19,9 @@ namespace ControlerLayer
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                var cpuItem = db.CPUtoBUY.SingleOrDefault(c => c.CartId = ShoppingCartId && c.CPUId = cpu.CPUId);
+                //var cpuItem = db.CPUtoBUY.SingleOrDefault(c => c.CartId = ShoppingCartId && c.CPUId = cpu.CPUId);
             }
+            return 1; //husk at fikse!!!
         }
     }
 }
