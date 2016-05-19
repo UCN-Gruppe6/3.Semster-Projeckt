@@ -14,6 +14,14 @@ namespace ModelLayer
         public string CartId { get; set; }
 
         public int CPUId { get; set; }
-        public C
+        public CPUCartItem CPU { get; set; }
+
+        public int GPUId { get; set; }
+        public GPUCartItem GPU { get; set; }
+
+        public int RAMId { get; set; }
+        public RAMCartItem RAM { get; set; }
+
+        public int 
     }
 }

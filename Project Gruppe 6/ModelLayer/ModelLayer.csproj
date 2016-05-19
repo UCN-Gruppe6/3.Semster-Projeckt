@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basket.cs" />
     <Compile Include="CartItems\Computer_CaseCartItem.cs" />
     <Compile Include="CartItems\CPUCartItem.cs" />
     <Compile Include="CartItems\GPUCartItem.cs" />
