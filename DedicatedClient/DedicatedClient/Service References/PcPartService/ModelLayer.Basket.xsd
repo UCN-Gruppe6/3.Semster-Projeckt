@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ModelLayer.Basket" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ModelLayer.Basket" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer" />
+  <xs:complexType name="Basket">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BasketID" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="MyComputerCase" nillable="true" type="q1:Computer_Case" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="MyCpu" nillable="true" type="q2:CPU" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="MyCustomer" nillable="true" type="q3:Customer" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="MyGpu" nillable="true" type="q4:GPU" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="MyMotherboard" nillable="true" type="q5:Motherboard" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="MyRam" nillable="true" type="q6:RAM" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" minOccurs="0" name="MyStorage" nillable="true" type="q7:Storage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Basket" nillable="true" type="tns:Basket" />
+</xs:schema>
