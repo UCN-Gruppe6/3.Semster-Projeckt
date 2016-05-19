@@ -12,6 +12,7 @@ namespace ModelLayer.Hardware
     public class RAM
     {
         [Key]
+        [DataMember]
         public int RAMId { get; set; }
         [DataMember]
         public string Manufacturer { get; set; }

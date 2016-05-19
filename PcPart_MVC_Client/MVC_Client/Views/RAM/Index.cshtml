@@ -67,7 +67,7 @@
             @Html.DisplayFor(modelItem => item.Stock)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Add to basket", "AddToBasket","Basket", new { id=item.RAMId, type = "RAM" },null) |
         </td>
     </tr>
 }
