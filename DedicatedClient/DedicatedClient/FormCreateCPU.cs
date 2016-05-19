@@ -25,7 +25,7 @@ namespace DedicatedClient
         {
             try {
                 richTextBox2.Text = " ";
-                PcPartServiseClient cl = new PcPartServiseClient();
+                PcPartServiceClient cl = new PcPartServiceClient();
                 PcPartService.CPU newCpu = new PcPartService.CPU();
 
                 newCpu.Brand = textBox1.Text;
