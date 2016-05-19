@@ -9,7 +9,7 @@ namespace MVC_Client.Controllers
 {
     public class CustomerController : Controller
     {
-        private PcPartServiseClient client = new PcPartServiseClient();
+        private PcPartServiceClient client = new PcPartServiceClient();
 
         public ActionResult Index(string name, int? id)
         {

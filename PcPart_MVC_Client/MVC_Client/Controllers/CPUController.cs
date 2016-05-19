@@ -8,7 +8,7 @@ namespace MVC_Client.Controllers
 {
     public class CPUController : Controller
     {
-        private PcPart.PcPartServiseClient client = new PcPart.PcPartServiseClient();
+        private PcPart.PcPartServiceClient client = new PcPart.PcPartServiceClient();
 
         public ActionResult Index(string brand)
         {

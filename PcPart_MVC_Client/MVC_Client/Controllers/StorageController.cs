@@ -8,7 +8,7 @@ namespace MVC_Client.Controllers
 {
     public class StorageController : Controller
     {
-        private PcPart.PcPartServiseClient client = new PcPart.PcPartServiseClient();
+        private PcPart.PcPartServiceClient client = new PcPart.PcPartServiceClient();
         // GET: Storage
         public ActionResult Index(string Manufacturer)
         {

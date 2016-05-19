@@ -1189,209 +1189,372 @@ namespace MVC_Client.PcPart {
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="PcPart.IPcPartServise")]
-    public interface IPcPartServise {
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Basket", Namespace="http://schemas.datacontract.org/2004/07/ModelLayer.Basket")]
+    [System.SerializableAttribute()]
+    public partial class Basket : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/CreateCPU", ReplyAction="http://tempuri.org/IPcPartServise/CreateCPUResponse")]
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int BasketIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private MVC_Client.PcPart.Computer_Case MyComputerCaseField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private MVC_Client.PcPart.CPU MyCpuField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private MVC_Client.PcPart.Customer MyCustomerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private MVC_Client.PcPart.GPU MyGpuField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private MVC_Client.PcPart.Motherboard MyMotherboardField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private MVC_Client.PcPart.RAM MyRamField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private MVC_Client.PcPart.Storage MyStorageField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int BasketID {
+            get {
+                return this.BasketIDField;
+            }
+            set {
+                if ((this.BasketIDField.Equals(value) != true)) {
+                    this.BasketIDField = value;
+                    this.RaisePropertyChanged("BasketID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public MVC_Client.PcPart.Computer_Case MyComputerCase {
+            get {
+                return this.MyComputerCaseField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MyComputerCaseField, value) != true)) {
+                    this.MyComputerCaseField = value;
+                    this.RaisePropertyChanged("MyComputerCase");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public MVC_Client.PcPart.CPU MyCpu {
+            get {
+                return this.MyCpuField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MyCpuField, value) != true)) {
+                    this.MyCpuField = value;
+                    this.RaisePropertyChanged("MyCpu");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public MVC_Client.PcPart.Customer MyCustomer {
+            get {
+                return this.MyCustomerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MyCustomerField, value) != true)) {
+                    this.MyCustomerField = value;
+                    this.RaisePropertyChanged("MyCustomer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public MVC_Client.PcPart.GPU MyGpu {
+            get {
+                return this.MyGpuField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MyGpuField, value) != true)) {
+                    this.MyGpuField = value;
+                    this.RaisePropertyChanged("MyGpu");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public MVC_Client.PcPart.Motherboard MyMotherboard {
+            get {
+                return this.MyMotherboardField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MyMotherboardField, value) != true)) {
+                    this.MyMotherboardField = value;
+                    this.RaisePropertyChanged("MyMotherboard");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public MVC_Client.PcPart.RAM MyRam {
+            get {
+                return this.MyRamField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MyRamField, value) != true)) {
+                    this.MyRamField = value;
+                    this.RaisePropertyChanged("MyRam");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public MVC_Client.PcPart.Storage MyStorage {
+            get {
+                return this.MyStorageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MyStorageField, value) != true)) {
+                    this.MyStorageField = value;
+                    this.RaisePropertyChanged("MyStorage");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="PcPart.IPcPartService")]
+    public interface IPcPartService {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/CreateCPU", ReplyAction="http://tempuri.org/IPcPartService/CreateCPUResponse")]
         void CreateCPU(MVC_Client.PcPart.CPU cpu);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/CreateCPU", ReplyAction="http://tempuri.org/IPcPartServise/CreateCPUResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/CreateCPU", ReplyAction="http://tempuri.org/IPcPartService/CreateCPUResponse")]
         System.Threading.Tasks.Task CreateCPUAsync(MVC_Client.PcPart.CPU cpu);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/UpdateCPU", ReplyAction="http://tempuri.org/IPcPartServise/UpdateCPUResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/UpdateCPU", ReplyAction="http://tempuri.org/IPcPartService/UpdateCPUResponse")]
         void UpdateCPU(MVC_Client.PcPart.CPU cpu);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/UpdateCPU", ReplyAction="http://tempuri.org/IPcPartServise/UpdateCPUResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/UpdateCPU", ReplyAction="http://tempuri.org/IPcPartService/UpdateCPUResponse")]
         System.Threading.Tasks.Task UpdateCPUAsync(MVC_Client.PcPart.CPU cpu);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/DeleteCPU", ReplyAction="http://tempuri.org/IPcPartServise/DeleteCPUResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/DeleteCPU", ReplyAction="http://tempuri.org/IPcPartService/DeleteCPUResponse")]
         void DeleteCPU(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/DeleteCPU", ReplyAction="http://tempuri.org/IPcPartServise/DeleteCPUResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/DeleteCPU", ReplyAction="http://tempuri.org/IPcPartService/DeleteCPUResponse")]
         System.Threading.Tasks.Task DeleteCPUAsync(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCPUsByBrand", ReplyAction="http://tempuri.org/IPcPartServise/FindCPUsByBrandResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCPUsByBrand", ReplyAction="http://tempuri.org/IPcPartService/FindCPUsByBrandResponse")]
         MVC_Client.PcPart.CPU[] FindCPUsByBrand(string Brand);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCPUsByBrand", ReplyAction="http://tempuri.org/IPcPartServise/FindCPUsByBrandResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCPUsByBrand", ReplyAction="http://tempuri.org/IPcPartService/FindCPUsByBrandResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.CPU[]> FindCPUsByBrandAsync(string Brand);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCPUsByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindCPUsByCategoryResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCPUsByCategory", ReplyAction="http://tempuri.org/IPcPartService/FindCPUsByCategoryResponse")]
         MVC_Client.PcPart.CPU[] FindCPUsByCategory(string Category);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCPUsByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindCPUsByCategoryResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCPUsByCategory", ReplyAction="http://tempuri.org/IPcPartService/FindCPUsByCategoryResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.CPU[]> FindCPUsByCategoryAsync(string Category);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllCPUs", ReplyAction="http://tempuri.org/IPcPartServise/FindAllCPUsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllCPUs", ReplyAction="http://tempuri.org/IPcPartService/FindAllCPUsResponse")]
         MVC_Client.PcPart.CPU[] FindAllCPUs();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllCPUs", ReplyAction="http://tempuri.org/IPcPartServise/FindAllCPUsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllCPUs", ReplyAction="http://tempuri.org/IPcPartService/FindAllCPUsResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.CPU[]> FindAllCPUsAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindStorageByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindStorageByManufacturerResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindStorageByManufacturer", ReplyAction="http://tempuri.org/IPcPartService/FindStorageByManufacturerResponse")]
         MVC_Client.PcPart.Storage[] FindStorageByManufacturer(string Manufacturer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindStorageByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindStorageByManufacturerResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindStorageByManufacturer", ReplyAction="http://tempuri.org/IPcPartService/FindStorageByManufacturerResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.Storage[]> FindStorageByManufacturerAsync(string Manufacturer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindStorageByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindStorageByCategoryResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindStorageByCategory", ReplyAction="http://tempuri.org/IPcPartService/FindStorageByCategoryResponse")]
         MVC_Client.PcPart.Storage[] FindStorageByCategory(string Category);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindStorageByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindStorageByCategoryResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindStorageByCategory", ReplyAction="http://tempuri.org/IPcPartService/FindStorageByCategoryResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.Storage[]> FindStorageByCategoryAsync(string Category);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllStorage", ReplyAction="http://tempuri.org/IPcPartServise/FindAllStorageResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllStorage", ReplyAction="http://tempuri.org/IPcPartService/FindAllStorageResponse")]
         MVC_Client.PcPart.Storage[] FindAllStorage();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllStorage", ReplyAction="http://tempuri.org/IPcPartServise/FindAllStorageResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllStorage", ReplyAction="http://tempuri.org/IPcPartService/FindAllStorageResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.Storage[]> FindAllStorageAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindRamByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindRamByManufacturerResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindRamByManufacturer", ReplyAction="http://tempuri.org/IPcPartService/FindRamByManufacturerResponse")]
         MVC_Client.PcPart.RAM[] FindRamByManufacturer(string Manufacturer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindRamByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindRamByManufacturerResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindRamByManufacturer", ReplyAction="http://tempuri.org/IPcPartService/FindRamByManufacturerResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.RAM[]> FindRamByManufacturerAsync(string Manufacturer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindRamByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindRamByCategoryResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindRamByCategory", ReplyAction="http://tempuri.org/IPcPartService/FindRamByCategoryResponse")]
         MVC_Client.PcPart.RAM[] FindRamByCategory(string Category);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindRamByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindRamByCategoryResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindRamByCategory", ReplyAction="http://tempuri.org/IPcPartService/FindRamByCategoryResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.RAM[]> FindRamByCategoryAsync(string Category);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllRam", ReplyAction="http://tempuri.org/IPcPartServise/FindAllRamResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllRam", ReplyAction="http://tempuri.org/IPcPartService/FindAllRamResponse")]
         MVC_Client.PcPart.RAM[] FindAllRam();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllRam", ReplyAction="http://tempuri.org/IPcPartServise/FindAllRamResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllRam", ReplyAction="http://tempuri.org/IPcPartService/FindAllRamResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.RAM[]> FindAllRamAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindMotherboardByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindMotherboardByManufacturerResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindMotherboardByManufacturer", ReplyAction="http://tempuri.org/IPcPartService/FindMotherboardByManufacturerResponse")]
         MVC_Client.PcPart.Motherboard[] FindMotherboardByManufacturer(string Manufacturer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindMotherboardByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindMotherboardByManufacturerResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindMotherboardByManufacturer", ReplyAction="http://tempuri.org/IPcPartService/FindMotherboardByManufacturerResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.Motherboard[]> FindMotherboardByManufacturerAsync(string Manufacturer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindMotherboardByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindMotherboardByCategoryResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindMotherboardByCategory", ReplyAction="http://tempuri.org/IPcPartService/FindMotherboardByCategoryResponse")]
         MVC_Client.PcPart.Motherboard[] FindMotherboardByCategory(string Category);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindMotherboardByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindMotherboardByCategoryResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindMotherboardByCategory", ReplyAction="http://tempuri.org/IPcPartService/FindMotherboardByCategoryResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.Motherboard[]> FindMotherboardByCategoryAsync(string Category);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllMotherboard", ReplyAction="http://tempuri.org/IPcPartServise/FindAllMotherboardResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllMotherboard", ReplyAction="http://tempuri.org/IPcPartService/FindAllMotherboardResponse")]
         MVC_Client.PcPart.Motherboard[] FindAllMotherboard();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllMotherboard", ReplyAction="http://tempuri.org/IPcPartServise/FindAllMotherboardResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllMotherboard", ReplyAction="http://tempuri.org/IPcPartService/FindAllMotherboardResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.Motherboard[]> FindAllMotherboardAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindGpuByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindGpuByManufacturerResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindGpuByManufacturer", ReplyAction="http://tempuri.org/IPcPartService/FindGpuByManufacturerResponse")]
         MVC_Client.PcPart.GPU[] FindGpuByManufacturer(string Manufacturer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindGpuByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindGpuByManufacturerResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindGpuByManufacturer", ReplyAction="http://tempuri.org/IPcPartService/FindGpuByManufacturerResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.GPU[]> FindGpuByManufacturerAsync(string Manufacturer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindGpuByModel", ReplyAction="http://tempuri.org/IPcPartServise/FindGpuByModelResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindGpuByModel", ReplyAction="http://tempuri.org/IPcPartService/FindGpuByModelResponse")]
         MVC_Client.PcPart.GPU[] FindGpuByModel(string Model);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindGpuByModel", ReplyAction="http://tempuri.org/IPcPartServise/FindGpuByModelResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindGpuByModel", ReplyAction="http://tempuri.org/IPcPartService/FindGpuByModelResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.GPU[]> FindGpuByModelAsync(string Model);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindGpuByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindGpuByCategoryResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindGpuByCategory", ReplyAction="http://tempuri.org/IPcPartService/FindGpuByCategoryResponse")]
         MVC_Client.PcPart.GPU[] FindGpuByCategory(string Category);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindGpuByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindGpuByCategoryResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindGpuByCategory", ReplyAction="http://tempuri.org/IPcPartService/FindGpuByCategoryResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.GPU[]> FindGpuByCategoryAsync(string Category);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllGpus", ReplyAction="http://tempuri.org/IPcPartServise/FindAllGpusResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllGpus", ReplyAction="http://tempuri.org/IPcPartService/FindAllGpusResponse")]
         MVC_Client.PcPart.GPU[] FindAllGpus();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllGpus", ReplyAction="http://tempuri.org/IPcPartServise/FindAllGpusResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllGpus", ReplyAction="http://tempuri.org/IPcPartService/FindAllGpusResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.GPU[]> FindAllGpusAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindComputerCaseByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindComputerCaseByManufacturerResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindComputerCaseByManufacturer", ReplyAction="http://tempuri.org/IPcPartService/FindComputerCaseByManufacturerResponse")]
         MVC_Client.PcPart.Computer_Case[] FindComputerCaseByManufacturer(string Manufacturer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindComputerCaseByManufacturer", ReplyAction="http://tempuri.org/IPcPartServise/FindComputerCaseByManufacturerResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindComputerCaseByManufacturer", ReplyAction="http://tempuri.org/IPcPartService/FindComputerCaseByManufacturerResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.Computer_Case[]> FindComputerCaseByManufacturerAsync(string Manufacturer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindComputerCaseByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindComputerCaseByCategoryResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindComputerCaseByCategory", ReplyAction="http://tempuri.org/IPcPartService/FindComputerCaseByCategoryResponse")]
         MVC_Client.PcPart.Computer_Case[] FindComputerCaseByCategory(string Category);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindComputerCaseByCategory", ReplyAction="http://tempuri.org/IPcPartServise/FindComputerCaseByCategoryResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindComputerCaseByCategory", ReplyAction="http://tempuri.org/IPcPartService/FindComputerCaseByCategoryResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.Computer_Case[]> FindComputerCaseByCategoryAsync(string Category);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllComputerCases", ReplyAction="http://tempuri.org/IPcPartServise/FindAllComputerCasesResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllComputerCases", ReplyAction="http://tempuri.org/IPcPartService/FindAllComputerCasesResponse")]
         MVC_Client.PcPart.Computer_Case[] FindAllComputerCases();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllComputerCases", ReplyAction="http://tempuri.org/IPcPartServise/FindAllComputerCasesResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllComputerCases", ReplyAction="http://tempuri.org/IPcPartService/FindAllComputerCasesResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.Computer_Case[]> FindAllComputerCasesAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/CreateCustomer", ReplyAction="http://tempuri.org/IPcPartServise/CreateCustomerResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/CreateCustomer", ReplyAction="http://tempuri.org/IPcPartService/CreateCustomerResponse")]
         void CreateCustomer(MVC_Client.PcPart.Customer customer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/CreateCustomer", ReplyAction="http://tempuri.org/IPcPartServise/CreateCustomerResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/CreateCustomer", ReplyAction="http://tempuri.org/IPcPartService/CreateCustomerResponse")]
         System.Threading.Tasks.Task CreateCustomerAsync(MVC_Client.PcPart.Customer customer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/UpdateCustomer", ReplyAction="http://tempuri.org/IPcPartServise/UpdateCustomerResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/UpdateCustomer", ReplyAction="http://tempuri.org/IPcPartService/UpdateCustomerResponse")]
         void UpdateCustomer(MVC_Client.PcPart.Customer customer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/UpdateCustomer", ReplyAction="http://tempuri.org/IPcPartServise/UpdateCustomerResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/UpdateCustomer", ReplyAction="http://tempuri.org/IPcPartService/UpdateCustomerResponse")]
         System.Threading.Tasks.Task UpdateCustomerAsync(MVC_Client.PcPart.Customer customer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/DeleteCustomer", ReplyAction="http://tempuri.org/IPcPartServise/DeleteCustomerResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/DeleteCustomer", ReplyAction="http://tempuri.org/IPcPartService/DeleteCustomerResponse")]
         void DeleteCustomer(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/DeleteCustomer", ReplyAction="http://tempuri.org/IPcPartServise/DeleteCustomerResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/DeleteCustomer", ReplyAction="http://tempuri.org/IPcPartService/DeleteCustomerResponse")]
         System.Threading.Tasks.Task DeleteCustomerAsync(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCustomerById", ReplyAction="http://tempuri.org/IPcPartServise/FindCustomerByIdResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCustomerById", ReplyAction="http://tempuri.org/IPcPartService/FindCustomerByIdResponse")]
         MVC_Client.PcPart.Customer FindCustomerById(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCustomerById", ReplyAction="http://tempuri.org/IPcPartServise/FindCustomerByIdResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCustomerById", ReplyAction="http://tempuri.org/IPcPartService/FindCustomerByIdResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.Customer> FindCustomerByIdAsync(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCustomerByName", ReplyAction="http://tempuri.org/IPcPartServise/FindCustomerByNameResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCustomerByName", ReplyAction="http://tempuri.org/IPcPartService/FindCustomerByNameResponse")]
         MVC_Client.PcPart.Customer[] FindCustomerByName(string name);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindCustomerByName", ReplyAction="http://tempuri.org/IPcPartServise/FindCustomerByNameResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCustomerByName", ReplyAction="http://tempuri.org/IPcPartService/FindCustomerByNameResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.Customer[]> FindCustomerByNameAsync(string name);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllCustomers", ReplyAction="http://tempuri.org/IPcPartServise/FindAllCustomersResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllCustomers", ReplyAction="http://tempuri.org/IPcPartService/FindAllCustomersResponse")]
         MVC_Client.PcPart.Customer[] FindAllCustomers();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindAllCustomers", ReplyAction="http://tempuri.org/IPcPartServise/FindAllCustomersResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllCustomers", ReplyAction="http://tempuri.org/IPcPartService/FindAllCustomersResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.Customer[]> FindAllCustomersAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindSocket", ReplyAction="http://tempuri.org/IPcPartServise/FindSocketResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/CreateBasket", ReplyAction="http://tempuri.org/IPcPartService/CreateBasketResponse")]
+        void CreateBasket(MVC_Client.PcPart.Basket basket);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/CreateBasket", ReplyAction="http://tempuri.org/IPcPartService/CreateBasketResponse")]
+        System.Threading.Tasks.Task CreateBasketAsync(MVC_Client.PcPart.Basket basket);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindSocket", ReplyAction="http://tempuri.org/IPcPartService/FindSocketResponse")]
         MVC_Client.PcPart.Socket FindSocket(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartServise/FindSocket", ReplyAction="http://tempuri.org/IPcPartServise/FindSocketResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindSocket", ReplyAction="http://tempuri.org/IPcPartService/FindSocketResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.Socket> FindSocketAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IPcPartServiseChannel : MVC_Client.PcPart.IPcPartServise, System.ServiceModel.IClientChannel {
+    public interface IPcPartServiceChannel : MVC_Client.PcPart.IPcPartService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class PcPartServiseClient : System.ServiceModel.ClientBase<MVC_Client.PcPart.IPcPartServise>, MVC_Client.PcPart.IPcPartServise {
+    public partial class PcPartServiceClient : System.ServiceModel.ClientBase<MVC_Client.PcPart.IPcPartService>, MVC_Client.PcPart.IPcPartService {
         
-        public PcPartServiseClient() {
+        public PcPartServiceClient() {
         }
         
-        public PcPartServiseClient(string endpointConfigurationName) : 
+        public PcPartServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public PcPartServiseClient(string endpointConfigurationName, string remoteAddress) : 
+        public PcPartServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public PcPartServiseClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public PcPartServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public PcPartServiseClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public PcPartServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
@@ -1617,6 +1780,14 @@ namespace MVC_Client.PcPart {
         
         public System.Threading.Tasks.Task<MVC_Client.PcPart.Customer[]> FindAllCustomersAsync() {
             return base.Channel.FindAllCustomersAsync();
+        }
+        
+        public void CreateBasket(MVC_Client.PcPart.Basket basket) {
+            base.Channel.CreateBasket(basket);
+        }
+        
+        public System.Threading.Tasks.Task CreateBasketAsync(MVC_Client.PcPart.Basket basket) {
+            return base.Channel.CreateBasketAsync(basket);
         }
         
         public MVC_Client.PcPart.Socket FindSocket(int id) {

@@ -27,6 +27,7 @@
     <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="906c6c5a-7cb5-4c54-8bc9-2778fe59a0b5" SourceId="1" SourceUrl="http://localhost:8733/mex" />
     <MetadataFile FileName="ModelLayer.Hardware.xsd" MetadataType="Schema" ID="778e9d62-33ec-4f5c-9fae-30f804f6934b" SourceId="1" SourceUrl="http://localhost:8733/mex" />
     <MetadataFile FileName="ModelLayer.xsd" MetadataType="Schema" ID="3432398b-efbb-4ae9-92b3-3221601f96dd" SourceId="1" SourceUrl="http://localhost:8733/mex" />
+    <MetadataFile FileName="ModelLayer.Basket.xsd" MetadataType="Schema" ID="6dc602cd-8ea1-4c9c-baf4-61269c487f23" SourceId="1" SourceUrl="http://localhost:8733/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

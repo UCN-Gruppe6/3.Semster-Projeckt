@@ -12,15 +12,5 @@ namespace ControlerLayer
 {
     public class ShoppingCartCtr
     {
-        public string ShoppingCartId { get; set; }
-        public const string CartSessionKey = "CartId";
-
-        public int AddCPUtoCart (CPUCartItem cpu)
-        {
-            using (EntityFrameworkContext db = new EntityFrameworkContext())
-            {
-                var cpuItem = db.CPUtoBUY.SingleOrDefault(c => c.CartId = ShoppingCartId && c.CPUId = cpu.CPUId);
-            }
-        }
     }
 }

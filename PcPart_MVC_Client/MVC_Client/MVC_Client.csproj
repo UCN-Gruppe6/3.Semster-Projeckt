@@ -150,7 +150,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\BasketController.cs" />
     <Compile Include="Controllers\Computer_CaseController.cs" />
     <Compile Include="Controllers\CPUController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
@@ -222,6 +221,9 @@
     <Content Include="Service References\PcPart\MVC_Client.PcPart.Storage.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\PcPart\ModelLayer.Basket.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\PcPart\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -271,7 +273,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Basket\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
