@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ModelLayer;
 using ModelLayer.Hardware;
 using ControlerLayer;
+using ModelLayer.Basket;
 
 namespace WCFServices 
 {
@@ -15,6 +16,7 @@ namespace WCFServices
         private HardwererCtr HWCtr = new HardwererCtr();
         private CustomerCtr customerCtr = new CustomerCtr();
         private ProductCtr proCtr = new ProductCtr();
+        private BasketCtr basketctr = new BasketCtr();
 
         // Vare CRUD
         #region
@@ -181,6 +183,17 @@ namespace WCFServices
         }
 
         #endregion
+
+        // Basket
+        #region
+        public void CreateBasket(Basket basket)
+        {
+            basketctr.CreateBasket(basket);
+        }
+
+
+        #endregion
+
 
         public Socket FindSocket(int id)
         {

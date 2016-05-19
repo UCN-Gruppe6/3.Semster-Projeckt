@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ModelLayer.Hardware;
 using ModelLayer;
 using System.ServiceModel;
+using ModelLayer.Basket;
 
 namespace WCFServices
 {
@@ -102,6 +103,17 @@ namespace WCFServices
         IEnumerable<Customer> FindAllCustomers();
 
         #endregion
+
+        // Basket
+        #region
+
+        [OperationContract]
+        void CreateBasket(Basket basket);
+
+            
+
+        #endregion
+
 
         [OperationContract]
         Socket FindSocket(int id);
