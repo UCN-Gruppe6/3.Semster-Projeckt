@@ -11,10 +11,16 @@ namespace MVC_Client.Controllers
     {
         public BasketController()
         {
-          //
+            // Dette her er en controler!!!
         }
 
-        // GET: Basket
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        // Laver en session som holder bå kurven inden at den bliver gemt.
+        // Ligger en vare i kurven.
         public ActionResult AddToBasket(int id, string type)
         {
             if (HttpContext.Session["basket"] == null)
@@ -25,7 +31,6 @@ namespace MVC_Client.Controllers
             switch (type)
             {
                 case "CPU":
-                    
                     basket.MyCpu = new CPU { CPUId = id };
                     return RedirectToAction("Index", "CPU");
                     break;
