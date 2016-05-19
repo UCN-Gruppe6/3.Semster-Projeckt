@@ -29,6 +29,7 @@ namespace DBLayer
 
         public DbSet<Customer> Customer { get; set; }
 
+        #region Mads TEST
         // Bluver brugt til kuvren.
         public DbSet<CPUCartItem> CPUtoBUY { get; set; }
         public DbSet<RAMCartItem> RAMtoBUY { get; set; }
@@ -37,6 +38,8 @@ namespace DBLayer
         public DbSet<MotherboardCartItem> MotherboardToBUY { get; set; }
         public DbSet<Computer_CaseCartItem> CaseToBUY { get; set; }
 
+        public DbSet<Cart> ShoppingCart { get; set; }
+        #endregion
 
         #region TEST
         // Bliver kun brugt til en test.

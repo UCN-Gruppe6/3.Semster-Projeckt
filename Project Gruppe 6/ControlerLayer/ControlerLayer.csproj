@@ -54,6 +54,7 @@
     <Compile Include="HardwererCtr.cs" />
     <Compile Include="ProductCtr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShoppingCartCtr.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
