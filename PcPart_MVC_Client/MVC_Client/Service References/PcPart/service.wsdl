@@ -586,7 +586,7 @@
   </wsdl:binding>
   <wsdl:service name="PcPartService">
     <wsdl:port name="BasicHttpBinding_IPcPartService" binding="tns:BasicHttpBinding_IPcPartService">
-      <soap:address location="http://localhost:8733/PcPartServise" />
+      <soap:address location="http://localhost:8733/PcPartService" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

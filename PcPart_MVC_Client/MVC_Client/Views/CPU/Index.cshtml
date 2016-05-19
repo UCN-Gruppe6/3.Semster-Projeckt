@@ -79,9 +79,17 @@
             @Html.DisplayFor(modelItem => item.Stock)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Add to basket", "AddToBasket", "Basket", new { id = item.CPUId, type = "CPU" }, null)
         </td>
     </tr>
 }
 
 </table>
+
+@{ 
+    Basket b = (Basket)Session["basket"];
+}
+<p>
+    CPU = @(b == null ? "" : b.MyCpu.CPUId.ToString())  <br/>
+    @*RAM = @(b == null ? "" : b.MyRam.Model)*@ 
+    </p>

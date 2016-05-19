@@ -477,6 +477,9 @@ namespace MVC_Client.PcPart {
         private double PriceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int RAMIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int StockField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -553,6 +556,19 @@ namespace MVC_Client.PcPart {
                 if ((this.PriceField.Equals(value) != true)) {
                     this.PriceField = value;
                     this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int RAMId {
+            get {
+                return this.RAMIdField;
+            }
+            set {
+                if ((this.RAMIdField.Equals(value) != true)) {
+                    this.RAMIdField = value;
+                    this.RaisePropertyChanged("RAMId");
                 }
             }
         }
