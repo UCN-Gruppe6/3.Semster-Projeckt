@@ -32,5 +32,11 @@ namespace DedicatedClient
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            FormBasket formbasket = new FormBasket();
+            formbasket.Show();
+        }
     }
 }

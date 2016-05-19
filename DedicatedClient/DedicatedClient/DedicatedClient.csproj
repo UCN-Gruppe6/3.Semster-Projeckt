@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBasket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBasket.Designer.cs">
+      <DependentUpon>FormBasket.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormBasket.resx">
+      <DependentUpon>FormBasket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +123,9 @@
     </None>
     <None Include="Service References\PcPartService\DedicatedClient.PcPartService.Storage.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PcPartService\ModelLayer.Basket.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Service References\PcPartService\ModelLayer.Hardware.xsd">
       <SubType>Designer</SubType>
