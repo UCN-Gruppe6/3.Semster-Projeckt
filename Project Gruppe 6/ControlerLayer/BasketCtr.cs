@@ -5,17 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using ModelLayer.Hardware;
 using DBLayer;
+using ModelLayer.Basket;
 
 namespace ControlerLayer
 {
    public  class BasketCtr
     {
-        public void SetComputerCase(Computer_Case ComputerC)
+
+        public void CreateBasket(Basket basket)
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-
+                db.Baskets.Add(basket);
+                db.SaveChanges();
             }
         }
+
     }
 }

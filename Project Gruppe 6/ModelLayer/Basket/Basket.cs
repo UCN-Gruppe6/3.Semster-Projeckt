@@ -12,6 +12,9 @@ namespace ModelLayer.Basket
    [DataContract]
    public class Basket
     {
+
+        [DataMember]
+        public int BasketID { get; set; }
         [DataMember]
         public Computer_Case MyComputerCase { get; set; }
         [DataMember]
@@ -28,6 +31,7 @@ namespace ModelLayer.Basket
         //Add customer to the buy
         [DataMember]
         public Customer MyCustomer { get; set; }
+
     }
 
 }

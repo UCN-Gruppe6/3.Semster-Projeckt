@@ -14,7 +14,7 @@ namespace DBLayer
         }
 
         // Hardware
-
+        public DbSet<Basket> Baskets { get; set; }
         public DbSet<CPU> CPUs { get; set; }
         public DbSet<RAM> RAMs { get; set; }
         public DbSet<Storage> Storages { get; set; }

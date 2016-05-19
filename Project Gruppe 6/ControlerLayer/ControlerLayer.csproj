@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasketCtr.cs" />
     <Compile Include="CostumerCtr.cs" />
     <Compile Include="HardwererCtr.cs" />
     <Compile Include="ProductCtr.cs" />
