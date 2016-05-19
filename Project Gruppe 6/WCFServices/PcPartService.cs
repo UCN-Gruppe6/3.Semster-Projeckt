@@ -190,8 +190,6 @@ namespace WCFServices
         {
             basketctr.CreateBasket(basket);
         }
-
-
         #endregion
 
 
