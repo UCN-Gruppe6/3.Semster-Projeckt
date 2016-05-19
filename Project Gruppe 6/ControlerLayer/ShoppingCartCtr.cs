@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ModelLayer.Hardware;
 using DBLayer;
+using ModelLayer;
+using ModelLayer.Hardware;
+using ModelLayer.CartItems;
 
 namespace ControlerLayer
 {
-   public  class BasketCtr
+    public class ShoppingCartCtr
     {
-        public void SetComputerCase(Computer_Case ComputerC)
+        public string ShoppingCartId { get; set; }
+        public const string CartSessionKey = "CartId";
+
+        public int AddCPUtoCart(CPUCartItem cpu)
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {

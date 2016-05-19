@@ -51,18 +51,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Basket\Basket.cs" />
+    <Compile Include="CartItems\Computer_CaseCartItem.cs" />
+    <Compile Include="CartItems\CPUCartItem.cs" />
+    <Compile Include="CartItems\GPUCartItem.cs" />
+    <Compile Include="CartItems\MotherboardCartItem.cs" />
+    <Compile Include="CartItems\RAMCartItem.cs" />
+    <Compile Include="CartItems\StorageCartItem.cs" />
     <Compile Include="Customer\Customer.cs" />
     <Compile Include="CPUTestClase.cs" />
     <Compile Include="Hardware\Computer_Case.cs" />
     <Compile Include="Hardware\CPU.cs" />
     <Compile Include="Hardware\GPU.cs" />
-    <Compile Include="Hardware\JegVilSkideDigIMunden.cs" />
     <Compile Include="Hardware\Motherboard.cs" />
     <Compile Include="Hardware\RAM.cs" />
     <Compile Include="Hardware\Socket.cs" />
     <Compile Include="Hardware\Storage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Cart.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -40,6 +40,22 @@ namespace ControlerLayer
             }
         }
 
+        public CPU FindCPUbyModelNr(string modelNr)
+        {
+            using (EntityFrameworkContext db = new EntityFrameworkContext())
+            {
+                return db.CPUs.Where(x => x.ModelNumber.Equals(modelNr)).FirstOrDefault();
+            }
+        }
+
+        public CPU FindCPUbyID(int id)
+        {
+            using (EntityFrameworkContext db = new EntityFrameworkContext())
+            {
+                return db.CPUs.Find(id);
+            }
+        }
+
         // bliver ikke brugt så tit
         public Socket FindSocket(int id)
         {
