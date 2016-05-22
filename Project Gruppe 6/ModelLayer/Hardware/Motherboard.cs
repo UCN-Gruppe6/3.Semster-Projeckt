@@ -13,7 +13,7 @@ namespace ModelLayer.Hardware
     public class Motherboard
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DataMember]
         public int MotherboardId { get; set; }
         [DataMember]
         public string Manufacturer { get; set; }

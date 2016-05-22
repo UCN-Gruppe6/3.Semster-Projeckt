@@ -56,6 +56,11 @@ namespace WCFServices
         {
             return HWCtr.FindCPUsByCategory(Category);
         }
+
+        public CPU FindCPUbyId (int id)
+        {
+            return HWCtr.FindCPUbyID(id);
+        }
         // CPU END
        
         // Storage START

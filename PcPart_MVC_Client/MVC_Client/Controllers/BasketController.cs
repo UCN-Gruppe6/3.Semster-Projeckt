@@ -9,10 +9,8 @@ namespace MVC_Client.Controllers
 {
     public class BasketController : Controller
     {
-        public BasketController()
-        {
-            // Dette her er en controler!!!
-        }
+
+        private PcPartServiceClient client = new PcPartServiceClient();
 
         public ActionResult Index()
         {
@@ -31,12 +29,71 @@ namespace MVC_Client.Controllers
             switch (type)
             {
                 case "CPU":
-                    basket.MyCpu = new CPU { CPUId = id };
-                    return RedirectToAction("Index", "CPU");
+                    if(basket.MyCpu == null)
+                    {
+                        basket.MyCpu = new CPU { CPUId = id };
+                        return RedirectToAction("Index", "CPU");
+                    }
+                    if(basket.MyCpu != null)
+                    {
+                        return View("BasketError");
+                    }
                     break;
                 case "RAM":
-                    basket.MyRam = new RAM {  RAMId = id };
-                    return RedirectToAction("Index", "RAM");
+                    if(basket.MyRam == null)
+                    {
+                        basket.MyRam = new RAM { RAMId = id };
+                        return RedirectToAction("Index", "RAM");
+                    }
+                    if(basket.MyRam != null)
+                    {
+                        return View("BasketError");
+                    }
+                    break;
+                case "GPU":
+                    if(basket.MyGpu == null)
+                    {
+                        basket.MyGpu = new GPU { GPUId = id };
+                        return RedirectToAction("Index", "GPU");
+                    }
+                    if(basket.MyGpu != null)
+                    {
+                        return View("BasketError");
+                    }
+                    break;
+                case "Motherboard":
+                    if(basket.MyMotherboard == null)
+                    {
+                        basket.MyMotherboard = new Motherboard { MotherboardId = id };
+                        return RedirectToAction("Index", "Motherboard");
+                    }
+                    break; 
+                    if(basket.MyMotherboard != null)
+                    {
+                        return View("BasketError");
+                    }
+                case "Computer_Case":
+                    if(basket.MyComputerCase == null)
+                    {
+                        basket.MyComputerCase = new Computer_Case { CaseId = id };
+                        return RedirectToAction("Index", "Computer_Case");
+
+                    }
+                    if(basket.MyComputerCase != null)
+                    {
+                        return View("BasketError");
+                    }
+                    break;
+                case "Storage":
+                    if(basket.MyStorage == null)
+                    {
+                        basket.MyStorage = new Storage { StorageId = id };
+                        return RedirectToAction("Index", "Storage");
+                    }
+                    if(basket.MyStorage != null)
+                    {
+                        return View("BasketError");
+                    }
                     break;
             }
             return RedirectToAction("Index", "Home");

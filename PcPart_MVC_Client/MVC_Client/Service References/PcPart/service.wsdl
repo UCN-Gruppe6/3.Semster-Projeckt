@@ -45,6 +45,12 @@
   <wsdl:message name="IPcPartService_FindAllCPUs_OutputMessage">
     <wsdl:part name="parameters" element="tns:FindAllCPUsResponse" />
   </wsdl:message>
+  <wsdl:message name="IPcPartService_FindCPUbyId_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCPUbyId" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindCPUbyId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCPUbyIdResponse" />
+  </wsdl:message>
   <wsdl:message name="IPcPartService_FindStorageByManufacturer_InputMessage">
     <wsdl:part name="parameters" element="tns:FindStorageByManufacturer" />
   </wsdl:message>
@@ -214,6 +220,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindAllCPUs" message="tns:IPcPartService_FindAllCPUs_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindAllCPUsResponse" message="tns:IPcPartService_FindAllCPUs_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="FindCPUbyId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindCPUbyId" message="tns:IPcPartService_FindCPUbyId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindCPUbyIdResponse" message="tns:IPcPartService_FindCPUbyId_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="FindStorageByManufacturer">
       <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindStorageByManufacturer" message="tns:IPcPartService_FindStorageByManufacturer_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindStorageByManufacturerResponse" message="tns:IPcPartService_FindStorageByManufacturer_OutputMessage" />
@@ -360,6 +370,15 @@
     </wsdl:operation>
     <wsdl:operation name="FindAllCPUs">
       <soap:operation soapAction="http://tempuri.org/IPcPartService/FindAllCPUs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCPUbyId">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindCPUbyId" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
