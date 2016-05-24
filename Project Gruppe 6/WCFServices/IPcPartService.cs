@@ -36,6 +36,8 @@ namespace WCFServices
         IEnumerable<CPU> FindCPUsByCategory(string Category);
         [OperationContract]
         IEnumerable<CPU> FindAllCPUs();
+        [OperationContract]
+        CPU FindCPUbyId(int id);
         // CPU END
 
         // Storage START

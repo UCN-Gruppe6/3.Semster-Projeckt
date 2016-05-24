@@ -631,6 +631,9 @@ namespace MVC_Client.PcPart {
         private string ManufacturerField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int MotherboardIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private double PriceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -694,6 +697,19 @@ namespace MVC_Client.PcPart {
                 if ((object.ReferenceEquals(this.ManufacturerField, value) != true)) {
                     this.ManufacturerField = value;
                     this.RaisePropertyChanged("Manufacturer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int MotherboardId {
+            get {
+                return this.MotherboardIdField;
+            }
+            set {
+                if ((this.MotherboardIdField.Equals(value) != true)) {
+                    this.MotherboardIdField = value;
+                    this.RaisePropertyChanged("MotherboardId");
                 }
             }
         }
@@ -1402,6 +1418,12 @@ namespace MVC_Client.PcPart {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllCPUs", ReplyAction="http://tempuri.org/IPcPartService/FindAllCPUsResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.CPU[]> FindAllCPUsAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCPUbyId", ReplyAction="http://tempuri.org/IPcPartService/FindCPUbyIdResponse")]
+        MVC_Client.PcPart.CPU FindCPUbyId(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCPUbyId", ReplyAction="http://tempuri.org/IPcPartService/FindCPUbyIdResponse")]
+        System.Threading.Tasks.Task<MVC_Client.PcPart.CPU> FindCPUbyIdAsync(int id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindStorageByManufacturer", ReplyAction="http://tempuri.org/IPcPartService/FindStorageByManufacturerResponse")]
         MVC_Client.PcPart.Storage[] FindStorageByManufacturer(string Manufacturer);
         
@@ -1620,6 +1642,14 @@ namespace MVC_Client.PcPart {
         
         public System.Threading.Tasks.Task<MVC_Client.PcPart.CPU[]> FindAllCPUsAsync() {
             return base.Channel.FindAllCPUsAsync();
+        }
+        
+        public MVC_Client.PcPart.CPU FindCPUbyId(int id) {
+            return base.Channel.FindCPUbyId(id);
+        }
+        
+        public System.Threading.Tasks.Task<MVC_Client.PcPart.CPU> FindCPUbyIdAsync(int id) {
+            return base.Channel.FindCPUbyIdAsync(id);
         }
         
         public MVC_Client.PcPart.Storage[] FindStorageByManufacturer(string Manufacturer) {

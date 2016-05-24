@@ -1,7 +1,6 @@
 ﻿using System.Data.Entity;
 using ModelLayer.Hardware;
 using ModelLayer;
-using ModelLayer.CartItems;
 using ModelLayer.Basket;
 
 namespace DBLayer
@@ -29,18 +28,6 @@ namespace DBLayer
         // Kunde
 
         public DbSet<Customer> Customer { get; set; }
-
-        #region Mads TEST
-        // Bluver brugt til kuvren.
-        public DbSet<CPUCartItem> CPUtoBUY { get; set; }
-        public DbSet<RAMCartItem> RAMtoBUY { get; set; }
-        public DbSet<StorageCartItem> StorageToBUY { get; set; }
-        public DbSet<GPUCartItem> GPUtoBUY { get; set; }
-        public DbSet<MotherboardCartItem> MotherboardToBUY { get; set; }
-        public DbSet<Computer_CaseCartItem> CaseToBUY { get; set; }
-
-        public DbSet<Cart> ShoppingCart { get; set; }
-        #endregion
 
         #region TEST
         // Bliver kun brugt til en test.

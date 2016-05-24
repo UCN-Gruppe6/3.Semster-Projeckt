@@ -85,11 +85,3 @@
 }
 
 </table>
-
-@{ 
-    Basket b = (Basket)Session["basket"];
-}
-<p>
-    CPU = @(b == null ? "" : b.MyCpu.CPUId.ToString())  <br/>
-    @*RAM = @(b == null ? "" : b.MyRam.Model)*@ 
-    </p>

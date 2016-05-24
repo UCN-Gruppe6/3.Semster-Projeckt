@@ -21,6 +21,5 @@ namespace ControlerLayer
                 db.SaveChanges();
             }
         }
-
     }
 }

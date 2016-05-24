@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Din Kurv</h2>
+
+@{
+    Basket b = (Basket)Session["basket"];
+}
+<p>
+    CPU = @(b == null ? "" : b.MyCpu.CPUId.ToString()) <br />
+    RAM = @(b == null ? "" : b.MyRam.RAMId.ToString()) <br />
+    GPU = @(b == null ? "" : b.MyRam.RAMId.ToString()) <br />
+    Bundkort = @(b == null ? "" : b.MyMotherboard.MotherboardId.ToString()) <br />
+    Kabenet = @(b == null ? "" : b.MyComputerCase.CaseId.ToString()) <br />
+    HDD/SSD = @(b == null ? "" : b.MyStorage.StorageId.ToString())
+</p>
+
