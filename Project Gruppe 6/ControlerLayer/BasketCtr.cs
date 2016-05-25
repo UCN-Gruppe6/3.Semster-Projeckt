@@ -17,9 +17,40 @@ namespace ControlerLayer
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                db.Entry(basket.MyCpu).State = System.Data.Entity.EntityState.Modified;
-                db.Baskets.Add(basket);
-                db.SaveChanges();
+                try
+                {
+                    if(basket.MyCpu != null)
+                    {
+                        db.Entry(basket.MyCpu).State = System.Data.Entity.EntityState.Modified;
+                    }
+                    if(basket.MyGpu != null)
+                    {
+                        db.Entry(basket.MyGpu).State = System.Data.Entity.EntityState.Modified;
+                    }
+                    if(basket.MyRam != null)
+                    {
+                        db.Entry(basket.MyRam).State = System.Data.Entity.EntityState.Modified;
+                    }
+                    if(basket.MyMotherboard != null)
+                    {
+                        db.Entry(basket.MyStorage).State = System.Data.Entity.EntityState.Modified;
+                    }
+                    if(basket.MyMotherboard != null)
+                    {
+                        db.Entry(basket.MyMotherboard).State = System.Data.Entity.EntityState.Modified;
+                    }
+                    if(basket.MyComputerCase != null)
+                    {
+                        db.Entry(basket.MyComputerCase).State = System.Data.Entity.EntityState.Modified;
+                    }
+
+                    db.Baskets.Add(basket);
+                    db.SaveChanges();
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e);
+                }
             }
         }
     }

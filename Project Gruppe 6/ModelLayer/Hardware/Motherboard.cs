@@ -26,8 +26,13 @@ namespace ModelLayer.Hardware
         [DataMember]
         public double Price { get; set; }
 
-        public int SocketTypeId { get; set; }
-        public Socket SocketType { get; set; }
+        [DataMember]
+        public Socket Socket { get; set; }
+        [DataMember]
+        public int SocketId { get; set; }
+
+        //public int SocketTypeId { get; set; }
+        //public Socket SocketType { get; set; }
 
         public List<GPU> GPUs { get; set; }
 

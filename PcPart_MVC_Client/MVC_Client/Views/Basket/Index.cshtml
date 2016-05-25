@@ -10,7 +10,7 @@
 
 <p>
     CPU = @(b == null || b.MyCpu == null ?  "" : b.MyCpu.ModelNumber) <br />
-    RAM = @(b == null || b.MyRam == null ? "" : b.MyRam.RAMId.ToString()) <br />
+    RAM = @(b == null || b.MyRam == null ? "" : b.MyRam.Model + " " + b.MyRam.Capacity.ToString() + "Gb") <br />
     GPU = @(b == null || b.MyGpu == null ? "" : b.MyGpu.GPUId.ToString()) <br />
     Bundkort = @(b == null || b.MyMotherboard == null ? "" : b.MyMotherboard.MotherboardId.ToString()) <br />
     Kabenet = @(b == null || b.MyComputerCase == null ? "" : b.MyComputerCase.CaseId.ToString()) <br />

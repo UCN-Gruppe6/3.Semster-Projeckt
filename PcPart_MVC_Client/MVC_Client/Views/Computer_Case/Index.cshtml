@@ -55,7 +55,7 @@
             @Html.DisplayFor(modelItem => item.Stock)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) 
+            @Html.ActionLink("Tilføj til kurv", "AddToBasket", "Basket", new { id = item.CaseId, type = "Computer_Case" }, null) 
         </td>
     </tr>
 }
