@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelLayer", "ModelLayer\ModelLayer.csproj", "{C6D7596E-4F1F-417A-A7E5-F54309B207ED}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServices", "WCFServices\WCFServices.csproj", "{92FA7922-102D-401D-947B-E5836F2E5D50}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{1397B604-BF34-442D-807C-86BDC784B832}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailBot", "ClassLibrary1\MailBot.csproj", "{07DCFBE8-8E21-49FF-9318-CE4CB6BB2173}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{1397B604-BF34-442D-807C-86BDC784B832}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1397B604-BF34-442D-807C-86BDC784B832}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1397B604-BF34-442D-807C-86BDC784B832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07DCFBE8-8E21-49FF-9318-CE4CB6BB2173}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07DCFBE8-8E21-49FF-9318-CE4CB6BB2173}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07DCFBE8-8E21-49FF-9318-CE4CB6BB2173}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07DCFBE8-8E21-49FF-9318-CE4CB6BB2173}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
