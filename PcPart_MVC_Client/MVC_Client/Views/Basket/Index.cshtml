@@ -8,14 +8,72 @@
 @{
     Basket b = (Basket)Session["basket"];
 
+
+
+    <div style="background-color: #ccccb3; padding-right: 100; padding: 5;">
+        <table style="width:30%">
+            <caption></caption>
+            <tr>
+                <th>Vare</th>
+                <th> </th>
+                <th>Pris</th>
+            </tr>
+            <tr>
+                <td>@(b == null || b.MyCpu == null ? "Ingen CPU" : b.MyCpu.Brand.ToString() )</td>
+                <td>@(b == null || b.MyCpu == null ? "" : b.MyCpu.ModelNumber.ToString() )</td>
+                <td>@(b == null || b.MyCpu == null ? "0,- Kr" : b.MyCpu.Price.ToString() )</td>
+            </tr>
+            <tr>
+                <td>@(b == null || b.MyRam == null ? "Ingen ram" : b.MyRam.Manufacturer.ToString() )</td>
+                <td>@(b == null || b.MyRam == null ? "" : b.MyRam.Model.ToString() )</td>
+                <td>@(b == null || b.MyRam == null ? "0,- Kr" : b.MyRam.Price.ToString() )</td>
+            </tr>
+            <tr>
+                <td>@(b == null || b.MyGpu == null ? "Ingen GPU" : b.MyGpu.Manufacturer.ToString())</td>
+                <td>@(b == null || b.MyGpu == null ? "" : b.MyGpu.Model.ToString())</td>
+                <td>@(b == null || b.MyGpu == null ? "0,- Kr" : b.MyGpu.Price.ToString())</td>
+            </tr>
+            <tr>
+                <td>@(b == null || b.MyMotherboard == null ? "Intet Motherboard" : b.MyMotherboard.Manufacturer.ToString())</td>
+                <td>@(b == null || b.MyMotherboard == null ? "" : b.MyMotherboard.Description.ToString())</td>
+                <td>@(b == null || b.MyMotherboard == null ? "0,- Kr" : b.MyMotherboard.Price.ToString())</td>
+            </tr>
+            <tr>
+                <td>@(b == null || b.MyComputerCase == null ? "Intet Kabinet" : b.MyComputerCase.Manufacturer.ToString())</td>
+                <td>@(b == null || b.MyComputerCase == null ? "" : b.MyComputerCase.Description.ToString())</td>
+                <td>@(b == null || b.MyComputerCase == null ? "0,- Kr" : b.MyComputerCase.Price.ToString())</td>
+            </tr>
+            <tr>
+                <td>@(b == null || b.MyStorage == null ? "Intet Fastpladelager" : b.MyStorage.Manufacturer.ToString())</td>
+                <td>@(b == null || b.MyStorage == null ? "" : b.MyStorage.Capacity.ToString())</td>
+                <td>@(b == null || b.MyStorage == null ? "0,- Kr" : b.MyStorage.Price.ToString())</td>
+            </tr>
+        </table>
+    </div>
+    
+
+    <br />
+    <br />
+    <br />
+
+
 <p>
-    CPU = @(b == null || b.MyCpu == null ?  "" : b.MyCpu.ModelNumber) <br />
-    RAM = @(b == null || b.MyRam == null ? "" : b.MyRam.Model + " " + b.MyRam.Capacity.ToString() + "Gb") <br />
-    GPU = @(b == null || b.MyGpu == null ? "" : b.MyGpu.GPUId.ToString()) <br />
-    Bundkort = @(b == null || b.MyMotherboard == null ? "" : b.MyMotherboard.MotherboardId.ToString()) <br />
-    Kabenet = @(b == null || b.MyComputerCase == null ? "" : b.MyComputerCase.CaseId.ToString()) <br />
+    CPU = @(b == null || b.MyCpu == null ? "" : b.MyCpu.ModelNumber.ToString() )
+
+    RAM = @(b == null || b.MyRam == null ? "" : b.MyRam.RAMId.ToString() )
+
+    GPU = @(b == null || b.MyGpu == null ? "" : b.MyGpu.GPUId.ToString())
+
+    Bundkort = @(b == null || b.MyMotherboard == null ? "" : b.MyMotherboard.MotherboardId.ToString())
+
+    Kabenet = @(b == null || b.MyComputerCase == null ? "" : b.MyComputerCase.CaseId.ToString())
+
     HDD/SSD = @(b == null || b.MyStorage == null ? "" : b.MyStorage.StorageId.ToString())
 </p>
+    
+
+    
+
 
 }
 
