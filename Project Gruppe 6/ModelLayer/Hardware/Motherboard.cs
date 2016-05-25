@@ -31,8 +31,6 @@ namespace ModelLayer.Hardware
         [DataMember]
         public int SocketId { get; set; }
 
-        //public int SocketTypeId { get; set; }
-        //public Socket SocketType { get; set; }
 
         public List<GPU> GPUs { get; set; }
 
