@@ -13,6 +13,13 @@ namespace Mailbot
 {
     public class MailBot
     {
+        public void SendInvoiceMail(Basket basket)
+        {
+            if (basket.MyCustomer != null && basket.MyCustomer.Email != null)
+                    SendInvoiceMail(basket, basket.MyCustomer.Email);
+
+        }
+
 
         public void SendInvoiceMail(Basket basket, String ToAddress )
         {
