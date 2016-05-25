@@ -17,6 +17,7 @@ namespace ControlerLayer
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
+                db.Entry(basket.MyCpu).State = System.Data.Entity.EntityState.Modified;
                 db.Baskets.Add(basket);
                 db.SaveChanges();
             }

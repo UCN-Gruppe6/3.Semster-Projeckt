@@ -31,7 +31,7 @@ namespace MVC_Client.Controllers
                 case "CPU":
                     if(basket.MyCpu == null)
                     {
-                        basket.MyCpu = new CPU { CPUId = id };
+                        basket.MyCpu = client.FindCPUbyId(id);
                         return RedirectToAction("Index", "CPU");
                     }
                     if(basket.MyCpu != null)
@@ -96,6 +96,27 @@ namespace MVC_Client.Controllers
                     }
                     break;
             }
+            return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult Buy()
+        {
+            try
+            {
+                Basket basket = (Basket)HttpContext.Session["basket"];
+
+                basket.MyCpu.Stock = basket.MyCpu.Stock - 1;
+                client.UpdateCPU(basket.MyCpu);
+
+                client.CreateBasket(basket);
+
+                HttpContext.Session["basket"] = null;
+            }
+            catch
+            {
+                return View("BuyError");
+            }
+
             return RedirectToAction("Index", "Home");
         }
     }

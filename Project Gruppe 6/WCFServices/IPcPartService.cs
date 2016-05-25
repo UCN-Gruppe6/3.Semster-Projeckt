@@ -10,22 +10,10 @@ using ModelLayer.Basket;
 
 namespace WCFServices
 {
+    // Dette her er intafaset til servisen.
     [ServiceContract]
     interface IPcPartService
     {
-        // Vare CRUD
-        #region
-
-        // CPU
-        [OperationContract]
-        void CreateCPU(CPU cpu);
-        [OperationContract]
-        void UpdateCPU(CPU cpu);
-        [OperationContract]
-        void DeleteCPU(int id);
-
-        #endregion
-
         // Hardware
         #region
 
@@ -38,6 +26,14 @@ namespace WCFServices
         IEnumerable<CPU> FindAllCPUs();
         [OperationContract]
         CPU FindCPUbyId(int id);
+        [OperationContract]
+        void CreateCPU(CPU cpu);
+        [OperationContract]
+        void UpdateCPU(CPU cpu);
+        [OperationContract]
+        void DeleteCPU(int id);
+        [OperationContract]
+        Socket FindSocket(int id);
         // CPU END
 
         // Storage START
@@ -47,6 +43,9 @@ namespace WCFServices
         IEnumerable<Storage> FindStorageByCategory(string Category);
         [OperationContract]
         IEnumerable<Storage> FindAllStorage();
+        [OperationContract]
+        Storage FindStorageById(int id);
+
         // Storage END
 
         // RAM START
@@ -116,8 +115,5 @@ namespace WCFServices
 
         #endregion
 
-
-        [OperationContract]
-        Socket FindSocket(int id);
     }
 }

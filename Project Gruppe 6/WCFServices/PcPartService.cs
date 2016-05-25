@@ -15,12 +15,12 @@ namespace WCFServices
 
         private HardwererCtr HWCtr = new HardwererCtr();
         private CustomerCtr customerCtr = new CustomerCtr();
-        private ProductCtr proCtr = new ProductCtr();
         private BasketCtr basketctr = new BasketCtr();
 
         // Vare CRUD
         #region
 
+        #region
         //CPU 
         public void CreateCPU(CPU cpu)
         {
@@ -36,6 +36,8 @@ namespace WCFServices
         {
             proCtr.DeleteCPU(id);
         }
+        #endregion
+
         #endregion
 
         // Hardware

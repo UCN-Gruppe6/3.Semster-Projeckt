@@ -7,13 +7,22 @@
 
 @{
     Basket b = (Basket)Session["basket"];
-}
+
 <p>
-    CPU = @(b == null ? "" : b.MyCpu.CPUId.ToString()) <br />
-    RAM = @(b == null ? "" : b.MyRam.RAMId.ToString()) <br />
-    GPU = @(b == null ? "" : b.MyRam.RAMId.ToString()) <br />
-    Bundkort = @(b == null ? "" : b.MyMotherboard.MotherboardId.ToString()) <br />
-    Kabenet = @(b == null ? "" : b.MyComputerCase.CaseId.ToString()) <br />
-    HDD/SSD = @(b == null ? "" : b.MyStorage.StorageId.ToString())
+    CPU = @(b == null || b.MyCpu == null ?  "" : b.MyCpu.ModelNumber) <br />
+    RAM = @(b == null || b.MyRam == null ? "" : b.MyRam.RAMId.ToString()) <br />
+    GPU = @(b == null || b.MyGpu == null ? "" : b.MyGpu.GPUId.ToString()) <br />
+    Bundkort = @(b == null || b.MyMotherboard == null ? "" : b.MyMotherboard.MotherboardId.ToString()) <br />
+    Kabenet = @(b == null || b.MyComputerCase == null ? "" : b.MyComputerCase.CaseId.ToString()) <br />
+    HDD/SSD = @(b == null || b.MyStorage == null ? "" : b.MyStorage.StorageId.ToString())
 </p>
 
+}
+
+<br />
+<br />
+
+
+<div>
+    @Html.ActionLink("Køb", "Buy", null, new { @class = "btn btn-default" })
+</div>
