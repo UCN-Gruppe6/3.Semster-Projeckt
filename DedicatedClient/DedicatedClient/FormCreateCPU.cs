@@ -139,5 +139,11 @@ namespace DedicatedClient
 
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            PcPartServiceClient cl = new PcPartServiceClient();
+            cl.DeleteCPU(readFromUI().CPUId);
+        }
     }
 }
