@@ -477,6 +477,9 @@ namespace DedicatedClient.PcPartService {
         private double PriceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int RAMIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int StockField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -558,6 +561,19 @@ namespace DedicatedClient.PcPartService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int RAMId {
+            get {
+                return this.RAMIdField;
+            }
+            set {
+                if ((this.RAMIdField.Equals(value) != true)) {
+                    this.RAMIdField = value;
+                    this.RaisePropertyChanged("RAMId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int Stock {
             get {
                 return this.StockField;
@@ -615,7 +631,16 @@ namespace DedicatedClient.PcPartService {
         private string ManufacturerField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int MotherboardIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private double PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DedicatedClient.PcPartService.Socket SocketField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SocketIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int StockField;
@@ -683,6 +708,19 @@ namespace DedicatedClient.PcPartService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int MotherboardId {
+            get {
+                return this.MotherboardIdField;
+            }
+            set {
+                if ((this.MotherboardIdField.Equals(value) != true)) {
+                    this.MotherboardIdField = value;
+                    this.RaisePropertyChanged("MotherboardId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public double Price {
             get {
                 return this.PriceField;
@@ -691,6 +729,32 @@ namespace DedicatedClient.PcPartService {
                 if ((this.PriceField.Equals(value) != true)) {
                     this.PriceField = value;
                     this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DedicatedClient.PcPartService.Socket Socket {
+            get {
+                return this.SocketField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SocketField, value) != true)) {
+                    this.SocketField = value;
+                    this.RaisePropertyChanged("Socket");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SocketId {
+            get {
+                return this.SocketIdField;
+            }
+            set {
+                if ((this.SocketIdField.Equals(value) != true)) {
+                    this.SocketIdField = value;
+                    this.RaisePropertyChanged("SocketId");
                 }
             }
         }
@@ -1350,6 +1414,30 @@ namespace DedicatedClient.PcPartService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="PcPartService.IPcPartService")]
     public interface IPcPartService {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCPUsByBrand", ReplyAction="http://tempuri.org/IPcPartService/FindCPUsByBrandResponse")]
+        DedicatedClient.PcPartService.CPU[] FindCPUsByBrand(string Brand);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCPUsByBrand", ReplyAction="http://tempuri.org/IPcPartService/FindCPUsByBrandResponse")]
+        System.Threading.Tasks.Task<DedicatedClient.PcPartService.CPU[]> FindCPUsByBrandAsync(string Brand);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCPUsByCategory", ReplyAction="http://tempuri.org/IPcPartService/FindCPUsByCategoryResponse")]
+        DedicatedClient.PcPartService.CPU[] FindCPUsByCategory(string Category);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCPUsByCategory", ReplyAction="http://tempuri.org/IPcPartService/FindCPUsByCategoryResponse")]
+        System.Threading.Tasks.Task<DedicatedClient.PcPartService.CPU[]> FindCPUsByCategoryAsync(string Category);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllCPUs", ReplyAction="http://tempuri.org/IPcPartService/FindAllCPUsResponse")]
+        DedicatedClient.PcPartService.CPU[] FindAllCPUs();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllCPUs", ReplyAction="http://tempuri.org/IPcPartService/FindAllCPUsResponse")]
+        System.Threading.Tasks.Task<DedicatedClient.PcPartService.CPU[]> FindAllCPUsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCPUbyId", ReplyAction="http://tempuri.org/IPcPartService/FindCPUbyIdResponse")]
+        DedicatedClient.PcPartService.CPU FindCPUbyId(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCPUbyId", ReplyAction="http://tempuri.org/IPcPartService/FindCPUbyIdResponse")]
+        System.Threading.Tasks.Task<DedicatedClient.PcPartService.CPU> FindCPUbyIdAsync(int id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/CreateCPU", ReplyAction="http://tempuri.org/IPcPartService/CreateCPUResponse")]
         void CreateCPU(DedicatedClient.PcPartService.CPU cpu);
         
@@ -1368,23 +1456,11 @@ namespace DedicatedClient.PcPartService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/DeleteCPU", ReplyAction="http://tempuri.org/IPcPartService/DeleteCPUResponse")]
         System.Threading.Tasks.Task DeleteCPUAsync(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCPUsByBrand", ReplyAction="http://tempuri.org/IPcPartService/FindCPUsByBrandResponse")]
-        DedicatedClient.PcPartService.CPU[] FindCPUsByBrand(string Brand);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindSocket", ReplyAction="http://tempuri.org/IPcPartService/FindSocketResponse")]
+        DedicatedClient.PcPartService.Socket FindSocket(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCPUsByBrand", ReplyAction="http://tempuri.org/IPcPartService/FindCPUsByBrandResponse")]
-        System.Threading.Tasks.Task<DedicatedClient.PcPartService.CPU[]> FindCPUsByBrandAsync(string Brand);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCPUsByCategory", ReplyAction="http://tempuri.org/IPcPartService/FindCPUsByCategoryResponse")]
-        DedicatedClient.PcPartService.CPU[] FindCPUsByCategory(string Category);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCPUsByCategory", ReplyAction="http://tempuri.org/IPcPartService/FindCPUsByCategoryResponse")]
-        System.Threading.Tasks.Task<DedicatedClient.PcPartService.CPU[]> FindCPUsByCategoryAsync(string Category);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllCPUs", ReplyAction="http://tempuri.org/IPcPartService/FindAllCPUsResponse")]
-        DedicatedClient.PcPartService.CPU[] FindAllCPUs();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllCPUs", ReplyAction="http://tempuri.org/IPcPartService/FindAllCPUsResponse")]
-        System.Threading.Tasks.Task<DedicatedClient.PcPartService.CPU[]> FindAllCPUsAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindSocket", ReplyAction="http://tempuri.org/IPcPartService/FindSocketResponse")]
+        System.Threading.Tasks.Task<DedicatedClient.PcPartService.Socket> FindSocketAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindStorageByManufacturer", ReplyAction="http://tempuri.org/IPcPartService/FindStorageByManufacturerResponse")]
         DedicatedClient.PcPartService.Storage[] FindStorageByManufacturer(string Manufacturer);
@@ -1404,6 +1480,18 @@ namespace DedicatedClient.PcPartService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllStorage", ReplyAction="http://tempuri.org/IPcPartService/FindAllStorageResponse")]
         System.Threading.Tasks.Task<DedicatedClient.PcPartService.Storage[]> FindAllStorageAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindStorageById", ReplyAction="http://tempuri.org/IPcPartService/FindStorageByIdResponse")]
+        DedicatedClient.PcPartService.Storage FindStorageById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindStorageById", ReplyAction="http://tempuri.org/IPcPartService/FindStorageByIdResponse")]
+        System.Threading.Tasks.Task<DedicatedClient.PcPartService.Storage> FindStorageByIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/UpdateStorage", ReplyAction="http://tempuri.org/IPcPartService/UpdateStorageResponse")]
+        void UpdateStorage(DedicatedClient.PcPartService.Storage storage);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/UpdateStorage", ReplyAction="http://tempuri.org/IPcPartService/UpdateStorageResponse")]
+        System.Threading.Tasks.Task UpdateStorageAsync(DedicatedClient.PcPartService.Storage storage);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindRamByManufacturer", ReplyAction="http://tempuri.org/IPcPartService/FindRamByManufacturerResponse")]
         DedicatedClient.PcPartService.RAM[] FindRamByManufacturer(string Manufacturer);
         
@@ -1422,6 +1510,18 @@ namespace DedicatedClient.PcPartService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllRam", ReplyAction="http://tempuri.org/IPcPartService/FindAllRamResponse")]
         System.Threading.Tasks.Task<DedicatedClient.PcPartService.RAM[]> FindAllRamAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindRAMbyId", ReplyAction="http://tempuri.org/IPcPartService/FindRAMbyIdResponse")]
+        DedicatedClient.PcPartService.RAM FindRAMbyId(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindRAMbyId", ReplyAction="http://tempuri.org/IPcPartService/FindRAMbyIdResponse")]
+        System.Threading.Tasks.Task<DedicatedClient.PcPartService.RAM> FindRAMbyIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/UpdateRAM", ReplyAction="http://tempuri.org/IPcPartService/UpdateRAMResponse")]
+        void UpdateRAM(DedicatedClient.PcPartService.RAM ram);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/UpdateRAM", ReplyAction="http://tempuri.org/IPcPartService/UpdateRAMResponse")]
+        System.Threading.Tasks.Task UpdateRAMAsync(DedicatedClient.PcPartService.RAM ram);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindMotherboardByManufacturer", ReplyAction="http://tempuri.org/IPcPartService/FindMotherboardByManufacturerResponse")]
         DedicatedClient.PcPartService.Motherboard[] FindMotherboardByManufacturer(string Manufacturer);
         
@@ -1439,6 +1539,18 @@ namespace DedicatedClient.PcPartService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllMotherboard", ReplyAction="http://tempuri.org/IPcPartService/FindAllMotherboardResponse")]
         System.Threading.Tasks.Task<DedicatedClient.PcPartService.Motherboard[]> FindAllMotherboardAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindMotherbordById", ReplyAction="http://tempuri.org/IPcPartService/FindMotherbordByIdResponse")]
+        DedicatedClient.PcPartService.Motherboard FindMotherbordById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindMotherbordById", ReplyAction="http://tempuri.org/IPcPartService/FindMotherbordByIdResponse")]
+        System.Threading.Tasks.Task<DedicatedClient.PcPartService.Motherboard> FindMotherbordByIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/UpdateMotherbord", ReplyAction="http://tempuri.org/IPcPartService/UpdateMotherbordResponse")]
+        void UpdateMotherbord(DedicatedClient.PcPartService.Motherboard motherbord);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/UpdateMotherbord", ReplyAction="http://tempuri.org/IPcPartService/UpdateMotherbordResponse")]
+        System.Threading.Tasks.Task UpdateMotherbordAsync(DedicatedClient.PcPartService.Motherboard motherbord);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindGpuByManufacturer", ReplyAction="http://tempuri.org/IPcPartService/FindGpuByManufacturerResponse")]
         DedicatedClient.PcPartService.GPU[] FindGpuByManufacturer(string Manufacturer);
@@ -1464,6 +1576,18 @@ namespace DedicatedClient.PcPartService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllGpus", ReplyAction="http://tempuri.org/IPcPartService/FindAllGpusResponse")]
         System.Threading.Tasks.Task<DedicatedClient.PcPartService.GPU[]> FindAllGpusAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindGPUbyId", ReplyAction="http://tempuri.org/IPcPartService/FindGPUbyIdResponse")]
+        DedicatedClient.PcPartService.GPU FindGPUbyId(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindGPUbyId", ReplyAction="http://tempuri.org/IPcPartService/FindGPUbyIdResponse")]
+        System.Threading.Tasks.Task<DedicatedClient.PcPartService.GPU> FindGPUbyIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/UpdateGPU", ReplyAction="http://tempuri.org/IPcPartService/UpdateGPUResponse")]
+        void UpdateGPU(DedicatedClient.PcPartService.GPU gpu);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/UpdateGPU", ReplyAction="http://tempuri.org/IPcPartService/UpdateGPUResponse")]
+        System.Threading.Tasks.Task UpdateGPUAsync(DedicatedClient.PcPartService.GPU gpu);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindComputerCaseByManufacturer", ReplyAction="http://tempuri.org/IPcPartService/FindComputerCaseByManufacturerResponse")]
         DedicatedClient.PcPartService.Computer_Case[] FindComputerCaseByManufacturer(string Manufacturer);
         
@@ -1481,6 +1605,18 @@ namespace DedicatedClient.PcPartService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllComputerCases", ReplyAction="http://tempuri.org/IPcPartService/FindAllComputerCasesResponse")]
         System.Threading.Tasks.Task<DedicatedClient.PcPartService.Computer_Case[]> FindAllComputerCasesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCaseById", ReplyAction="http://tempuri.org/IPcPartService/FindCaseByIdResponse")]
+        DedicatedClient.PcPartService.Computer_Case FindCaseById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindCaseById", ReplyAction="http://tempuri.org/IPcPartService/FindCaseByIdResponse")]
+        System.Threading.Tasks.Task<DedicatedClient.PcPartService.Computer_Case> FindCaseByIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/UpdateComputerCase", ReplyAction="http://tempuri.org/IPcPartService/UpdateComputerCaseResponse")]
+        void UpdateComputerCase(DedicatedClient.PcPartService.Computer_Case Ccase);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/UpdateComputerCase", ReplyAction="http://tempuri.org/IPcPartService/UpdateComputerCaseResponse")]
+        System.Threading.Tasks.Task UpdateComputerCaseAsync(DedicatedClient.PcPartService.Computer_Case Ccase);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/CreateCustomer", ReplyAction="http://tempuri.org/IPcPartService/CreateCustomerResponse")]
         void CreateCustomer(DedicatedClient.PcPartService.Customer customer);
@@ -1523,12 +1659,6 @@ namespace DedicatedClient.PcPartService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/CreateBasket", ReplyAction="http://tempuri.org/IPcPartService/CreateBasketResponse")]
         System.Threading.Tasks.Task CreateBasketAsync(DedicatedClient.PcPartService.Basket basket);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindSocket", ReplyAction="http://tempuri.org/IPcPartService/FindSocketResponse")]
-        DedicatedClient.PcPartService.Socket FindSocket(int id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindSocket", ReplyAction="http://tempuri.org/IPcPartService/FindSocketResponse")]
-        System.Threading.Tasks.Task<DedicatedClient.PcPartService.Socket> FindSocketAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1558,6 +1688,38 @@ namespace DedicatedClient.PcPartService {
                 base(binding, remoteAddress) {
         }
         
+        public DedicatedClient.PcPartService.CPU[] FindCPUsByBrand(string Brand) {
+            return base.Channel.FindCPUsByBrand(Brand);
+        }
+        
+        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.CPU[]> FindCPUsByBrandAsync(string Brand) {
+            return base.Channel.FindCPUsByBrandAsync(Brand);
+        }
+        
+        public DedicatedClient.PcPartService.CPU[] FindCPUsByCategory(string Category) {
+            return base.Channel.FindCPUsByCategory(Category);
+        }
+        
+        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.CPU[]> FindCPUsByCategoryAsync(string Category) {
+            return base.Channel.FindCPUsByCategoryAsync(Category);
+        }
+        
+        public DedicatedClient.PcPartService.CPU[] FindAllCPUs() {
+            return base.Channel.FindAllCPUs();
+        }
+        
+        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.CPU[]> FindAllCPUsAsync() {
+            return base.Channel.FindAllCPUsAsync();
+        }
+        
+        public DedicatedClient.PcPartService.CPU FindCPUbyId(int id) {
+            return base.Channel.FindCPUbyId(id);
+        }
+        
+        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.CPU> FindCPUbyIdAsync(int id) {
+            return base.Channel.FindCPUbyIdAsync(id);
+        }
+        
         public void CreateCPU(DedicatedClient.PcPartService.CPU cpu) {
             base.Channel.CreateCPU(cpu);
         }
@@ -1582,28 +1744,12 @@ namespace DedicatedClient.PcPartService {
             return base.Channel.DeleteCPUAsync(id);
         }
         
-        public DedicatedClient.PcPartService.CPU[] FindCPUsByBrand(string Brand) {
-            return base.Channel.FindCPUsByBrand(Brand);
+        public DedicatedClient.PcPartService.Socket FindSocket(int id) {
+            return base.Channel.FindSocket(id);
         }
         
-        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.CPU[]> FindCPUsByBrandAsync(string Brand) {
-            return base.Channel.FindCPUsByBrandAsync(Brand);
-        }
-        
-        public DedicatedClient.PcPartService.CPU[] FindCPUsByCategory(string Category) {
-            return base.Channel.FindCPUsByCategory(Category);
-        }
-        
-        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.CPU[]> FindCPUsByCategoryAsync(string Category) {
-            return base.Channel.FindCPUsByCategoryAsync(Category);
-        }
-        
-        public DedicatedClient.PcPartService.CPU[] FindAllCPUs() {
-            return base.Channel.FindAllCPUs();
-        }
-        
-        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.CPU[]> FindAllCPUsAsync() {
-            return base.Channel.FindAllCPUsAsync();
+        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.Socket> FindSocketAsync(int id) {
+            return base.Channel.FindSocketAsync(id);
         }
         
         public DedicatedClient.PcPartService.Storage[] FindStorageByManufacturer(string Manufacturer) {
@@ -1630,6 +1776,22 @@ namespace DedicatedClient.PcPartService {
             return base.Channel.FindAllStorageAsync();
         }
         
+        public DedicatedClient.PcPartService.Storage FindStorageById(int id) {
+            return base.Channel.FindStorageById(id);
+        }
+        
+        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.Storage> FindStorageByIdAsync(int id) {
+            return base.Channel.FindStorageByIdAsync(id);
+        }
+        
+        public void UpdateStorage(DedicatedClient.PcPartService.Storage storage) {
+            base.Channel.UpdateStorage(storage);
+        }
+        
+        public System.Threading.Tasks.Task UpdateStorageAsync(DedicatedClient.PcPartService.Storage storage) {
+            return base.Channel.UpdateStorageAsync(storage);
+        }
+        
         public DedicatedClient.PcPartService.RAM[] FindRamByManufacturer(string Manufacturer) {
             return base.Channel.FindRamByManufacturer(Manufacturer);
         }
@@ -1654,6 +1816,22 @@ namespace DedicatedClient.PcPartService {
             return base.Channel.FindAllRamAsync();
         }
         
+        public DedicatedClient.PcPartService.RAM FindRAMbyId(int id) {
+            return base.Channel.FindRAMbyId(id);
+        }
+        
+        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.RAM> FindRAMbyIdAsync(int id) {
+            return base.Channel.FindRAMbyIdAsync(id);
+        }
+        
+        public void UpdateRAM(DedicatedClient.PcPartService.RAM ram) {
+            base.Channel.UpdateRAM(ram);
+        }
+        
+        public System.Threading.Tasks.Task UpdateRAMAsync(DedicatedClient.PcPartService.RAM ram) {
+            return base.Channel.UpdateRAMAsync(ram);
+        }
+        
         public DedicatedClient.PcPartService.Motherboard[] FindMotherboardByManufacturer(string Manufacturer) {
             return base.Channel.FindMotherboardByManufacturer(Manufacturer);
         }
@@ -1676,6 +1854,22 @@ namespace DedicatedClient.PcPartService {
         
         public System.Threading.Tasks.Task<DedicatedClient.PcPartService.Motherboard[]> FindAllMotherboardAsync() {
             return base.Channel.FindAllMotherboardAsync();
+        }
+        
+        public DedicatedClient.PcPartService.Motherboard FindMotherbordById(int id) {
+            return base.Channel.FindMotherbordById(id);
+        }
+        
+        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.Motherboard> FindMotherbordByIdAsync(int id) {
+            return base.Channel.FindMotherbordByIdAsync(id);
+        }
+        
+        public void UpdateMotherbord(DedicatedClient.PcPartService.Motherboard motherbord) {
+            base.Channel.UpdateMotherbord(motherbord);
+        }
+        
+        public System.Threading.Tasks.Task UpdateMotherbordAsync(DedicatedClient.PcPartService.Motherboard motherbord) {
+            return base.Channel.UpdateMotherbordAsync(motherbord);
         }
         
         public DedicatedClient.PcPartService.GPU[] FindGpuByManufacturer(string Manufacturer) {
@@ -1710,6 +1904,22 @@ namespace DedicatedClient.PcPartService {
             return base.Channel.FindAllGpusAsync();
         }
         
+        public DedicatedClient.PcPartService.GPU FindGPUbyId(int id) {
+            return base.Channel.FindGPUbyId(id);
+        }
+        
+        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.GPU> FindGPUbyIdAsync(int id) {
+            return base.Channel.FindGPUbyIdAsync(id);
+        }
+        
+        public void UpdateGPU(DedicatedClient.PcPartService.GPU gpu) {
+            base.Channel.UpdateGPU(gpu);
+        }
+        
+        public System.Threading.Tasks.Task UpdateGPUAsync(DedicatedClient.PcPartService.GPU gpu) {
+            return base.Channel.UpdateGPUAsync(gpu);
+        }
+        
         public DedicatedClient.PcPartService.Computer_Case[] FindComputerCaseByManufacturer(string Manufacturer) {
             return base.Channel.FindComputerCaseByManufacturer(Manufacturer);
         }
@@ -1732,6 +1942,22 @@ namespace DedicatedClient.PcPartService {
         
         public System.Threading.Tasks.Task<DedicatedClient.PcPartService.Computer_Case[]> FindAllComputerCasesAsync() {
             return base.Channel.FindAllComputerCasesAsync();
+        }
+        
+        public DedicatedClient.PcPartService.Computer_Case FindCaseById(int id) {
+            return base.Channel.FindCaseById(id);
+        }
+        
+        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.Computer_Case> FindCaseByIdAsync(int id) {
+            return base.Channel.FindCaseByIdAsync(id);
+        }
+        
+        public void UpdateComputerCase(DedicatedClient.PcPartService.Computer_Case Ccase) {
+            base.Channel.UpdateComputerCase(Ccase);
+        }
+        
+        public System.Threading.Tasks.Task UpdateComputerCaseAsync(DedicatedClient.PcPartService.Computer_Case Ccase) {
+            return base.Channel.UpdateComputerCaseAsync(Ccase);
         }
         
         public void CreateCustomer(DedicatedClient.PcPartService.Customer customer) {
@@ -1788,14 +2014,6 @@ namespace DedicatedClient.PcPartService {
         
         public System.Threading.Tasks.Task CreateBasketAsync(DedicatedClient.PcPartService.Basket basket) {
             return base.Channel.CreateBasketAsync(basket);
-        }
-        
-        public DedicatedClient.PcPartService.Socket FindSocket(int id) {
-            return base.Channel.FindSocket(id);
-        }
-        
-        public System.Threading.Tasks.Task<DedicatedClient.PcPartService.Socket> FindSocketAsync(int id) {
-            return base.Channel.FindSocketAsync(id);
         }
     }
 }

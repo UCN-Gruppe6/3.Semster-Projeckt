@@ -502,7 +502,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(379, 45);
+            this.button4.Location = new System.Drawing.Point(16, 327);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 21;
@@ -518,6 +518,7 @@
             this.button5.TabIndex = 22;
             this.button5.Text = "Update";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -557,7 +558,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 498);
+            this.ClientSize = new System.Drawing.Size(1083, 498);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.TableTapControl);
             this.Name = "FormCreateCPU";
