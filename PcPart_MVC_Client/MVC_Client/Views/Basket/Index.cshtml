@@ -50,31 +50,6 @@
             </tr>
         </table>
     </div>
-    
-
-    <br />
-    <br />
-    <br />
-
-
-<p>
-    CPU = @(b == null || b.MyCpu == null ? "" : b.MyCpu.ModelNumber.ToString() )
-
-    RAM = @(b == null || b.MyRam == null ? "" : b.MyRam.RAMId.ToString() )
-
-    GPU = @(b == null || b.MyGpu == null ? "" : b.MyGpu.GPUId.ToString())
-
-    Bundkort = @(b == null || b.MyMotherboard == null ? "" : b.MyMotherboard.MotherboardId.ToString())
-
-    Kabenet = @(b == null || b.MyComputerCase == null ? "" : b.MyComputerCase.CaseId.ToString())
-
-    HDD/SSD = @(b == null || b.MyStorage == null ? "" : b.MyStorage.StorageId.ToString())
-</p>
-    
-
-    
-
-
 }
 
 <br />
@@ -82,5 +57,5 @@
 
 
 <div>
-    @Html.ActionLink("Køb", "Buy", null, new { @class = "btn btn-default" })
+    @Html.ActionLink("Køb", "CheckOut", null, new { @class = "btn btn-default" })
 </div>

@@ -58,7 +58,61 @@ namespace MVC_Client.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        public ActionResult Buy()
+        // Metode der checkker om kurven er ok
+        // Hvis den ikke er ok er det forde en anden har nået at købe den vare du havde i en kurv.
+        private Boolean CheckBasket()
+        {
+            bool isBasketOk = true;
+
+            Basket basket = (Basket)HttpContext.Session["basket"];
+
+            if (basket.MyCpu != null)
+            {
+                if (client.FindCPUbyId(basket.MyCpu.CPUId).Stock < 1)
+                {
+                    isBasketOk = false;
+                }
+            }
+            if (basket.MyGpu != null)
+            {
+                if (client.FindGPUbyId(basket.MyGpu.GPUId).Stock < 1)
+                {
+                    isBasketOk = false;
+                }
+            }
+            if (basket.MyRam != null)
+            {
+                if (client.FindRAMbyId(basket.MyRam.RAMId).Stock < 1)
+                {
+                    isBasketOk = false;
+                }
+            }
+            if (basket.MyStorage != null)
+            {
+                if (client.FindStorageById(basket.MyStorage.StorageId).Stock < 1)
+                {
+                    isBasketOk = false;
+                }
+            }
+            if(basket.MyMotherboard != null)
+            {
+                if(client.FindMotherbordById(basket.MyMotherboard.MotherboardId).Stock < 1)
+                {
+                    isBasketOk = false;
+                }
+            }
+            if(basket.MyComputerCase != null)
+            {
+                if(client.FindCaseById(basket.MyComputerCase.CaseId).Stock <1)
+                {
+                    isBasketOk = false;
+                }
+            }
+            return isBasketOk;
+        }
+
+        // Tager din kurv og trekker 1 fra i stock fra alle vare i kurven og køber dem.
+        private void Buy()
         {
             try
             {
@@ -97,14 +151,70 @@ namespace MVC_Client.Controllers
 
                 client.CreateBasket(basket);
 
-                HttpContext.Session["basket"] = null;
+                HttpContext.Session["basket"] = null; // Sletter din session
             }
             catch
             {
-                return View("BuyError");
+                View("GeneralError");
+            }
+        }
+
+        // Checkout metode der ferdigøre dit køb
+        public ActionResult CheckOut()
+        {
+            try
+            {
+                if (CheckBasket())
+                {
+                    Buy();
+                }
+                else
+                {
+                    return View("BuyError");
+                }
+            }
+            catch
+            {
+                return View("GeneralError");
             }
 
             return View("BuyConformation");
+        }
+
+        // Regninger din total pris for de vare der er i kurven
+        private double TotalSum(double totalPrice)
+        {
+            Basket basket = (Basket)HttpContext.Session["basket"];
+
+            if (basket != null)
+            {
+                totalPrice = 0;
+                if (basket.MyCpu != null)
+                {
+                    totalPrice += basket.MyCpu.Price;
+                }
+                if (basket.MyGpu != null)
+                {
+                    totalPrice += basket.MyGpu.Price;
+                }
+                if(basket.MyRam != null)
+                {
+                    totalPrice += basket.MyRam.Price;
+                }
+                if(basket.MyStorage != null)
+                {
+                    totalPrice += basket.MyStorage.Price;
+                }
+                if (basket.MyMotherboard != null)
+                {
+                    totalPrice += basket.MyMotherboard.Price;
+                }
+                if(basket.MyComputerCase != null)
+                {
+                    totalPrice += basket.MyComputerCase.Price;
+                } 
+            }
+            return totalPrice;
         }
     }
 }

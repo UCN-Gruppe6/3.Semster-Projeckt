@@ -16,33 +16,34 @@ namespace Mailbot
         public void SendInvoiceMail(Basket basket)
         {
             if (basket.MyCustomer != null && basket.MyCustomer.Email != null)
-                    SendInvoiceMail(basket, basket.MyCustomer.Email);
+                SendInvoiceMail(basket, basket.MyCustomer.Email);
 
         }
 
 
-        public void SendInvoiceMail(Basket basket, String ToAddress )
+        public void SendInvoiceMail(Basket basket, String ToAddress)
         {
-            try {
+            try
+            {
                 const string FromAddress = "KlostRobot@gmail.com";
                 const string FromPassword = "RobotRobot1";
                 string subject = "Invoice ";
                 string body = "";
 
-                if(basket != null)
+                if (basket != null)
                 {
                     double sum = 0;
                     if (basket.MyComputerCase != null)
                     {
                         body += String.Format("æ kass \n");
                         sum += basket.MyComputerCase.Price;
-                    }    
+                    }
                     if (basket.MyCpu != null)
                     {
                         body += string.Format("{0} {1}: {2},- kr \n", (string)basket.MyCpu.Brand, (string)basket.MyCpu.Description, (string)basket.MyCpu.Price.ToString());
                         sum += basket.MyCpu.Price;
                     }
-                        
+
                     if (basket.MyGpu != null)
                     {
                         body += string.Format("{0} {1}: {2},- kr \n", basket.MyGpu.Manufacturer, basket.MyGpu.Model, basket.MyGpu.Price.ToString());
@@ -62,11 +63,11 @@ namespace Mailbot
                     {
                         body += String.Format("ornli' syg fastpladelager \n");
                         sum += basket.MyStorage.Price;
-                    }       
-               
+                    }
+
                     body += string.Format("Total: {0}", sum);
                 }
-                
+
 
 
 
@@ -85,7 +86,7 @@ namespace Mailbot
                 SmtpServer.Send(mail);
 
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 throw e;
             }
