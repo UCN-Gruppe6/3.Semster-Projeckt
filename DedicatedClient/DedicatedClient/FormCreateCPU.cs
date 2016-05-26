@@ -14,6 +14,7 @@ namespace DedicatedClient
 {
     public partial class FormCreateCPU : Form
     {
+        PcPartService.CPU currentCPU = null;
         bool debug = false;
         public FormCreateCPU()
         {
@@ -32,7 +33,7 @@ namespace DedicatedClient
                 newCpu.ModelNumber = textBox2.Text;
                 newCpu.BaseClock = Double.Parse(textBox3.Text);
                 newCpu.BoostClock = Double.Parse(textBox4.Text);
-                newCpu.IsUnlocked = true; //Boolean.Parse(textBox5.ToString());
+                newCpu.IsUnlocked = checkBox1.Checked; 
                 newCpu.SocketId = 1;
                 newCpu.Price = Double.Parse(textBox7.Text);
                 newCpu.Category = textBox8.Text;
@@ -72,6 +73,20 @@ namespace DedicatedClient
             if (!debug)
                 this.Width = 300;
         }
-            
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                PcPartServiceClient cl = new PcPartServiceClient();
+               // currentCPU = cl.
+
+            }
+            catch(Exception e)
+            {
+                
+
+            }
+        }
     }
 }

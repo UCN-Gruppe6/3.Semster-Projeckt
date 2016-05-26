@@ -17,7 +17,6 @@ namespace Mailbot
         {
             if (basket.MyCustomer != null && basket.MyCustomer.Email != null)
                     SendInvoiceMail(basket, basket.MyCustomer.Email);
-
         }
 
 
@@ -63,8 +62,8 @@ namespace Mailbot
                         body += String.Format("ornli' syg fastpladelager \n");
                         sum += basket.MyStorage.Price;
                     }       
-               
-                    body += string.Format("Total: {0}", sum);
+                    body += string.Format("Total: {0} \n", sum);
+                    body += string.Format("Total: {0} \n", sum);
                 }
                 
 

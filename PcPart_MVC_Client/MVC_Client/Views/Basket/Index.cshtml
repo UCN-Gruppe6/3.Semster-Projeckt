@@ -50,29 +50,34 @@
             </tr>
         </table>
     </div>
-    
 
-    <br />
-    <br />
-    <br />
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+    </div>
 
 
-<p>
-    CPU = @(b == null || b.MyCpu == null ? "" : b.MyCpu.ModelNumber.ToString() )
+        <br />
+            <br />
+            <br />
 
-    RAM = @(b == null || b.MyRam == null ? "" : b.MyRam.RAMId.ToString() )
 
-    GPU = @(b == null || b.MyGpu == null ? "" : b.MyGpu.GPUId.ToString())
+            <p>
+                CPU = @(b == null || b.MyCpu == null ? "" : b.MyCpu.ModelNumber.ToString() )
 
-    Bundkort = @(b == null || b.MyMotherboard == null ? "" : b.MyMotherboard.MotherboardId.ToString())
+                RAM = @(b == null || b.MyRam == null ? "" : b.MyRam.RAMId.ToString() )
 
-    Kabenet = @(b == null || b.MyComputerCase == null ? "" : b.MyComputerCase.CaseId.ToString())
+                GPU = @(b == null || b.MyGpu == null ? "" : b.MyGpu.GPUId.ToString())
 
-    HDD/SSD = @(b == null || b.MyStorage == null ? "" : b.MyStorage.StorageId.ToString())
-</p>
-    
+                Bundkort = @(b == null || b.MyMotherboard == null ? "" : b.MyMotherboard.MotherboardId.ToString())
 
-    
+                Kabenet = @(b == null || b.MyComputerCase == null ? "" : b.MyComputerCase.CaseId.ToString())
+
+                HDD/SSD = @(b == null || b.MyStorage == null ? "" : b.MyStorage.StorageId.ToString())
+            </p>
+
+
+
 
 
 }

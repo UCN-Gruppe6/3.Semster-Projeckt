@@ -42,7 +42,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -50,6 +49,7 @@
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.TableTapControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.Find = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
@@ -72,7 +72,12 @@
             this.label18 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.TableTapControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.Find.SuspendLayout();
@@ -197,13 +202,6 @@
             this.textBox4.Size = new System.Drawing.Size(224, 22);
             this.textBox4.TabIndex = 13;
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(100, 124);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(224, 22);
-            this.textBox5.TabIndex = 14;
-            // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(100, 152);
@@ -255,6 +253,12 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label19);
+            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.checkBox1);
+            this.tabPage1.Controls.Add(this.button6);
+            this.tabPage1.Controls.Add(this.button5);
+            this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.richTextBox1);
             this.tabPage1.Controls.Add(this.button1);
@@ -265,7 +269,6 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.textBox6);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.textBox5);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.textBox4);
             this.tabPage1.Controls.Add(this.label5);
@@ -282,6 +285,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Create";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(330, 417);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "debug";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Find
             // 
@@ -487,21 +500,64 @@
             this.tabPage4.Text = "Delete";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // button4
             // 
-            this.button3.Location = new System.Drawing.Point(330, 417);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "debug";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button4.Location = new System.Drawing.Point(379, 45);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 21;
+            this.button4.Text = "Find";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(16, 356);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 22;
+            this.button5.Text = "Update";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(16, 385);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 23;
+            this.button6.Text = "Delete";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(100, 129);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(18, 17);
+            this.checkBox1.TabIndex = 24;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(379, 12);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(224, 22);
+            this.textBox5.TabIndex = 25;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(354, 17);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(19, 17);
+            this.label19.TabIndex = 26;
+            this.label19.Text = "Id";
             // 
             // FormCreateCPU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 483);
+            this.ClientSize = new System.Drawing.Size(649, 498);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.TableTapControl);
             this.Name = "FormCreateCPU";
@@ -531,7 +587,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
@@ -562,5 +617,11 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
