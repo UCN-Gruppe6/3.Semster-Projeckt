@@ -40,7 +40,7 @@ namespace ControlerLayer
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                return db.CPUs.ToList();
+                return db.CPUs.Where(x => x.Stock > 0).ToList();
             }
         }
 
@@ -119,7 +119,7 @@ namespace ControlerLayer
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                return db.Storages.ToList();
+                return db.Storages.Where(x => x.Stock > 0).ToList();
             }
         }
 
@@ -168,7 +168,7 @@ namespace ControlerLayer
         {
             using(EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                return db.RAMs.ToList();
+                return db.RAMs.Where(x => x.Stock > 0).ToList();
             }
         }
 
@@ -213,7 +213,7 @@ namespace ControlerLayer
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                return db.Motherboards.ToList();
+                return db.Motherboards.Where(x => x.Stock > 0).ToList();
             }
         }
 
@@ -270,7 +270,7 @@ namespace ControlerLayer
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                return db.GPUs.ToList();
+                return db.GPUs.Where(x => x.Stock > 0).ToList();
             }
         }
 
@@ -316,7 +316,7 @@ namespace ControlerLayer
         {
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
-                return db.CompunterCase.ToList();
+                return db.CompunterCase.Where(X => X.Stock > 0).ToList();
             }
         }
 

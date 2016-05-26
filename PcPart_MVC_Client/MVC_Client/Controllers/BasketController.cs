@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Diagnostics;
 
 namespace MVC_Client.Controllers
 {
@@ -21,80 +22,38 @@ namespace MVC_Client.Controllers
         // Ligger en vare i kurven.
         public ActionResult AddToBasket(int id, string type)
         {
-            if (HttpContext.Session["basket"] == null)
+            try
             {
-                HttpContext.Session["basket"] = new Basket();
-            }
-            Basket basket = (Basket)HttpContext.Session["basket"];
-            switch (type)
-            {
-                case "CPU":
-                    if(basket.MyCpu == null)
-                    {
+                if (HttpContext.Session["basket"] == null)
+                {
+                    HttpContext.Session["basket"] = new Basket();
+                }
+                Basket basket = (Basket)HttpContext.Session["basket"];
+                switch (type)
+                {
+                    case "CPU":
                         basket.MyCpu = client.FindCPUbyId(id);
-                        return RedirectToAction("Index", "CPU");
-                    }
-                    if(basket.MyCpu != null)
-                    {
-                        return View("BasketError");
-                    }
-                    break;
-                case "RAM":
-                    if(basket.MyRam == null)
-                    {
-                        basket.MyRam = new RAM { RAMId = id };
-                        return RedirectToAction("Index", "RAM");
-                    }
-                    if(basket.MyRam != null)
-                    {
-                        return View("BasketError");
-                    }
-                    break;
-                case "GPU":
-                    if(basket.MyGpu == null)
-                    {
-                        basket.MyGpu = new GPU { GPUId = id };
-                        return RedirectToAction("Index", "GPU");
-                    }
-                    if(basket.MyGpu != null)
-                    {
-                        return View("BasketError");
-                    }
-                    break;
-                case "Motherboard":
-                    if(basket.MyMotherboard == null)
-                    {
-                        basket.MyMotherboard = new Motherboard { MotherboardId = id };
-                        return RedirectToAction("Index", "Motherboard");
-                    }
-                    break; 
-                    if(basket.MyMotherboard != null)
-                    {
-                        return View("BasketError");
-                    }
-                case "Computer_Case":
-                    if(basket.MyComputerCase == null)
-                    {
-                        basket.MyComputerCase = new Computer_Case { CaseId = id };
-                        return RedirectToAction("Index", "Computer_Case");
-
-                    }
-                    if(basket.MyComputerCase != null)
-                    {
-                        return View("BasketError");
-                    }
-                    break;
-                case "Storage":
-                    if(basket.MyStorage == null)
-                    {
-                        basket.MyStorage = new Storage { StorageId = id };
-                        return RedirectToAction("Index", "Storage");
-                    }
-                    if(basket.MyStorage != null)
-                    {
-                        return View("BasketError");
-                    }
-                    break;
+                        return RedirectToAction("Index", "Hardware");
+                    case "RAM":
+                        basket.MyRam = client.FindRAMbyId(id);
+                        return RedirectToAction("Index", "Hardware");
+                    case "GPU":
+                        basket.MyGpu = client.FindGPUbyId(id);
+                        return RedirectToAction("Index", "Hardware");
+                    case "Motherboard":
+                        basket.MyMotherboard = client.FindMotherbordById(id);
+                        return RedirectToAction("Index", "Hardware");
+                    case "Computer_Case":
+                        basket.MyComputerCase = client.FindCaseById(id);
+                        return RedirectToAction("Index", "Hardware");
+                    case "Storage":
+                        basket.MyStorage = client.FindStorageById(id);
+                        return RedirectToAction("Index", "Hardware");
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.GetType().ToString() + " " + e.ToString());
             }
             return RedirectToAction("Index", "Home");
         }
@@ -105,8 +64,36 @@ namespace MVC_Client.Controllers
             {
                 Basket basket = (Basket)HttpContext.Session["basket"];
 
-                basket.MyCpu.Stock = basket.MyCpu.Stock - 1;
-                client.UpdateCPU(basket.MyCpu);
+                if (basket.MyCpu != null)
+                {
+                    basket.MyCpu.Stock--;
+                    client.UpdateCPU(basket.MyCpu);
+                }
+                if (basket.MyGpu != null)
+                {
+                    basket.MyGpu.Stock--;
+                    client.UpdateGPU(basket.MyGpu);
+                }
+                if (basket.MyMotherboard != null)
+                {
+                    basket.MyMotherboard.Stock--;
+                    client.UpdateMotherbord(basket.MyMotherboard);
+                }
+                if (basket.MyStorage != null)
+                {
+                    basket.MyStorage.Stock--;
+                    client.UpdateStorage(basket.MyStorage);
+                }
+                if (basket.MyRam != null)
+                {
+                    basket.MyRam.Stock--;
+                    client.UpdateRAM(basket.MyRam);
+                }
+                if (basket.MyComputerCase != null)
+                {
+                    basket.MyComputerCase.Stock--;
+                    client.UpdateComputerCase(basket.MyComputerCase);
+                }
 
                 client.CreateBasket(basket);
 
@@ -117,7 +104,7 @@ namespace MVC_Client.Controllers
                 return View("BuyError");
             }
 
-            return RedirectToAction("Index", "Home");
+            return View("BuyConformation");
         }
     }
 }

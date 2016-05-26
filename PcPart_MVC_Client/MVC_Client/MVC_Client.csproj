@@ -276,7 +276,7 @@
     <Content Include="Views\Basket\Index.cshtml" />
     <Content Include="Views\Basket\BasketError.cshtml" />
     <Content Include="Views\Basket\BuyError.cshtml" />
-    <Content Include="Views\Shared\GeneralError.cshtml" />
+    <Content Include="Views\Basket\BuyConformation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

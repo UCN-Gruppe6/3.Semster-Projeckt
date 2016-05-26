@@ -45,7 +45,8 @@ namespace WCFServices
         IEnumerable<Storage> FindAllStorage();
         [OperationContract]
         Storage FindStorageById(int id);
-
+        [OperationContract]
+        void UpdateStorage(Storage storage);
         // Storage END
 
         // RAM START
@@ -55,6 +56,10 @@ namespace WCFServices
         IEnumerable<RAM> FindRamByCategory(string Category);
         [OperationContract]
         IEnumerable<RAM> FindAllRam();
+        [OperationContract]
+        RAM FindRAMbyId(int id);
+        [OperationContract]
+        void UpdateRAM(RAM ram);
         // RAM END
 
         // Motherboard START
@@ -64,6 +69,10 @@ namespace WCFServices
         IEnumerable<Motherboard> FindMotherboardByCategory(string Category);
         [OperationContract]
         IEnumerable<Motherboard> FindAllMotherboard();
+        [OperationContract]
+        Motherboard FindMotherbordById(int id);
+        [OperationContract]
+        void UpdateMotherbord(Motherboard motherbord);
         // Motherboard END 
 
         // GPU START
@@ -72,9 +81,13 @@ namespace WCFServices
         [OperationContract]
         IEnumerable<GPU> FindGpuByModel(string Model);
         [OperationContract]
-        IEnumerable<GPU> FindGpuByCategory(String Category);
+        IEnumerable<GPU> FindGpuByCategory(string Category);
         [OperationContract]
         IEnumerable<GPU> FindAllGpus();
+        [OperationContract]
+        GPU FindGPUbyId(int id);
+        [OperationContract]
+        void UpdateGPU(GPU gpu);
         // GPU END
 
         // Computer Case START
@@ -84,6 +97,10 @@ namespace WCFServices
         IEnumerable<Computer_Case> FindComputerCaseByCategory(string Category);
         [OperationContract]
         IEnumerable<Computer_Case> FindAllComputerCases();
+        [OperationContract]
+        Computer_Case FindCaseById(int id);
+        [OperationContract]
+        void UpdateComputerCase(Computer_Case Ccase);
         // Computer Case END 
         #endregion
 
@@ -110,8 +127,6 @@ namespace WCFServices
 
         [OperationContract]
         void CreateBasket(Basket basket);
-
-            
 
         #endregion
 

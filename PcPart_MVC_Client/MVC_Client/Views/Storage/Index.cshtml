@@ -7,18 +7,18 @@
 <h2>HDD/SSD</h2>
 
 <div>
-<br>
-<h4> <b>Filtrer</b> </h4>
+    <br>
+    <h4> <b>Filtrer</b> </h4>
 
-@using (Html.BeginForm())
-{
-    <p>
-        <b>Mærke:</b> @Html.TextBox("Brand") <br />
-        <br>
-        <input type="submit" value="Find" />
-    </p>
-}
-<br />
+    @using (Html.BeginForm())
+    {
+        <p>
+            <b>Mærke:</b> @Html.TextBox("Brand") <br />
+            <br>
+            <input type="submit" value="Find" />
+        </p>
+    }
+    <br />
 </div>
 
 <table class="table">
@@ -47,35 +47,34 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Type)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Manufacturer)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Model)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Capacity)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Stock)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.StorageId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.StorageId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.StorageId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manufacturer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Capacity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stock)
+            </td>
+            <td>
+                @Html.ActionLink("Tilføj til kurv", "AddToBasket", "Basket", new { id = item.StorageId, type = "Storage" }, null)
+            </td>
+        </tr>
+    }
 
 </table>

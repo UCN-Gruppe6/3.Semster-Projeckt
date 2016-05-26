@@ -17,32 +17,10 @@ namespace WCFServices
         private CustomerCtr customerCtr = new CustomerCtr();
         private BasketCtr basketctr = new BasketCtr();
 
-        // Vare CRUD
-        #region
-
-        #region
-        //CPU 
-        public void CreateCPU(CPU cpu)
-        {
-            proCtr.CreateCPU(cpu);
-        }
-
-        public void UpdateCPU(CPU cpu)
-        {
-            proCtr.UpdateCPU(cpu);
-        }
-
-        public void DeleteCPU(int id)
-        {
-            proCtr.DeleteCPU(id);
-        }
-        #endregion
-
-        #endregion
-
         // Hardware
         #region
 
+        #region CPU
         // CPU START 
         public IEnumerable<CPU> FindAllCPUs()
         {
@@ -63,11 +41,32 @@ namespace WCFServices
         {
             return HWCtr.FindCPUbyID(id);
         }
-        // CPU END
-       
-        // Storage START
 
-         public IEnumerable<Storage> FindAllStorage()
+        public void CreateCPU(CPU cpu)
+        {
+            HWCtr.CreateCPU(cpu);
+        }
+
+        public void UpdateCPU(CPU cpu)
+        {
+            HWCtr.UpdateCPU(cpu);
+        }
+
+        public void DeleteCPU(int id)
+        {
+            HWCtr.DeleteCPU(id);
+        }
+
+        public Socket FindSocket(int id)
+        {
+            return HWCtr.FindSocket(id);
+        }
+
+        #endregion
+
+        #region Storage
+
+        public IEnumerable<Storage> FindAllStorage()
         {
             return HWCtr.FindAllStorage();
         }
@@ -81,9 +80,20 @@ namespace WCFServices
             return HWCtr.FindStorageByManufacturer(Manufacturer);
         }
 
-        // Storage END
-        
-        // RAM START
+        public Storage FindStorageById(int id)
+        {
+            return HWCtr.FindStorageById(id);
+        }
+
+        public void UpdateStorage(Storage storage)
+        {
+            HWCtr.UpdateStorage(storage);
+        }
+
+        #endregion
+
+        #region RAM
+
         public IEnumerable<RAM> FindAllRam()
         {
             return HWCtr.FindAllRam();
@@ -98,9 +108,20 @@ namespace WCFServices
             return HWCtr.FindRamByManufacturer(Manufacturer);
         }
 
-        // RAM END 
+        public RAM FindRAMbyId(int id)
+        {
+            return HWCtr.FindRAMbyId(id);
+        }
 
-        // Motherboard START
+        public void UpdateRAM(RAM ram)
+        {
+            HWCtr.UpdateRAM(ram);
+        }
+
+        #endregion
+
+        #region Motherbord
+
         public IEnumerable<Motherboard> FindAllMotherboard()
         {
             return HWCtr.FindAllMotherboard();
@@ -114,9 +135,21 @@ namespace WCFServices
         {
             return HWCtr.FindMotherboardByManufacturer(Manufacturer);
         }
-        // Motherboard END 
 
-        // GPU START 
+        public Motherboard FindMotherbordById(int id)
+        {
+            return HWCtr.FindMotherbordById(id);
+        }
+
+        public void UpdateMotherbord(Motherboard motherbord)
+        {
+            HWCtr.UpdateMotherbord(motherbord);
+        }
+
+        #endregion
+
+        #region GPU
+
         public IEnumerable<GPU> FindAllGpus()
         {
             return HWCtr.FindAllGpus();
@@ -135,9 +168,20 @@ namespace WCFServices
         {
             return HWCtr.FindGpuByModel(Model);
         }
-        // GPU END 
 
-        // Computer Case START
+        public GPU FindGPUbyId(int id)
+        {
+            return HWCtr.FindGPUbyId(id);
+        }
+
+        public void UpdateGPU(GPU gpu)
+        {
+            HWCtr.UpdateGPU(gpu);
+        }
+
+        #endregion
+
+        #region Computer Case
 
         public IEnumerable<Computer_Case> FindAllComputerCases()
         {
@@ -153,7 +197,18 @@ namespace WCFServices
             return HWCtr.FindComputerCaseByManufacturer(Manufacturer);
         }
 
-        // Computer Case END 
+        public Computer_Case FindCaseById(int id)
+        {
+            return HWCtr.FindCaseById(id);
+        }
+
+        public void UpdateComputerCase(Computer_Case Ccase)
+        {
+            HWCtr.UpdateCase(Ccase);
+        }
+
+        #endregion
+
         #endregion
 
         // Customer
@@ -198,12 +253,6 @@ namespace WCFServices
             basketctr.CreateBasket(basket);
         }
         #endregion
-
-
-        public Socket FindSocket(int id)
-        {
-            return HWCtr.FindSocket(id);
-        }
 
     }
 }
