@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ModelLayer.Hardware;
-using ModelLayer;
 using System.Runtime.Serialization;
 
-namespace ModelLayer.Basket
+namespace ModelLayer
 { 
    [DataContract]
    public class Basket

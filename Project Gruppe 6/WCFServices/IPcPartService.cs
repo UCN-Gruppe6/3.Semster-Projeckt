@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using ModelLayer.Hardware;
 using ModelLayer;
 using System.ServiceModel;
-using ModelLayer.Basket;
 
 namespace WCFServices
 {
@@ -126,7 +125,7 @@ namespace WCFServices
         #region
 
         [OperationContract]
-        void CreateBasket(Basket basket);
+        void Buy(Basket basket);
 
         #endregion
 

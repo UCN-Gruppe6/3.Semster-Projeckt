@@ -100,7 +100,8 @@
         <td>
             @Html.ActionLink("Redigere", "Edit", new { id=item.CustomerId }) |
             @Html.ActionLink("Detaljer", "Details", new { id=item.CustomerId }) |
-            @Html.ActionLink("Slet", "Delete", new { id=item.CustomerId })
+            @Html.ActionLink("Slet", "Delete", new { id=item.CustomerId }) |
+            @Html.ActionLink("Koble til kurv", "AddToBasket", "Basket", new { id = item.CustomerId, type = "Customer" }, null)
         </td>
     </tr>
 }

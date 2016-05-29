@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ModelLayer;
-using ModelLayer.Basket;
 using ModelLayer.Hardware;
 using System.Net;
 using System.Net.Mail;
 
-namespace Mailbot
+namespace MailBot
 {
     public class MailBot
     {
@@ -17,9 +16,7 @@ namespace Mailbot
         {
             if (basket.MyCustomer != null && basket.MyCustomer.Email != null)
                 SendInvoiceMail(basket, basket.MyCustomer.Email);
-
         }
-
 
         public void SendInvoiceMail(Basket basket, String ToAddress)
         {
@@ -67,10 +64,6 @@ namespace Mailbot
 
                     body += string.Format("Total: {0}", sum);
                 }
-
-
-
-
 
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("Smtp.gmail.com");

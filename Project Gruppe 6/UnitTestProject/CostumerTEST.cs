@@ -12,7 +12,7 @@ namespace UnitTestProject
         [TestMethod]
         public void CreateCustomer()
         {
-            using (DBLayer.EntityFrameworkContext db = new DBLayer.EntityFrameworkContext())
+            using (ModelLayer.EntityFrameworkContext db = new ModelLayer.EntityFrameworkContext())
             {
                 //Arranger
 
@@ -42,7 +42,7 @@ namespace UnitTestProject
             //Arranger
 
             var nameInput = "HANS";
-            var db = new DBLayer.EntityFrameworkContext();
+            var db = new ModelLayer.EntityFrameworkContext();
             var customerCtr = new ControlerLayer.CustomerCtr();
             ModelLayer.Customer customer = new ModelLayer.Customer
             {
@@ -65,7 +65,7 @@ namespace UnitTestProject
         {
             //Arranger
 
-            var db = new DBLayer.EntityFrameworkContext();
+            var db = new ModelLayer.EntityFrameworkContext();
             var costumerCtr = new ControlerLayer.CustomerCtr();
             ModelLayer.Customer costumer = new ModelLayer.Customer
             {
@@ -91,7 +91,7 @@ namespace UnitTestProject
             //Arranger
 
             var idImput = 1;
-            var db = new DBLayer.EntityFrameworkContext();
+            var db = new ModelLayer.EntityFrameworkContext();
             var customerCtr = new ControlerLayer.CustomerCtr();
             ModelLayer.Customer customer = new ModelLayer.Customer()
             {

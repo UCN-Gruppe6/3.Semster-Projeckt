@@ -6,7 +6,6 @@
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer" />
-      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer.Basket" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IPcPartService_FindCPUsByBrand_InputMessage">
@@ -249,11 +248,11 @@
   <wsdl:message name="IPcPartService_FindAllCustomers_OutputMessage">
     <wsdl:part name="parameters" element="tns:FindAllCustomersResponse" />
   </wsdl:message>
-  <wsdl:message name="IPcPartService_CreateBasket_InputMessage">
-    <wsdl:part name="parameters" element="tns:CreateBasket" />
+  <wsdl:message name="IPcPartService_Buy_InputMessage">
+    <wsdl:part name="parameters" element="tns:Buy" />
   </wsdl:message>
-  <wsdl:message name="IPcPartService_CreateBasket_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CreateBasketResponse" />
+  <wsdl:message name="IPcPartService_Buy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuyResponse" />
   </wsdl:message>
   <wsdl:portType name="IPcPartService">
     <wsdl:operation name="FindCPUsByBrand">
@@ -416,9 +415,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindAllCustomers" message="tns:IPcPartService_FindAllCustomers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindAllCustomersResponse" message="tns:IPcPartService_FindAllCustomers_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="CreateBasket">
-      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/CreateBasket" message="tns:IPcPartService_CreateBasket_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/CreateBasketResponse" message="tns:IPcPartService_CreateBasket_OutputMessage" />
+    <wsdl:operation name="Buy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/Buy" message="tns:IPcPartService_Buy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/BuyResponse" message="tns:IPcPartService_Buy_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IPcPartService" type="tns:IPcPartService">
@@ -783,8 +782,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="CreateBasket">
-      <soap:operation soapAction="http://tempuri.org/IPcPartService/CreateBasket" style="document" />
+    <wsdl:operation name="Buy">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/Buy" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

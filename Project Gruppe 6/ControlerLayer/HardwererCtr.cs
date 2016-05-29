@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ModelLayer;
-using DBLayer;
 using ModelLayer.Hardware;
 
 namespace ControlerLayer

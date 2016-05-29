@@ -15,6 +15,8 @@ namespace MVC_Client.Controllers
 
         public ActionResult Index()
         {
+            double sum = TotalSum();
+            ViewBag.Sum = sum;
             return View();
         }
 
@@ -49,6 +51,10 @@ namespace MVC_Client.Controllers
                     case "Storage":
                         basket.MyStorage = client.FindStorageById(id);
                         return RedirectToAction("Index", "Hardware");
+                    case "Customer":
+                        basket.MyCustomer = client.FindCustomerById(id);
+                        return RedirectToAction("Index", "Basket");
+
                 }
             }
             catch (Exception e)
@@ -58,137 +64,30 @@ namespace MVC_Client.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        // Metode der checkker om kurven er ok
-        // Hvis den ikke er ok er det forde en anden har nået at købe den vare du havde i en kurv.
-        private Boolean CheckBasket()
-        {
-            bool isBasketOk = true;
-
-            Basket basket = (Basket)HttpContext.Session["basket"];
-
-            if (basket.MyCpu != null)
-            {
-                if (client.FindCPUbyId(basket.MyCpu.CPUId).Stock < 1)
-                {
-                    isBasketOk = false;
-                }
-            }
-            if (basket.MyGpu != null)
-            {
-                if (client.FindGPUbyId(basket.MyGpu.GPUId).Stock < 1)
-                {
-                    isBasketOk = false;
-                }
-            }
-            if (basket.MyRam != null)
-            {
-                if (client.FindRAMbyId(basket.MyRam.RAMId).Stock < 1)
-                {
-                    isBasketOk = false;
-                }
-            }
-            if (basket.MyStorage != null)
-            {
-                if (client.FindStorageById(basket.MyStorage.StorageId).Stock < 1)
-                {
-                    isBasketOk = false;
-                }
-            }
-            if(basket.MyMotherboard != null)
-            {
-                if(client.FindMotherbordById(basket.MyMotherboard.MotherboardId).Stock < 1)
-                {
-                    isBasketOk = false;
-                }
-            }
-            if(basket.MyComputerCase != null)
-            {
-                if(client.FindCaseById(basket.MyComputerCase.CaseId).Stock <1)
-                {
-                    isBasketOk = false;
-                }
-            }
-            return isBasketOk;
-        }
-
-        // Tager din kurv og trekker 1 fra i stock fra alle vare i kurven og køber dem.
-        private void Buy()
-        {
-            try
-            {
-                Basket basket = (Basket)HttpContext.Session["basket"];
-
-                if (basket.MyCpu != null)
-                {
-                    basket.MyCpu.Stock--;
-                    client.UpdateCPU(basket.MyCpu);
-                }
-                if (basket.MyGpu != null)
-                {
-                    basket.MyGpu.Stock--;
-                    client.UpdateGPU(basket.MyGpu);
-                }
-                if (basket.MyMotherboard != null)
-                {
-                    basket.MyMotherboard.Stock--;
-                    client.UpdateMotherbord(basket.MyMotherboard);
-                }
-                if (basket.MyStorage != null)
-                {
-                    basket.MyStorage.Stock--;
-                    client.UpdateStorage(basket.MyStorage);
-                }
-                if (basket.MyRam != null)
-                {
-                    basket.MyRam.Stock--;
-                    client.UpdateRAM(basket.MyRam);
-                }
-                if (basket.MyComputerCase != null)
-                {
-                    basket.MyComputerCase.Stock--;
-                    client.UpdateComputerCase(basket.MyComputerCase);
-                }
-
-                client.CreateBasket(basket);
-
-                HttpContext.Session["basket"] = null; // Sletter din session
-            }
-            catch
-            {
-                View("GeneralError");
-            }
-        }
-
         // Checkout metode der ferdigøre dit køb
         public ActionResult CheckOut()
         {
+            Basket basket = (Basket)HttpContext.Session["basket"];
             try
             {
-                if (CheckBasket())
-                {
-                    Buy();
-                }
-                else
-                {
-                    return View("BuyError");
-                }
+                client.Buy(basket);
+                HttpContext.Session["basket"] = null;
             }
             catch
             {
-                return View("GeneralError");
+                return View("BuyError");
             }
 
             return View("BuyConformation");
         }
 
         // Regninger din total pris for de vare der er i kurven
-        private double TotalSum(double totalPrice)
+        private double TotalSum()
         {
             Basket basket = (Basket)HttpContext.Session["basket"];
-
+            double totalPrice = 0;
             if (basket != null)
             {
-                totalPrice = 0;
                 if (basket.MyCpu != null)
                 {
                     totalPrice += basket.MyCpu.Price;

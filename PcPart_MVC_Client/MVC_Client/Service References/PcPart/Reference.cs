@@ -1255,7 +1255,7 @@ namespace MVC_Client.PcPart {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Basket", Namespace="http://schemas.datacontract.org/2004/07/ModelLayer.Basket")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Basket", Namespace="http://schemas.datacontract.org/2004/07/ModelLayer")]
     [System.SerializableAttribute()]
     public partial class Basket : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -1654,11 +1654,11 @@ namespace MVC_Client.PcPart {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/FindAllCustomers", ReplyAction="http://tempuri.org/IPcPartService/FindAllCustomersResponse")]
         System.Threading.Tasks.Task<MVC_Client.PcPart.Customer[]> FindAllCustomersAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/CreateBasket", ReplyAction="http://tempuri.org/IPcPartService/CreateBasketResponse")]
-        void CreateBasket(MVC_Client.PcPart.Basket basket);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/Buy", ReplyAction="http://tempuri.org/IPcPartService/BuyResponse")]
+        void Buy(MVC_Client.PcPart.Basket basket);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/CreateBasket", ReplyAction="http://tempuri.org/IPcPartService/CreateBasketResponse")]
-        System.Threading.Tasks.Task CreateBasketAsync(MVC_Client.PcPart.Basket basket);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPcPartService/Buy", ReplyAction="http://tempuri.org/IPcPartService/BuyResponse")]
+        System.Threading.Tasks.Task BuyAsync(MVC_Client.PcPart.Basket basket);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2008,12 +2008,12 @@ namespace MVC_Client.PcPart {
             return base.Channel.FindAllCustomersAsync();
         }
         
-        public void CreateBasket(MVC_Client.PcPart.Basket basket) {
-            base.Channel.CreateBasket(basket);
+        public void Buy(MVC_Client.PcPart.Basket basket) {
+            base.Channel.Buy(basket);
         }
         
-        public System.Threading.Tasks.Task CreateBasketAsync(MVC_Client.PcPart.Basket basket) {
-            return base.Channel.CreateBasketAsync(basket);
+        public System.Threading.Tasks.Task BuyAsync(MVC_Client.PcPart.Basket basket) {
+            return base.Channel.BuyAsync(basket);
         }
     }
 }

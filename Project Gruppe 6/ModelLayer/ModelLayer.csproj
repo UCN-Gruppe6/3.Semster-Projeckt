@@ -54,6 +54,8 @@
     <Compile Include="Basket.cs" />
     <Compile Include="Customer\Customer.cs" />
     <Compile Include="CPUTestClase.cs" />
+    <Compile Include="Exceptions\BuyErrorException.cs" />
+    <Compile Include="Exceptions\OutOfStockException.cs" />
     <Compile Include="Hardware\Computer_Case.cs" />
     <Compile Include="Hardware\CPU.cs" />
     <Compile Include="Hardware\GPU.cs" />

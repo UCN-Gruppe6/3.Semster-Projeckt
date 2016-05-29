@@ -2,7 +2,6 @@
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" />
   <xs:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer" />
-  <xs:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer.Basket" />
   <xs:element name="FindCPUsByBrand">
     <xs:complexType>
       <xs:sequence>
@@ -527,14 +526,14 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="CreateBasket">
+  <xs:element name="Buy">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/ModelLayer.Basket" minOccurs="0" name="basket" nillable="true" type="q39:Basket" />
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/ModelLayer" minOccurs="0" name="basket" nillable="true" type="q39:Basket" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="CreateBasketResponse">
+  <xs:element name="BuyResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>

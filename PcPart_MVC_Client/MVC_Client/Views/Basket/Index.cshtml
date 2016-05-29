@@ -8,10 +8,8 @@
 @{
     Basket b = (Basket)Session["basket"];
 
-
-
-    <div style="background-color: #ccccb3; padding-right: 100; padding: 5;">
-        <table style="width:30%">
+    
+        <table class="table table-striped" >
             <caption></caption>
             <tr>
                 <th>Vare</th>
@@ -48,8 +46,18 @@
                 <td>@(b == null || b.MyStorage == null ? "" : b.MyStorage.Capacity.ToString())</td>
                 <td>@(b == null || b.MyStorage == null ? "0,- Kr" : b.MyStorage.Price.ToString())</td>
             </tr>
+            <tr>
+                <td> <label>Total Pris: </label>  @ViewBag.Sum</td>
+            </tr>
         </table>
-    </div>
+
+        <br />
+
+<div>
+    <label>Du køber som: </label> @(b == null || b.MyCustomer == null ? "Ingen kunde koblet til kurven" : b.MyCustomer.Name)
+</div>
+
+
 }
 
 <br />
@@ -57,5 +65,22 @@
 
 
 <div>
-    @Html.ActionLink("Køb", "CheckOut", null, new { @class = "btn btn-default" })
+    @Html.ActionLink("Køb", "CheckOut", null, new { @class = "btn btn-default", id="KøbsKnap" })
 </div>
+
+@section scripts{      
+    <script>
+        $('#KøbsKnap').click(function (evt) {
+            evt.preventDefault();
+            var r = confirm('Er du sikker på at du vil købe dette?');
+            if (r) {
+                window.location.href = '@Url.Action("CheckOut", "Basket")';
+            }
+            else {
+                alert('Annuler');
+            }
+        });
+    </script>
+    
+    
+    }

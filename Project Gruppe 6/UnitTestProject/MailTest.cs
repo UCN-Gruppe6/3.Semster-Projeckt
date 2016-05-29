@@ -1,8 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ModelLayer;
-using Mailbot;
-using ModelLayer.Basket;
+using MailBot;
 using ModelLayer.Hardware;
 
 namespace UnitTestProject
@@ -20,7 +19,7 @@ namespace UnitTestProject
                     Basket basket = new Basket();
                     basket.MyCpu = new CPU() {Brand = "TestBrand", Description = "i9-1337", Price = 1337};
                     basket.MyGpu = new GPU() {Manufacturer = "TestManu", Model = "GTX1337", Price = 1337};
-                    MailBot mailbot = new MailBot();
+                    var mailbot = new MailBot.MailBot();
                     
                     mailbot.SendInvoiceMail(basket, "Emil.kloster.lindberg@gmail.com");
                 }

@@ -1,9 +1,8 @@
 ﻿using System.Data.Entity;
 using ModelLayer.Hardware;
 using ModelLayer;
-using ModelLayer.Basket;
 
-namespace DBLayer
+namespace ModelLayer
 {
     public class EntityFrameworkContext : DbContext
     {

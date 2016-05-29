@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using DBLayer;
+using ModelLayer;
 using System.Linq;
 using System.Collections.Generic;
 using ControlerLayer;
@@ -14,7 +14,7 @@ namespace UnitTestProject
         [TestMethod]
         public void CPUTest1()
         {
-            using (DBLayer.EntityFrameworkContext db = new DBLayer.EntityFrameworkContext())
+            using (ModelLayer.EntityFrameworkContext db = new ModelLayer.EntityFrameworkContext())
             {
                 //arrange 
                 ModelLayer.Hardware.CPU cpu = new ModelLayer.Hardware.CPU();
@@ -72,26 +72,26 @@ namespace UnitTestProject
             Assert.AreEqual("Gaming", cpulist.First().Category);
         }
 
-        [TestMethod]
-        public void FindAllCPUs()
-        {
-            //Arrange
-            var db = new EntityFrameworkContext();
-            var ctr = new HardwererCtr();
-            ModelLayer.CPUTestClase CPU1 = new ModelLayer.CPUTestClase();
-            ModelLayer.CPUTestClase CPU2 = new ModelLayer.CPUTestClase();
-            ModelLayer.CPUTestClase CPU3 = new ModelLayer.CPUTestClase();
+        //[TestMethod]
+        //public void FindAllCPUs()
+        //{
+        //    //Arrange
+        //    var db = new EntityFrameworkContext();
+        //    var ctr = new HardwererCtr();
+        //    ModelLayer.CPUTestClase CPU1 = new ModelLayer.CPUTestClase();
+        //    ModelLayer.CPUTestClase CPU2 = new ModelLayer.CPUTestClase();
+        //    ModelLayer.CPUTestClase CPU3 = new ModelLayer.CPUTestClase();
 
-            //Act
-            db.CPUTestClas.Add(CPU1);
-            db.CPUTestClas.Add(CPU2);
-            db.CPUTestClas.Add(CPU3);
-            db.SaveChanges();
-            IEnumerable<ModelLayer.CPUTestClase> cpulist = ctr.FindAllCPUs2().ToList();
+        //    //Act
+        //    db.CPUTestClas.Add(CPU1);
+        //    db.CPUTestClas.Add(CPU2);
+        //    db.CPUTestClas.Add(CPU3);
+        //    db.SaveChanges();
+        //    IEnumerable<ModelLayer.CPUTestClase> cpulist = ctr.FindAllCPU().ToList();
 
-            //Assert
-            Assert.IsTrue(cpulist.Count() > 0);
-        }
+        //    //Assert
+        //    Assert.IsTrue(cpulist.Count() > 0);
+        //}
 
         [TestMethod]
         public void CreatCPU()
@@ -99,7 +99,7 @@ namespace UnitTestProject
             using (EntityFrameworkContext db = new EntityFrameworkContext())
             {
                 //Arrange
-                var ctr = new ProductCtr();
+                var ctr = new HardwererCtr();
 
                 //Act
                 ModelLayer.Hardware.CPU CPU = new ModelLayer.Hardware.CPU
