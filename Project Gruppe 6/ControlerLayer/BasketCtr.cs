@@ -32,14 +32,13 @@ namespace ControlerLayer
             {
                 using (var db = new EntityFrameworkContext())
                 {
+                    
                     if (basket.MyCpu != null)
                     {
-                        db.Entry(basket.MyCpu).State = System.Data.Entity.EntityState.Modified;
-                        var cpu = db.CPUs.Find(basket.MyCpu.CPUId);
-                        if (cpu.Stock > 0)
+                        basket.MyCpu = db.CPUs.Find(basket.MyCpu.CPUId);
+                        if (basket.MyCpu.Stock > 0)
                         {
-                            cpu.Stock--;
-                            hCtr.UpdateCPU(cpu);
+                            basket.MyCpu.Stock--;
                             db.SaveChanges();
                         }
                         else
@@ -49,27 +48,23 @@ namespace ControlerLayer
                     }
                     if (basket.MyGpu != null)
                     {
-                        db.Entry(basket.MyGpu).State = System.Data.Entity.EntityState.Modified;
-                        var gpu = db.GPUs.Find(basket.MyGpu.GPUId);
-                        if (gpu.Stock > 0)
+                        basket.MyGpu = db.GPUs.Find(basket.MyGpu.GPUId);
+                        if (basket.MyGpu.Stock > 0)
                         {
-                            gpu.Stock--;
-                            hCtr.UpdateGPU(gpu);
+                            basket.MyGpu.Stock--;
                             db.SaveChanges();
                         }
-                        else if (gpu.Stock < 1)
+                        else
                         {
                             throw new Exception("GPU'en er ikke på lager merer.");
                         }
                     }
                     if (basket.MyRam != null)
                     {
-                        db.Entry(basket.MyRam).State = System.Data.Entity.EntityState.Modified;
-                        var ram = db.RAMs.Find(basket.MyRam.RAMId);
-                        if (ram.Stock > 0)
+                        basket.MyRam = db.RAMs.Find(basket.MyRam.RAMId);
+                        if (basket.MyRam.Stock > 0)
                         {
-                            ram.Stock--;
-                            hCtr.UpdateRAM(ram);
+                            basket.MyRam.Stock--;
                             db.SaveChanges();
                         }
                         else
@@ -79,12 +74,10 @@ namespace ControlerLayer
                     }
                     if (basket.MyMotherboard != null)
                     {
-                        db.Entry(basket.MyMotherboard).State = System.Data.Entity.EntityState.Modified;
-                        var motherbord = db.Motherboards.Find(basket.MyMotherboard.MotherboardId);
-                        if (motherbord.Stock > 0)
+                        basket.MyMotherboard = db.Motherboards.Find(basket.MyMotherboard.MotherboardId);
+                        if (basket.MyMotherboard.Stock > 0)
                         {
-                            motherbord.Stock--;
-                            hCtr.UpdateMotherbord(motherbord);
+                            basket.MyMotherboard.Stock--;
                             db.SaveChanges();
                         }
                         else
@@ -94,12 +87,10 @@ namespace ControlerLayer
                     }
                     if (basket.MyComputerCase != null)
                     {
-                        db.Entry(basket.MyComputerCase).State = System.Data.Entity.EntityState.Modified;
-                        var Ccase = db.CompunterCase.Find(basket.MyComputerCase);
-                        if (Ccase.Stock > 0)
+                        basket.MyComputerCase = db.CompunterCase.Find(basket.MyComputerCase.CaseId);
+                        if (basket.MyComputerCase.Stock > 0)
                         {
-                            Ccase.Stock--;
-                            hCtr.UpdateCase(Ccase);
+                            basket.MyComputerCase.Stock--;
                             db.SaveChanges();
                         }
                         else
@@ -109,12 +100,10 @@ namespace ControlerLayer
                     }
                     if (basket.MyStorage != null)
                     {
-                        db.Entry(basket.MyStorage).State = System.Data.Entity.EntityState.Modified;
-                        var storage = db.Storages.Find(basket.MyStorage.StorageId);
-                        if (storage.Stock > 0)
+                        basket.MyStorage = db.Storages.Find(basket.MyStorage.StorageId);
+                        if (basket.MyStorage.Stock > 0)
                         {
-                            storage.Stock--;
-                            hCtr.UpdateStorage(storage);
+                            basket.MyStorage.Stock--;
                             db.SaveChanges();
                         }
                         else
