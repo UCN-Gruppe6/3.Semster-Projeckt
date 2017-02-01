@@ -1,0 +1,69 @@
+﻿@model IEnumerable<MVC_Client.PcPart.Motherboard>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Motherboard</h2>
+
+<div>
+    <br />
+    <h4>Filtrer</h4>
+    @using (Html.BeginForm())
+    {
+        <p>
+            <b>Fabrikant:</b> @Html.TextBox("Manufacturer") <br />
+            <br>
+            <input type="submit" value="Find" />
+        </p>
+    }
+</div>
+<table class="table">
+    <tr>
+        <th>
+            <label>Fabrikant</label>
+        </th>
+        <th>
+            <label>Chipsæt</label>
+        </th>
+        <th>
+            <label>Beskrivelse</label>
+        </th>
+        <th>
+            <label>Kategori</label>
+        </th>
+        <th>
+            <label>Pris</label>
+        </th>
+        <th>
+            <label>På lager</label>
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Manufacturer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Chipset)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stock)
+        </td>
+        <td>
+            @Html.ActionLink("Tilføj til kurv", "AddToBasket", "Basket", new { id = item.MotherboardId, type = "Motherboard" }, null)
+        </td>
+    </tr>
+}
+
+</table>

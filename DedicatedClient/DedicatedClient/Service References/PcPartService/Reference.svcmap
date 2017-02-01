@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3a37eb64-c908-414f-bb47-437e5fa04227" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="289b39d0-99d8-4d83-a00e-47b0e0066d25" SourceId="1" SourceUrl="http://localhost:8733/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="4a3f672a-bca8-49e3-9582-9e9da138da50" SourceId="1" SourceUrl="http://localhost:8733/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="5bb39b63-194c-49b7-befb-cc24e62847fc" SourceId="1" SourceUrl="http://localhost:8733/mex" />
+    <MetadataFile FileName="ModelLayer.Hardware.xsd" MetadataType="Schema" ID="6136902e-79a8-4c37-ab38-8b0319d2f9a2" SourceId="1" SourceUrl="http://localhost:8733/mex" />
+    <MetadataFile FileName="ModelLayer.xsd" MetadataType="Schema" ID="81621eae-2876-462f-bac4-b72c0add9ec0" SourceId="1" SourceUrl="http://localhost:8733/mex" />
+    <MetadataFile FileName="ModelLayer.Basket.xsd" MetadataType="Schema" ID="6b804aa4-712f-4fbe-a9c6-f219d2af9530" SourceId="1" SourceUrl="http://localhost:8733/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

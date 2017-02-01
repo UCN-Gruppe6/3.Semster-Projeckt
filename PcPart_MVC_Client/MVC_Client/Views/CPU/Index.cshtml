@@ -1,0 +1,87 @@
+﻿@model IEnumerable<MVC_Client.PcPart.CPU>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>CPUs</h2>
+
+<div>
+    <br>
+    <h4> <b>Filtrer</b> </h4>
+
+    @using (Html.BeginForm())
+    {
+        <p> <b>Mærke:</b> @Html.TextBox("Brand") <br />
+        <br>
+        <input type="submit" value="Find" /></p>
+    }
+    <br />
+</div>
+<table class="table">
+    <tr>
+        <th>
+            <label>Mærke</label>
+        </th>
+        <th>
+            <label>Modelnummer</label>
+        </th>
+        <th>
+            <label>Baseclock</label>
+        </th>
+        <th>
+            <label>Boostclock</label>
+        </th>
+        <th>
+            <label>Unlocked</label>
+        </th>
+        <th>
+            <label>Beskrivelse</label>
+        </th>
+        <th>
+            <label>Kategori</label>
+        </th>
+        <th>
+            <label>Pris</label>
+        </th>
+        <th>
+            <label>På lager</label>
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Brand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModelNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BaseClock)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BoostClock)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsUnlocked)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stock)
+        </td>
+        <td>
+            @Html.ActionLink("Tilføj til kurv", "AddToBasket", "Basket", new { id = item.CPUId, type = "CPU" }, null)
+        </td>
+    </tr>
+}
+
+</table>

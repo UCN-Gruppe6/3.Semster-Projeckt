@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PcPartService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer.Hardware" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer.Basket" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPcPartService_FindCPUsByBrand_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCPUsByBrand" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindCPUsByBrand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCPUsByBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindCPUsByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCPUsByCategory" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindCPUsByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCPUsByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindAllCPUs_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllCPUs" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindAllCPUs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllCPUsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindCPUbyId_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCPUbyId" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindCPUbyId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCPUbyIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_CreateCPU_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCPU" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_CreateCPU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCPUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_UpdateCPU_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCPU" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_UpdateCPU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCPUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_DeleteCPU_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCPU" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_DeleteCPU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCPUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindSocket_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindSocket" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindSocket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindSocketResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindStorageByManufacturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindStorageByManufacturer" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindStorageByManufacturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindStorageByManufacturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindStorageByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindStorageByCategory" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindStorageByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindStorageByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindAllStorage_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllStorage" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindAllStorage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllStorageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindStorageById_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindStorageById" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindStorageById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindStorageByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_UpdateStorage_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStorage" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_UpdateStorage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStorageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindRamByManufacturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindRamByManufacturer" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindRamByManufacturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindRamByManufacturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindRamByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindRamByCategory" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindRamByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindRamByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindAllRam_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllRam" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindAllRam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllRamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindRAMbyId_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindRAMbyId" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindRAMbyId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindRAMbyIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_UpdateRAM_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRAM" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_UpdateRAM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRAMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindMotherboardByManufacturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindMotherboardByManufacturer" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindMotherboardByManufacturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindMotherboardByManufacturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindMotherboardByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindMotherboardByCategory" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindMotherboardByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindMotherboardByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindAllMotherboard_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllMotherboard" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindAllMotherboard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllMotherboardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindMotherbordById_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindMotherbordById" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindMotherbordById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindMotherbordByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_UpdateMotherbord_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMotherbord" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_UpdateMotherbord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMotherbordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindGpuByManufacturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindGpuByManufacturer" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindGpuByManufacturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindGpuByManufacturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindGpuByModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindGpuByModel" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindGpuByModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindGpuByModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindGpuByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindGpuByCategory" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindGpuByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindGpuByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindAllGpus_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllGpus" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindAllGpus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllGpusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindGPUbyId_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindGPUbyId" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindGPUbyId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindGPUbyIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_UpdateGPU_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGPU" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_UpdateGPU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGPUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindComputerCaseByManufacturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindComputerCaseByManufacturer" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindComputerCaseByManufacturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindComputerCaseByManufacturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindComputerCaseByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindComputerCaseByCategory" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindComputerCaseByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindComputerCaseByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindAllComputerCases_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllComputerCases" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindAllComputerCases_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllComputerCasesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindCaseById_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseById" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindCaseById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCaseByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_UpdateComputerCase_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateComputerCase" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_UpdateComputerCase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateComputerCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_CreateCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_CreateCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_UpdateCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_UpdateCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_DeleteCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_DeleteCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindCustomerById_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCustomerById" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindCustomerById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCustomerByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindCustomerByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCustomerByName" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindCustomerByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCustomerByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindAllCustomers_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllCustomers" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_FindAllCustomers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAllCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_CreateBasket_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBasket" />
+  </wsdl:message>
+  <wsdl:message name="IPcPartService_CreateBasket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBasketResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPcPartService">
+    <wsdl:operation name="FindCPUsByBrand">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindCPUsByBrand" message="tns:IPcPartService_FindCPUsByBrand_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindCPUsByBrandResponse" message="tns:IPcPartService_FindCPUsByBrand_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCPUsByCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindCPUsByCategory" message="tns:IPcPartService_FindCPUsByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindCPUsByCategoryResponse" message="tns:IPcPartService_FindCPUsByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllCPUs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindAllCPUs" message="tns:IPcPartService_FindAllCPUs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindAllCPUsResponse" message="tns:IPcPartService_FindAllCPUs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCPUbyId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindCPUbyId" message="tns:IPcPartService_FindCPUbyId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindCPUbyIdResponse" message="tns:IPcPartService_FindCPUbyId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCPU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/CreateCPU" message="tns:IPcPartService_CreateCPU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/CreateCPUResponse" message="tns:IPcPartService_CreateCPU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCPU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/UpdateCPU" message="tns:IPcPartService_UpdateCPU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/UpdateCPUResponse" message="tns:IPcPartService_UpdateCPU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCPU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/DeleteCPU" message="tns:IPcPartService_DeleteCPU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/DeleteCPUResponse" message="tns:IPcPartService_DeleteCPU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindSocket">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindSocket" message="tns:IPcPartService_FindSocket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindSocketResponse" message="tns:IPcPartService_FindSocket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindStorageByManufacturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindStorageByManufacturer" message="tns:IPcPartService_FindStorageByManufacturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindStorageByManufacturerResponse" message="tns:IPcPartService_FindStorageByManufacturer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindStorageByCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindStorageByCategory" message="tns:IPcPartService_FindStorageByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindStorageByCategoryResponse" message="tns:IPcPartService_FindStorageByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllStorage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindAllStorage" message="tns:IPcPartService_FindAllStorage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindAllStorageResponse" message="tns:IPcPartService_FindAllStorage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindStorageById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindStorageById" message="tns:IPcPartService_FindStorageById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindStorageByIdResponse" message="tns:IPcPartService_FindStorageById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStorage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/UpdateStorage" message="tns:IPcPartService_UpdateStorage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/UpdateStorageResponse" message="tns:IPcPartService_UpdateStorage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindRamByManufacturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindRamByManufacturer" message="tns:IPcPartService_FindRamByManufacturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindRamByManufacturerResponse" message="tns:IPcPartService_FindRamByManufacturer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindRamByCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindRamByCategory" message="tns:IPcPartService_FindRamByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindRamByCategoryResponse" message="tns:IPcPartService_FindRamByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllRam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindAllRam" message="tns:IPcPartService_FindAllRam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindAllRamResponse" message="tns:IPcPartService_FindAllRam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindRAMbyId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindRAMbyId" message="tns:IPcPartService_FindRAMbyId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindRAMbyIdResponse" message="tns:IPcPartService_FindRAMbyId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRAM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/UpdateRAM" message="tns:IPcPartService_UpdateRAM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/UpdateRAMResponse" message="tns:IPcPartService_UpdateRAM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindMotherboardByManufacturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindMotherboardByManufacturer" message="tns:IPcPartService_FindMotherboardByManufacturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindMotherboardByManufacturerResponse" message="tns:IPcPartService_FindMotherboardByManufacturer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindMotherboardByCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindMotherboardByCategory" message="tns:IPcPartService_FindMotherboardByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindMotherboardByCategoryResponse" message="tns:IPcPartService_FindMotherboardByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllMotherboard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindAllMotherboard" message="tns:IPcPartService_FindAllMotherboard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindAllMotherboardResponse" message="tns:IPcPartService_FindAllMotherboard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindMotherbordById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindMotherbordById" message="tns:IPcPartService_FindMotherbordById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindMotherbordByIdResponse" message="tns:IPcPartService_FindMotherbordById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMotherbord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/UpdateMotherbord" message="tns:IPcPartService_UpdateMotherbord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/UpdateMotherbordResponse" message="tns:IPcPartService_UpdateMotherbord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindGpuByManufacturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindGpuByManufacturer" message="tns:IPcPartService_FindGpuByManufacturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindGpuByManufacturerResponse" message="tns:IPcPartService_FindGpuByManufacturer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindGpuByModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindGpuByModel" message="tns:IPcPartService_FindGpuByModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindGpuByModelResponse" message="tns:IPcPartService_FindGpuByModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindGpuByCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindGpuByCategory" message="tns:IPcPartService_FindGpuByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindGpuByCategoryResponse" message="tns:IPcPartService_FindGpuByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllGpus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindAllGpus" message="tns:IPcPartService_FindAllGpus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindAllGpusResponse" message="tns:IPcPartService_FindAllGpus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindGPUbyId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindGPUbyId" message="tns:IPcPartService_FindGPUbyId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindGPUbyIdResponse" message="tns:IPcPartService_FindGPUbyId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGPU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/UpdateGPU" message="tns:IPcPartService_UpdateGPU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/UpdateGPUResponse" message="tns:IPcPartService_UpdateGPU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindComputerCaseByManufacturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindComputerCaseByManufacturer" message="tns:IPcPartService_FindComputerCaseByManufacturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindComputerCaseByManufacturerResponse" message="tns:IPcPartService_FindComputerCaseByManufacturer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindComputerCaseByCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindComputerCaseByCategory" message="tns:IPcPartService_FindComputerCaseByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindComputerCaseByCategoryResponse" message="tns:IPcPartService_FindComputerCaseByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllComputerCases">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindAllComputerCases" message="tns:IPcPartService_FindAllComputerCases_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindAllComputerCasesResponse" message="tns:IPcPartService_FindAllComputerCases_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindCaseById" message="tns:IPcPartService_FindCaseById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindCaseByIdResponse" message="tns:IPcPartService_FindCaseById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateComputerCase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/UpdateComputerCase" message="tns:IPcPartService_UpdateComputerCase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/UpdateComputerCaseResponse" message="tns:IPcPartService_UpdateComputerCase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/CreateCustomer" message="tns:IPcPartService_CreateCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/CreateCustomerResponse" message="tns:IPcPartService_CreateCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/UpdateCustomer" message="tns:IPcPartService_UpdateCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/UpdateCustomerResponse" message="tns:IPcPartService_UpdateCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/DeleteCustomer" message="tns:IPcPartService_DeleteCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/DeleteCustomerResponse" message="tns:IPcPartService_DeleteCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCustomerById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindCustomerById" message="tns:IPcPartService_FindCustomerById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindCustomerByIdResponse" message="tns:IPcPartService_FindCustomerById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCustomerByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindCustomerByName" message="tns:IPcPartService_FindCustomerByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindCustomerByNameResponse" message="tns:IPcPartService_FindCustomerByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAllCustomers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/FindAllCustomers" message="tns:IPcPartService_FindAllCustomers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/FindAllCustomersResponse" message="tns:IPcPartService_FindAllCustomers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateBasket">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPcPartService/CreateBasket" message="tns:IPcPartService_CreateBasket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPcPartService/CreateBasketResponse" message="tns:IPcPartService_CreateBasket_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPcPartService" type="tns:IPcPartService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FindCPUsByBrand">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindCPUsByBrand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCPUsByCategory">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindCPUsByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAllCPUs">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindAllCPUs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCPUbyId">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindCPUbyId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCPU">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/CreateCPU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCPU">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/UpdateCPU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCPU">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/DeleteCPU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindSocket">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindSocket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindStorageByManufacturer">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindStorageByManufacturer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindStorageByCategory">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindStorageByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAllStorage">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindAllStorage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindStorageById">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindStorageById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStorage">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/UpdateStorage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindRamByManufacturer">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindRamByManufacturer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindRamByCategory">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindRamByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAllRam">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindAllRam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindRAMbyId">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindRAMbyId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRAM">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/UpdateRAM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindMotherboardByManufacturer">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindMotherboardByManufacturer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindMotherboardByCategory">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindMotherboardByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAllMotherboard">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindAllMotherboard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindMotherbordById">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindMotherbordById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMotherbord">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/UpdateMotherbord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindGpuByManufacturer">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindGpuByManufacturer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindGpuByModel">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindGpuByModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindGpuByCategory">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindGpuByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAllGpus">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindAllGpus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindGPUbyId">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindGPUbyId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGPU">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/UpdateGPU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindComputerCaseByManufacturer">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindComputerCaseByManufacturer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindComputerCaseByCategory">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindComputerCaseByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAllComputerCases">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindAllComputerCases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCaseById">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindCaseById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateComputerCase">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/UpdateComputerCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomer">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/CreateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomer">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/UpdateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/DeleteCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCustomerById">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindCustomerById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindCustomerByName">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindCustomerByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAllCustomers">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/FindAllCustomers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateBasket">
+      <soap:operation soapAction="http://tempuri.org/IPcPartService/CreateBasket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PcPartService">
+    <wsdl:port name="BasicHttpBinding_IPcPartService" binding="tns:BasicHttpBinding_IPcPartService">
+      <soap:address location="http://localhost:8733/PcPartService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
